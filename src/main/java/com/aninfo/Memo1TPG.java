@@ -2,14 +2,17 @@ package com.aninfo;
 
 import com.aninfo.model.*;
 import com.aninfo.service.ProjectService;
+import com.aninfo.service.TicketService;
 import com.aninfo.service.TaskService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import org.springframework.format.annotation.DateTimeFormat;
 import java.time.LocalDate;
 import java.util.Collection;
 
@@ -28,6 +31,9 @@ public class Memo1TPG {
 
 	@Autowired
 	private ProjectService projectService;
+	
+	@Autowired
+	private TicketService ticketService;
 
 	@Autowired
 	private TaskService taskService;
@@ -38,9 +44,15 @@ public class Memo1TPG {
 	}
 
 	@PostMapping("/projects")
-	public Project createProject(@RequestParam String name, @RequestParam String description, @RequestParam LocalDate startDate, @RequestParam LocalDate estimatedFinishDate)
+	public Project createProject(@RequestParam String name, @RequestParam String description, @RequestParam @DateTimeFormat(pattern = "yyyy-MM-dd") LocalDate startDate, @RequestParam @DateTimeFormat(pattern = "yyyy-MM-dd") LocalDate estimatedFinishDate)
 	{
 		return projectService.createProject(name, description, startDate, estimatedFinishDate);
+	}
+	
+	@PostMapping("/tickets")
+	public Ticket createTicket(@RequestParam String name, @RequestParam String info, @RequestParam Severity severity, @RequestParam String creator, @RequestParam @DateTimeFormat(pattern = "yyyy-MM-dd") LocalDate startDate, @RequestParam @DateTimeFormat(pattern = "yyyy-MM-dd") LocalDate estimatedFinishDate)
+	{
+		return ticketService.createTicket(name, info, severity, creator, startDate, estimatedFinishDate);
 	}
 
 	@PostMapping("/projects/{id}/tasks")
@@ -54,16 +66,30 @@ public class Memo1TPG {
 		return projectService.findAll();
 	}
 
+	@GetMapping("/tickets")
+	public Collection<Ticket> getTickets() {
+		return ticketService.findAll();
+	}
+
 	@GetMapping("/projects/{id}")
 	public Project getProject(@PathVariable Long id) {
 		return projectService.findById(id);
 	}
 
-	@DeleteMapping("/project/{id}")
+	@GetMapping("/tickets/{id}")
+	public Ticket getTicket(@PathVariable Long code) {
+		return ticketService.findByCode(code);
+	}
+
+	@DeleteMapping("/projects/{id}")
 	public void deleteProject(@PathVariable Long id) {
 		projectService.deleteById(id);
 	}
 
+	@DeleteMapping("/tickets/{id}")
+	public void deleteTicket(@PathVariable Long code) {
+		ticketService.deleteById(code);
+	}
 
 	@GetMapping("/projects/{id}/tasks")
 	public Collection<Task> getTasksForProject(@PathVariable Long id) {
