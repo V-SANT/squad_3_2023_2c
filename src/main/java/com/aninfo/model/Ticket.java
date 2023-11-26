@@ -4,7 +4,6 @@ import javax.persistence.Id;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
-import java.util.ArrayList;
 import java.time.LocalDate;
 
 @Entity

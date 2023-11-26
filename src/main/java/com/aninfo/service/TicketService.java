@@ -27,10 +27,6 @@ public class TicketService {
         return ticketRepository.findAll();
     }
 
-    public Ticket findByName(String name) {
-        return ticketRepository.findTicketByName(name).orElseThrow(() -> new InvalidTicketException("No ticket found with that name"));
-    }
-
     public Ticket findByCode(Long code) {
         return ticketRepository.findById(code).orElseThrow(() -> new InvalidTicketException("No ticket found with that code"));
     }
@@ -39,8 +35,8 @@ public class TicketService {
         ticketRepository.save(ticket);
     }
 
-    public void deleteById(Long id) {
-        ticketRepository.deleteById(id);
+    public void deleteByCode(Long code) {
+        ticketRepository.deleteById(code);
     }
 
     public Collection<Ticket> findAll() {
