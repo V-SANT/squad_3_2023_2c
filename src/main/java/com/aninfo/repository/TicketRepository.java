@@ -12,8 +12,7 @@ public interface TicketRepository extends CrudRepository<Ticket, Long> {
 
     Optional<Ticket> findTicketByName(String name);
 
-    @Override
-    Optional<Ticket> findById(Long id);
+    Ticket findTicketByCode(Long code);
 
     @Override
     List<Ticket> findAll();

@@ -76,7 +76,7 @@ public class Memo1TPG {
 		return projectService.findById(id);
 	}
 
-	@GetMapping("/tickets/{id}")
+	@GetMapping("/tickets/{code}")
 	public Ticket getTicket(@PathVariable Long code) {
 		return ticketService.findByCode(code);
 	}
@@ -87,8 +87,8 @@ public class Memo1TPG {
 	}
 
 	@DeleteMapping("/tickets/{id}")
-	public void deleteTicket(@PathVariable Long code) {
-		ticketService.deleteById(code);
+	public void deleteTicket(@PathVariable Long id) {
+		ticketService.deleteById(id);
 	}
 
 	@GetMapping("/projects/{id}/tasks")

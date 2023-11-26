@@ -20,7 +20,7 @@ public class TicketService {
     public Ticket createTicket(String name, String info, Severity severity, String creator, LocalDate startDate, LocalDate estimatedFinishDate) {
         ticketRepository.findTicketByName(name).ifPresent(x -> {throw new TicketNameAlreadyTakenException("Name already taken");});
         Ticket ticket = new Ticket(name, info, severity, creator, startDate, estimatedFinishDate);
-        return ticketRepository.save(ticket);;
+        return ticketRepository.save(ticket);
     }
 
     public Collection<Ticket> getTickets() {
