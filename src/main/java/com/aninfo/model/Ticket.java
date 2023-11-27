@@ -17,6 +17,7 @@ public class Ticket {
     private String info;
     private Status status;
     private Severity severity;
+    private Priority priority;
     private String creator;
     private LocalDate startDate;
     private LocalDate estimatedFinishDate;
@@ -25,11 +26,12 @@ public class Ticket {
     public Ticket() {
     }
     
-    public Ticket(String name, String info, Severity severity, String creator, LocalDate startDate, LocalDate estimatedFinishDate) {
+    public Ticket(String name, String info, Status status, Severity severity, Priority priority, String creator, LocalDate startDate, LocalDate estimatedFinishDate) {
         this.name = name;
         this.info = info;
-        this.status = Status.NOT_STARTED;
+        this.status = status;
         this.severity = severity;
+        this.priority = priority;
         this.creator = creator;
         this.startDate = startDate;
         this.estimatedFinishDate = estimatedFinishDate;
@@ -40,6 +42,7 @@ public class Ticket {
     public String getInfo(){ return info;}
     public Status getStatus(){ return status;}
     public Severity getSeverity(){ return severity;}
+    public Priority getPriority(){ return priority;}
     public String getCreator(){ return creator;}
     public LocalDate getStartDate(){ return startDate;}
     public LocalDate getEstimatedFinishDate(){ return estimatedFinishDate;}
@@ -49,6 +52,7 @@ public class Ticket {
     public void setInfo(String info){ this.info = info;}
     public void setStatus(Status status){ this.status = status;}
     public void setSeverity(Severity severity){ this.severity = severity;}
+    public void setPriority(Priority priority){ this.priority = priority;}
     public void setCreator(String creator){ this.creator = creator;}
     public void setEstimatedFinishDate(LocalDate date){ this.estimatedFinishDate = date;}
 }

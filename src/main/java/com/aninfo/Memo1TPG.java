@@ -36,9 +36,9 @@ public class Memo1TPG {
 	}
 	
 	@PostMapping("/tickets")
-	public Ticket createTicket(@RequestParam String name, @RequestParam String info, @RequestParam Severity severity, @RequestParam String creator, @RequestParam @DateTimeFormat(pattern = "yyyy-MM-dd") LocalDate startDate, @RequestParam @DateTimeFormat(pattern = "yyyy-MM-dd") LocalDate estimatedFinishDate)
+	public Ticket createTicket(@RequestParam String name, @RequestParam String info, @RequestParam Severity severity,@RequestParam Status status ,@RequestParam Priority priority, @RequestParam String creator, @RequestParam @DateTimeFormat(pattern = "yyyy-MM-dd") LocalDate startDate, @RequestParam @DateTimeFormat(pattern = "yyyy-MM-dd") LocalDate estimatedFinishDate)
 	{
-		return ticketService.createTicket(name, info, severity, creator, startDate, estimatedFinishDate);
+		return ticketService.createTicket(name, info, status, severity, priority, creator, startDate, estimatedFinishDate);
 	}
 
 	@GetMapping("/tickets")
@@ -57,8 +57,8 @@ public class Memo1TPG {
 	}
 
 	@PutMapping("/tickets/{code}")
-	public Ticket updateTicket(@PathVariable Long code, @RequestParam String name, @RequestParam String info, @RequestParam Status status, @RequestParam Severity severity, @RequestParam String creator, @RequestParam @DateTimeFormat(pattern = "yyyy-MM-dd") LocalDate estimatedFinishDate){
-		return ticketService.updateTicket(code, name, info, status, severity, creator, estimatedFinishDate);
+	public Ticket updateTicket(@PathVariable Long code, @RequestParam String name, @RequestParam String info, @RequestParam Status status, @RequestParam Severity severity, @RequestParam Priority priority, @RequestParam @DateTimeFormat(pattern = "yyyy-MM-dd") LocalDate estimatedFinishDate){
+		return ticketService.updateTicket(code, name, info, status, severity, priority, estimatedFinishDate);
 	}
 
 	@Bean

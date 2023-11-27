@@ -3,7 +3,7 @@ package com.aninfo.integration.cucumber;
 import com.aninfo.exceptions.DepositNegativeSumException;
 import com.aninfo.exceptions.InsufficientFundsException;
 import com.aninfo.exceptions.TicketNameAlreadyTakenException;
-import com.aninfo.model.Account;
+import com.aninfo.model.Ticket;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.And;
@@ -36,8 +36,17 @@ public class TicketCreationTest extends TicketIntegrationServiceTest {
         System.out.println("Resetting system");
         deleteAll();
     }
+
+    @Given("^No ticket with name (.*)$")
+    public void no_ticket_with_name(String name) {
+    }
+
+    @Given("^Ticket with name (.*) because of creating$")
+    public void ticket_with_name(String name) {
+        createTicket(name);
+    }
     
-    @When("^Trying to create a project with name(.*)$")
+    @When("^Trying to create a ticket with name (.*)$")
     public void trying_create_ticket(String name)  {
         try {
             this.ticket = createTicket(name);
@@ -52,7 +61,7 @@ public class TicketCreationTest extends TicketIntegrationServiceTest {
         assertNotNull(this.ticket);
     }
 
-    @Then("^It is not created, ticket whith that name already exists$")
+    @Then("^It is not created, ticket with that name already exists$")
     public void ticket_not_created_successfully() {
         assertNotNull(this.name_error);
         assertNull(this.ticket);
@@ -61,5 +70,10 @@ public class TicketCreationTest extends TicketIntegrationServiceTest {
     @And("^Ticket is named (.*)$")
     public void ticket_named(String name) {
         assertEquals(name, this.ticket.getName());
+    }
+
+    @After
+    public void tearDown() {
+        System.out.println("After all test execution");
     }
 }

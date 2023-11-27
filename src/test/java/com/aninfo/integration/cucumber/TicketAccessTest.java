@@ -1,8 +1,8 @@
 package com.aninfo.integration.cucumber;
 
-import com.aninfo.exceptions.InvalidProjectException;
-import com.aninfo.exceptions.ProjectNameAlreadyTakenException;
-import com.aninfo.model.Project;
+import com.aninfo.exceptions.InvalidTicketException;
+import com.aninfo.exceptions.TicketNameAlreadyTakenException;
+import com.aninfo.model.Ticket;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
@@ -12,7 +12,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.TestPropertySource;
 
-import java.util.List;
+import java.util.Collection;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -21,7 +21,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class TicketAccessTest extends TicketIntegrationServiceTest {
 
     private Ticket ticket;
-    private List<Ticket> allTickets;
+    private Collection<Ticket> allTickets;
     private InvalidTicketException invalid_error;
     private TicketNameAlreadyTakenException name_error;
 
@@ -34,10 +34,11 @@ public class TicketAccessTest extends TicketIntegrationServiceTest {
     public void beforeEachTest() {
         System.out.println("Resetting system");
         invalid_error = null;
+        ticket = null;
         deleteAll();
     }
 
-    @Given("^No tickets$")
+    @Given("^No tickets$ to access")
     public void no_tickets() {
     }
 
@@ -53,7 +54,7 @@ public class TicketAccessTest extends TicketIntegrationServiceTest {
 
     @Given("^Two tickets$")
     public void two_tickets() {
-        createTickte("ticket1");
+        createTicket("ticket1");
         createTicket("ticket2");
         this.allTickets = findAll();
     }
@@ -63,9 +64,16 @@ public class TicketAccessTest extends TicketIntegrationServiceTest {
         assertEquals(this.allTickets.size(), 2);
     }
 
-    @Given("^Ticket with name (.*)$")
+    @Given("^Ticket with name (.*) because of accesing$")
     public void ticket_with_a_name(String name) {
         createTicket(name);
+    }
+
+    @Given("^Ticket with name (.*) is deleted$")
+    public void ticket_with_a_name_deleted(String name) {
+        Ticket ticket = createTicket(name);
+        deleteByCode(ticket.getCode());
+        this.ticket = null;
     }
 
     @When("^Trying to find ticket with name (.*)$")
@@ -83,7 +91,7 @@ public class TicketAccessTest extends TicketIntegrationServiceTest {
         assertNull(this.invalid_error);
     }
 
-    @Then("^I get an Invalid Ticket Exception$")
+    @Then("^I get an Invalid Ticket Exception because of accessing$")
     public void obtains_invalid_ticket_exception() {
         assertNull(this.ticket);
         assertNotNull(this.invalid_error);
