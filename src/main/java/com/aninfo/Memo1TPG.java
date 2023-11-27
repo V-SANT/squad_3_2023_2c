@@ -56,6 +56,11 @@ public class Memo1TPG {
 		ticketService.deleteByCode(code);
 	}
 
+	@PutMapping("/tickets/{code}")
+	public Ticket updateTicket(@PathVariable Long code, @RequestParam String name, @RequestParam String info, @RequestParam Status status, @RequestParam Severity severity, @RequestParam String creator, @RequestParam @DateTimeFormat(pattern = "yyyy-MM-dd") LocalDate estimatedFinishDate){
+		return ticketService.updateTicket(code, name, info, status, severity, creator, estimatedFinishDate);
+	}
+
 	@Bean
 	public Docket apiDocket() {
 		return new Docket(DocumentationType.SWAGGER_2)
