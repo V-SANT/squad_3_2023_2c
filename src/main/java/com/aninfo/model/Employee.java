@@ -1,7 +1,6 @@
 package com.aninfo.model;
 
 import javax.persistence.Id;
-import java.util.ArrayList;
 
 public class Employee {
 

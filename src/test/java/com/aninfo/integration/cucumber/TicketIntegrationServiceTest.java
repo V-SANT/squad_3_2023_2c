@@ -48,9 +48,9 @@ public class TicketIntegrationServiceTest {
         return ticketService.updateTicket(code,ticket.getName(), new_info, ticket.getStatus(), ticket.getSeverity(), ticket.getPriority(), ticket.getEstimatedFinishDate());
     }
 
-    void updateTicketStatus(Long code, Status new_status){
+    Ticket updateTicketStatus(Long code, Status new_status){
         Ticket ticket = ticketService.findByCode(code);
-        ticketService.updateTicket(code, ticket.getName(), ticket.getInfo(), new_status, ticket.getSeverity(), ticket.getPriority(), ticket.getEstimatedFinishDate());
+        return ticketService.updateTicket(code, ticket.getName(), ticket.getInfo(), new_status, ticket.getSeverity(), ticket.getPriority(), ticket.getEstimatedFinishDate());
     }
 
     Ticket updateTicketEstimatedFinishDate(Long code, LocalDate new_date){

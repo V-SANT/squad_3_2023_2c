@@ -1,14 +1,12 @@
 package com.aninfo.integration.cucumber;
 
 import com.aninfo.exceptions.InvalidTicketException;
-import com.aninfo.exceptions.TicketNameAlreadyTakenException;
 import com.aninfo.model.Ticket;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import org.junit.jupiter.api.BeforeEach;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.TestPropertySource;
 
@@ -23,21 +21,14 @@ public class TicketAccessTest extends TicketIntegrationServiceTest {
     private Ticket ticket;
     private Collection<Ticket> allTickets;
     private InvalidTicketException invalid_error;
-    private TicketNameAlreadyTakenException name_error;
 
     @Before
     public void setup() {
         System.out.println("Before any test execution");
     }
 
-    @BeforeEach
-    public void beforeEachTest() {
-        System.out.println("Resetting system");
-        invalid_error = null;
-        ticket = null;
-        deleteAll();
-    }
-
+    // @BeforeEach
+    
     @Given("^No tickets to access$")
     public void no_tickets() {
     }
@@ -70,12 +61,12 @@ public class TicketAccessTest extends TicketIntegrationServiceTest {
         createTicket(name);
     }
 
-    // @Given("^Ticket with name (.*) is deleted$")
-    // public void ticket_with_a_name_deleted(String name) {
-    //     Ticket ticket = createTicket(name);
-    //     deleteByCode(ticket.getCode());
-    //     this.ticket = null;
-    // }
+    @Given("^Ticket with name (.*) is deleted$")
+    public void ticket_with_a_name_deleted(String name) {
+        Ticket ticket = createTicket(name);
+        deleteByCode(ticket.getCode());
+        this.ticket = null;
+    }
 
     @When("^Trying to find ticket with name (.*)$")
     public void trying_to_find_ticket(String name) {
@@ -106,7 +97,13 @@ public class TicketAccessTest extends TicketIntegrationServiceTest {
     }
 
     @After
-    public void tearDown() {
-        System.out.println("After all test execution");
+    public void beforeEachTest() {
+        System.out.println("Resetting system");
+        invalid_error = null;
+        ticket = null;
+        deleteAll();
     }
+    // public void tearDown() {
+    //     System.out.println("After all test execution");
+    // }
 }

@@ -8,15 +8,12 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import org.junit.jupiter.api.BeforeEach;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.TestPropertySource;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 
-import org.junit.jupiter.api.AfterEach;
 
 import static org.junit.jupiter.api.Assertions.assertNull;
 
@@ -31,13 +28,7 @@ public class TicketCreationTest extends TicketIntegrationServiceTest {
     public void setup() {
         System.out.println("Before any test execution");
     }
-
-    @BeforeEach
-    public void beforeEachTest() {
-        System.out.println("Resetting system");
-        this.deleteAll();
-    }
-
+    
     @Given("^No ticket with name (.*)$")
     public void no_ticket_with_name(String name) {
     }
@@ -74,7 +65,8 @@ public class TicketCreationTest extends TicketIntegrationServiceTest {
     }
 
     @After
-    public void tearDown() {
-        System.out.println("After all test execution");
+    public void beforeEachTest() {
+        System.out.println("Resetting system");
+        this.deleteAll();
     }
 }
