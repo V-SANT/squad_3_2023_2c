@@ -31,7 +31,7 @@ public class TicketSearchTest extends TicketIntegrationServiceTest {
         this.code = ticket.getCode();
     }
 
-    @Given("^No tickets to search$")
+    @Given("^no tickets to search$")
     public void no_tickets() {
         this.code = 1L;
     }

@@ -1,0 +1,2125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.aninfo.integration.cucumber.CucumberTest" tests="42" skipped="0" failures="0" errors="0" timestamp="2023-12-02T18:41:16" hostname="valentin-750XFG" time="0.499">
+  <properties/>
+  <testcase name="Given No tickets to access" classname="com.aninfo.integration.cucumber.CucumberTest" time="0.0"/>
+  <testcase name="When Trying to get tickets" classname="com.aninfo.integration.cucumber.CucumberTest" time="0.0"/>
+  <testcase name="Then I get no tickets" classname="com.aninfo.integration.cucumber.CucumberTest" time="0.0"/>
+  <testcase name="Given Two tickets" classname="com.aninfo.integration.cucumber.CucumberTest" time="0.0"/>
+  <testcase name="When Trying to get tickets" classname="com.aninfo.integration.cucumber.CucumberTest" time="0.0"/>
+  <testcase name="Then I get two tickets" classname="com.aninfo.integration.cucumber.CucumberTest" time="0.0"/>
+  <testcase name="Given Ticket with name Ticket1 because of accesing" classname="com.aninfo.integration.cucumber.CucumberTest" time="0.0"/>
+  <testcase name="When Trying to find ticket with name Ticket1" classname="com.aninfo.integration.cucumber.CucumberTest" time="0.0"/>
+  <testcase name="Then I get the ticket appropriately" classname="com.aninfo.integration.cucumber.CucumberTest" time="0.0"/>
+  <testcase name="Given Ticket with name MyTicket1 because of accesing" classname="com.aninfo.integration.cucumber.CucumberTest" time="0.001"/>
+  <testcase name="When Trying to find ticket with name MyTicket2" classname="com.aninfo.integration.cucumber.CucumberTest" time="0.0"/>
+  <testcase name="Then I get an Invalid Ticket Exception because of accessing" classname="com.aninfo.integration.cucumber.CucumberTest" time="0.001"/>
+  <testcase name="Given No ticket with name ticket1" classname="com.aninfo.integration.cucumber.CucumberTest" time="0.0"/>
+  <testcase name="When Trying to create a ticket with name ticket1" classname="com.aninfo.integration.cucumber.CucumberTest" time="0.0"/>
+  <testcase name="Then It is created successfully" classname="com.aninfo.integration.cucumber.CucumberTest" time="0.0"/>
+  <testcase name="And Ticket is named ticket1" classname="com.aninfo.integration.cucumber.CucumberTest" time="0.0"/>
+  <testcase name="Given A ticket with status NOT STARTED" classname="com.aninfo.integration.cucumber.CucumberTest" time="0.0"/>
+  <testcase name="When Trying to edit the status from NOT STARTED to IN PROGRESS" classname="com.aninfo.integration.cucumber.CucumberTest" time="0.0"/>
+  <testcase name="Then Status is edited successfully" classname="com.aninfo.integration.cucumber.CucumberTest" time="0.0"/>
+  <testcase name="Given A ticket with severity S1" classname="com.aninfo.integration.cucumber.CucumberTest" time="0.0"/>
+  <testcase name="When Trying to edit the severity from S1 to S2" classname="com.aninfo.integration.cucumber.CucumberTest" time="0.0"/>
+  <testcase name="Then Severity is edited successfully" classname="com.aninfo.integration.cucumber.CucumberTest" time="0.0"/>
+  <testcase name="Given A ticket with priority LOW" classname="com.aninfo.integration.cucumber.CucumberTest" time="0.0"/>
+  <testcase name="When Trying to edit the priority from LOW to HIGH" classname="com.aninfo.integration.cucumber.CucumberTest" time="0.0"/>
+  <testcase name="Then Priority is edited successfully" classname="com.aninfo.integration.cucumber.CucumberTest" time="0.0"/>
+  <testcase name="Given A ticket with an empty info" classname="com.aninfo.integration.cucumber.CucumberTest" time="0.0"/>
+  <testcase name="When Trying to edit the info to a different one" classname="com.aninfo.integration.cucumber.CucumberTest" time="0.0"/>
+  <testcase name="Then Info is edited successfully" classname="com.aninfo.integration.cucumber.CucumberTest" time="0.0"/>
+  <testcase name="Given A ticket with name ticket1" classname="com.aninfo.integration.cucumber.CucumberTest" time="0.0"/>
+  <testcase name="When Trying to edit the name from ticket1 to ticket2" classname="com.aninfo.integration.cucumber.CucumberTest" time="0.0"/>
+  <testcase name="Then Name is edited successfully" classname="com.aninfo.integration.cucumber.CucumberTest" time="0.0"/>
+  <testcase name="Given Two tickets with names ticket1 and ticket2" classname="com.aninfo.integration.cucumber.CucumberTest" time="0.0"/>
+  <testcase name="When Trying to edit the name of ticket1 to the same name of ticket2" classname="com.aninfo.integration.cucumber.CucumberTest" time="0.0"/>
+  <testcase name="Then I get a Ticket Name Already Taken Exception" classname="com.aninfo.integration.cucumber.CucumberTest" time="0.0"/>
+  <testcase name="And It remain with the original name" classname="com.aninfo.integration.cucumber.CucumberTest" time="0.0"/>
+  <testcase name="Given A ticket" classname="com.aninfo.integration.cucumber.CucumberTest" time="0.0"/>
+  <testcase name="When Searching this ticket by it's code" classname="com.aninfo.integration.cucumber.CucumberTest" time="0.0"/>
+  <testcase name="Then It is found successfully" classname="com.aninfo.integration.cucumber.CucumberTest" time="0.0"/>
+  <testcase name="And The ticket's code matches" classname="com.aninfo.integration.cucumber.CucumberTest" time="0.0"/>
+  <testcase name="Given no tickets to search" classname="com.aninfo.integration.cucumber.CucumberTest" time="0.0"/>
+  <testcase name="When Searching this ticket by it's code" classname="com.aninfo.integration.cucumber.CucumberTest" time="0.0"/>
+  <testcase name="Then I get an Invalid Ticket Exception because of searching" classname="com.aninfo.integration.cucumber.CucumberTest" time="0.0"/>
+  <system-out><![CDATA[15:41:11.355 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+15:41:11.365 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+15:41:11.386 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.aninfo.integration.cucumber.TicketCreationTest] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+15:41:11.416 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.aninfo.integration.cucumber.TicketIntegrationServiceTest]: class path resource [com/aninfo/integration/cucumber/TicketIntegrationServiceTest-context.xml] does not exist
+15:41:11.416 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.aninfo.integration.cucumber.TicketIntegrationServiceTest]: class path resource [com/aninfo/integration/cucumber/TicketIntegrationServiceTestContext.groovy] does not exist
+15:41:11.416 [Test worker] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.aninfo.integration.cucumber.TicketIntegrationServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+15:41:11.443 [Test worker] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.aninfo.integration.cucumber.TicketCreationTest]
+15:41:11.500 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [com.aninfo.integration.cucumber.TicketCreationTest]: using defaults.
+15:41:11.501 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+15:41:11.509 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@4eb698a7, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@74e6026e, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@49987db1, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@51ccd843, org.springframework.test.context.support.DirtiesContextTestExecutionListener@2b45117d, org.springframework.test.context.transaction.TransactionalTestExecutionListener@6f749309, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@658b0ea3, org.springframework.test.context.event.EventPublishingTestExecutionListener@5232cc91, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@51ffe153, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@1a58ccbe, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@279b3740, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@63893166, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@4d52a13d]
+15:41:11.523 [Test worker] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true, server.port=-1}
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.2.5.RELEASE)
+
+2023-12-02 15:41:11.796  INFO 79413 --- [    Test worker] c.a.i.cucumber.TicketCreationTest        : Starting TicketCreationTest on valentin-750XFG with PID 79413 (started by valentin in /home/valentin/ANALISIS_DE_LA_INFORMACION/TPG/squad_3_2023_2c)
+2023-12-02 15:41:11.798  INFO 79413 --- [    Test worker] c.a.i.cucumber.TicketCreationTest        : No active profile set, falling back to default profiles: default
+2023-12-02 15:41:12.618  INFO 79413 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-02 15:41:12.729  INFO 79413 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 102ms. Found 1 JPA repository interfaces.
+2023-12-02 15:41:13.420  INFO 79413 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-02 15:41:13.479  INFO 79413 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.12.Final
+2023-12-02 15:41:13.566  INFO 79413 --- [    Test worker] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2023-12-02 15:41:13.660  INFO 79413 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-12-02 15:41:13.798  INFO 79413 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-12-02 15:41:13.815  INFO 79413 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+Hibernate: 
+    
+    drop table ticket if exists
+Hibernate: 
+    
+    drop table ticket_tasks if exists
+Hibernate: 
+    
+    drop sequence if exists hibernate_sequence
+Hibernate: create sequence hibernate_sequence start with 1 increment by 1
+Hibernate: 
+    
+    create table ticket (
+       code bigint not null,
+        closing_date date,
+        description varchar(255),
+        employee_id bigint,
+        priority integer,
+        product varchar(255),
+        severity integer,
+        start_date date,
+        status integer,
+        title varchar(255),
+        version varchar(255),
+        primary key (code)
+    )
+Hibernate: 
+    
+    create table ticket_tasks (
+       ticket_id bigint not null,
+        task_id bigint
+    )
+Hibernate: 
+    
+    alter table ticket_tasks 
+       add constraint FKnbyd5rwnukhkx2huaqj7mmpdn 
+       foreign key (ticket_id) 
+       references ticket
+2023-12-02 15:41:14.322  INFO 79413 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-12-02 15:41:14.327  INFO 79413 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-02 15:41:14.889  WARN 79413 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-02 15:41:15.561  INFO 79413 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-12-02 15:41:15.909  INFO 79413 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:DBNAME'
+2023-12-02 15:41:16.438  INFO 79413 --- [    Test worker] c.a.i.cucumber.TicketCreationTest        : Started TicketCreationTest in 4.909 seconds (JVM running for 6.015)
+Before any test execution
+Before any test execution
+Before any test execution
+Before any test execution
+Hibernate: 
+    select
+        ticket0_.code as code1_0_,
+        ticket0_.closing_date as closing_2_0_,
+        ticket0_.description as descript3_0_,
+        ticket0_.employee_id as employee4_0_,
+        ticket0_.priority as priority5_0_,
+        ticket0_.product as product6_0_,
+        ticket0_.severity as severity7_0_,
+        ticket0_.start_date as start_da8_0_,
+        ticket0_.status as status9_0_,
+        ticket0_.title as title10_0_,
+        ticket0_.version as version11_0_ 
+    from
+        ticket ticket0_
+Resetting system
+Hibernate: 
+    select
+        ticket0_.code as code1_0_,
+        ticket0_.closing_date as closing_2_0_,
+        ticket0_.description as descript3_0_,
+        ticket0_.employee_id as employee4_0_,
+        ticket0_.priority as priority5_0_,
+        ticket0_.product as product6_0_,
+        ticket0_.severity as severity7_0_,
+        ticket0_.start_date as start_da8_0_,
+        ticket0_.status as status9_0_,
+        ticket0_.title as title10_0_,
+        ticket0_.version as version11_0_ 
+    from
+        ticket ticket0_
+Resetting system
+Hibernate: 
+    select
+        ticket0_.code as code1_0_,
+        ticket0_.closing_date as closing_2_0_,
+        ticket0_.description as descript3_0_,
+        ticket0_.employee_id as employee4_0_,
+        ticket0_.priority as priority5_0_,
+        ticket0_.product as product6_0_,
+        ticket0_.severity as severity7_0_,
+        ticket0_.start_date as start_da8_0_,
+        ticket0_.status as status9_0_,
+        ticket0_.title as title10_0_,
+        ticket0_.version as version11_0_ 
+    from
+        ticket ticket0_
+Resetting system
+Hibernate: 
+    select
+        ticket0_.code as code1_0_,
+        ticket0_.closing_date as closing_2_0_,
+        ticket0_.description as descript3_0_,
+        ticket0_.employee_id as employee4_0_,
+        ticket0_.priority as priority5_0_,
+        ticket0_.product as product6_0_,
+        ticket0_.severity as severity7_0_,
+        ticket0_.start_date as start_da8_0_,
+        ticket0_.status as status9_0_,
+        ticket0_.title as title10_0_,
+        ticket0_.version as version11_0_ 
+    from
+        ticket ticket0_
+Resetting system
+Hibernate: 
+    select
+        ticket0_.code as code1_0_,
+        ticket0_.closing_date as closing_2_0_,
+        ticket0_.description as descript3_0_,
+        ticket0_.employee_id as employee4_0_,
+        ticket0_.priority as priority5_0_,
+        ticket0_.product as product6_0_,
+        ticket0_.severity as severity7_0_,
+        ticket0_.start_date as start_da8_0_,
+        ticket0_.status as status9_0_,
+        ticket0_.title as title10_0_,
+        ticket0_.version as version11_0_ 
+    from
+        ticket ticket0_
+2023-12-02 15:41:16.798  INFO 79413 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.aninfo.integration.cucumber.TicketIntegrationServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-12-02 15:41:16.801  INFO 79413 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2023-12-02 15:41:16.802  INFO 79413 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@1d81b547, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@2119d600, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@269703a4, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@5327851e, org.springframework.test.context.support.DirtiesContextTestExecutionListener@439c39b0, org.springframework.test.context.transaction.TransactionalTestExecutionListener@2c5a4e15, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@32cee219, org.springframework.test.context.event.EventPublishingTestExecutionListener@5d2e9e2b, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@7fdd6d87, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@109ae8f, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@44924a9d, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@6de44be2, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@79c1a28c]
+Before any test execution
+Before any test execution
+Before any test execution
+Before any test execution
+Hibernate: 
+    select
+        ticket0_.code as code1_0_,
+        ticket0_.closing_date as closing_2_0_,
+        ticket0_.description as descript3_0_,
+        ticket0_.employee_id as employee4_0_,
+        ticket0_.priority as priority5_0_,
+        ticket0_.product as product6_0_,
+        ticket0_.severity as severity7_0_,
+        ticket0_.start_date as start_da8_0_,
+        ticket0_.status as status9_0_,
+        ticket0_.title as title10_0_,
+        ticket0_.version as version11_0_ 
+    from
+        ticket ticket0_ 
+    where
+        ticket0_.title=?
+Hibernate: 
+    call next value for hibernate_sequence
+Hibernate: 
+    insert 
+    into
+        ticket
+        (closing_date, description, employee_id, priority, product, severity, start_date, status, title, version, code) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    select
+        ticket0_.code as code1_0_,
+        ticket0_.closing_date as closing_2_0_,
+        ticket0_.description as descript3_0_,
+        ticket0_.employee_id as employee4_0_,
+        ticket0_.priority as priority5_0_,
+        ticket0_.product as product6_0_,
+        ticket0_.severity as severity7_0_,
+        ticket0_.start_date as start_da8_0_,
+        ticket0_.status as status9_0_,
+        ticket0_.title as title10_0_,
+        ticket0_.version as version11_0_ 
+    from
+        ticket ticket0_ 
+    where
+        ticket0_.title=?
+Hibernate: 
+    call next value for hibernate_sequence
+Hibernate: 
+    insert 
+    into
+        ticket
+        (closing_date, description, employee_id, priority, product, severity, start_date, status, title, version, code) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    select
+        ticket0_.code as code1_0_,
+        ticket0_.closing_date as closing_2_0_,
+        ticket0_.description as descript3_0_,
+        ticket0_.employee_id as employee4_0_,
+        ticket0_.priority as priority5_0_,
+        ticket0_.product as product6_0_,
+        ticket0_.severity as severity7_0_,
+        ticket0_.start_date as start_da8_0_,
+        ticket0_.status as status9_0_,
+        ticket0_.title as title10_0_,
+        ticket0_.version as version11_0_ 
+    from
+        ticket ticket0_
+Hibernate: 
+    select
+        ticket0_.code as code1_0_,
+        ticket0_.closing_date as closing_2_0_,
+        ticket0_.description as descript3_0_,
+        ticket0_.employee_id as employee4_0_,
+        ticket0_.priority as priority5_0_,
+        ticket0_.product as product6_0_,
+        ticket0_.severity as severity7_0_,
+        ticket0_.start_date as start_da8_0_,
+        ticket0_.status as status9_0_,
+        ticket0_.title as title10_0_,
+        ticket0_.version as version11_0_ 
+    from
+        ticket ticket0_
+Resetting system
+Hibernate: 
+    select
+        ticket0_.code as code1_0_,
+        ticket0_.closing_date as closing_2_0_,
+        ticket0_.description as descript3_0_,
+        ticket0_.employee_id as employee4_0_,
+        ticket0_.priority as priority5_0_,
+        ticket0_.product as product6_0_,
+        ticket0_.severity as severity7_0_,
+        ticket0_.start_date as start_da8_0_,
+        ticket0_.status as status9_0_,
+        ticket0_.title as title10_0_,
+        ticket0_.version as version11_0_ 
+    from
+        ticket ticket0_
+Hibernate: 
+    delete 
+    from
+        ticket_tasks 
+    where
+        ticket_id=?
+Hibernate: 
+    delete 
+    from
+        ticket_tasks 
+    where
+        ticket_id=?
+Hibernate: 
+    delete 
+    from
+        ticket 
+    where
+        code=?
+Hibernate: 
+    delete 
+    from
+        ticket 
+    where
+        code=?
+Resetting system
+Hibernate: 
+    select
+        ticket0_.code as code1_0_,
+        ticket0_.closing_date as closing_2_0_,
+        ticket0_.description as descript3_0_,
+        ticket0_.employee_id as employee4_0_,
+        ticket0_.priority as priority5_0_,
+        ticket0_.product as product6_0_,
+        ticket0_.severity as severity7_0_,
+        ticket0_.start_date as start_da8_0_,
+        ticket0_.status as status9_0_,
+        ticket0_.title as title10_0_,
+        ticket0_.version as version11_0_ 
+    from
+        ticket ticket0_
+Resetting system
+Hibernate: 
+    select
+        ticket0_.code as code1_0_,
+        ticket0_.closing_date as closing_2_0_,
+        ticket0_.description as descript3_0_,
+        ticket0_.employee_id as employee4_0_,
+        ticket0_.priority as priority5_0_,
+        ticket0_.product as product6_0_,
+        ticket0_.severity as severity7_0_,
+        ticket0_.start_date as start_da8_0_,
+        ticket0_.status as status9_0_,
+        ticket0_.title as title10_0_,
+        ticket0_.version as version11_0_ 
+    from
+        ticket ticket0_
+Resetting system
+Hibernate: 
+    select
+        ticket0_.code as code1_0_,
+        ticket0_.closing_date as closing_2_0_,
+        ticket0_.description as descript3_0_,
+        ticket0_.employee_id as employee4_0_,
+        ticket0_.priority as priority5_0_,
+        ticket0_.product as product6_0_,
+        ticket0_.severity as severity7_0_,
+        ticket0_.start_date as start_da8_0_,
+        ticket0_.status as status9_0_,
+        ticket0_.title as title10_0_,
+        ticket0_.version as version11_0_ 
+    from
+        ticket ticket0_
+2023-12-02 15:41:16.889  INFO 79413 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.aninfo.integration.cucumber.TicketIntegrationServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-12-02 15:41:16.891  INFO 79413 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2023-12-02 15:41:16.892  INFO 79413 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@3426a7b, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@571d464e, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@2f1000d1, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@39da54d, org.springframework.test.context.support.DirtiesContextTestExecutionListener@131c16f7, org.springframework.test.context.transaction.TransactionalTestExecutionListener@2e8e0dec, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1378664, org.springframework.test.context.event.EventPublishingTestExecutionListener@6feefcc2, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@1cb6f466, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@42896b71, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@7f30c1e2, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@67203a2a, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@4c1ef76c]
+Before any test execution
+Before any test execution
+Before any test execution
+Before any test execution
+Hibernate: 
+    select
+        ticket0_.code as code1_0_,
+        ticket0_.closing_date as closing_2_0_,
+        ticket0_.description as descript3_0_,
+        ticket0_.employee_id as employee4_0_,
+        ticket0_.priority as priority5_0_,
+        ticket0_.product as product6_0_,
+        ticket0_.severity as severity7_0_,
+        ticket0_.start_date as start_da8_0_,
+        ticket0_.status as status9_0_,
+        ticket0_.title as title10_0_,
+        ticket0_.version as version11_0_ 
+    from
+        ticket ticket0_ 
+    where
+        ticket0_.title=?
+Hibernate: 
+    call next value for hibernate_sequence
+Hibernate: 
+    insert 
+    into
+        ticket
+        (closing_date, description, employee_id, priority, product, severity, start_date, status, title, version, code) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    select
+        ticket0_.code as code1_0_,
+        ticket0_.closing_date as closing_2_0_,
+        ticket0_.description as descript3_0_,
+        ticket0_.employee_id as employee4_0_,
+        ticket0_.priority as priority5_0_,
+        ticket0_.product as product6_0_,
+        ticket0_.severity as severity7_0_,
+        ticket0_.start_date as start_da8_0_,
+        ticket0_.status as status9_0_,
+        ticket0_.title as title10_0_,
+        ticket0_.version as version11_0_ 
+    from
+        ticket ticket0_ 
+    where
+        ticket0_.title=?
+Resetting system
+Hibernate: 
+    select
+        ticket0_.code as code1_0_,
+        ticket0_.closing_date as closing_2_0_,
+        ticket0_.description as descript3_0_,
+        ticket0_.employee_id as employee4_0_,
+        ticket0_.priority as priority5_0_,
+        ticket0_.product as product6_0_,
+        ticket0_.severity as severity7_0_,
+        ticket0_.start_date as start_da8_0_,
+        ticket0_.status as status9_0_,
+        ticket0_.title as title10_0_,
+        ticket0_.version as version11_0_ 
+    from
+        ticket ticket0_
+Hibernate: 
+    delete 
+    from
+        ticket_tasks 
+    where
+        ticket_id=?
+Hibernate: 
+    delete 
+    from
+        ticket 
+    where
+        code=?
+Resetting system
+Hibernate: 
+    select
+        ticket0_.code as code1_0_,
+        ticket0_.closing_date as closing_2_0_,
+        ticket0_.description as descript3_0_,
+        ticket0_.employee_id as employee4_0_,
+        ticket0_.priority as priority5_0_,
+        ticket0_.product as product6_0_,
+        ticket0_.severity as severity7_0_,
+        ticket0_.start_date as start_da8_0_,
+        ticket0_.status as status9_0_,
+        ticket0_.title as title10_0_,
+        ticket0_.version as version11_0_ 
+    from
+        ticket ticket0_
+Resetting system
+Hibernate: 
+    select
+        ticket0_.code as code1_0_,
+        ticket0_.closing_date as closing_2_0_,
+        ticket0_.description as descript3_0_,
+        ticket0_.employee_id as employee4_0_,
+        ticket0_.priority as priority5_0_,
+        ticket0_.product as product6_0_,
+        ticket0_.severity as severity7_0_,
+        ticket0_.start_date as start_da8_0_,
+        ticket0_.status as status9_0_,
+        ticket0_.title as title10_0_,
+        ticket0_.version as version11_0_ 
+    from
+        ticket ticket0_
+Resetting system
+Hibernate: 
+    select
+        ticket0_.code as code1_0_,
+        ticket0_.closing_date as closing_2_0_,
+        ticket0_.description as descript3_0_,
+        ticket0_.employee_id as employee4_0_,
+        ticket0_.priority as priority5_0_,
+        ticket0_.product as product6_0_,
+        ticket0_.severity as severity7_0_,
+        ticket0_.start_date as start_da8_0_,
+        ticket0_.status as status9_0_,
+        ticket0_.title as title10_0_,
+        ticket0_.version as version11_0_ 
+    from
+        ticket ticket0_
+2023-12-02 15:41:16.913  INFO 79413 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.aninfo.integration.cucumber.TicketIntegrationServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-12-02 15:41:16.915  INFO 79413 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2023-12-02 15:41:16.916  INFO 79413 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@232a08eb, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@9f8eb30, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@be09a58, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@68dec168, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1bc0e1c8, org.springframework.test.context.transaction.TransactionalTestExecutionListener@552f38eb, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@5a924a4c, org.springframework.test.context.event.EventPublishingTestExecutionListener@445915f7, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@580b7215, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@744fe19f, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@3c470570, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@303d49a2, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@33250e6a]
+Before any test execution
+Before any test execution
+Before any test execution
+Before any test execution
+Hibernate: 
+    select
+        ticket0_.code as code1_0_,
+        ticket0_.closing_date as closing_2_0_,
+        ticket0_.description as descript3_0_,
+        ticket0_.employee_id as employee4_0_,
+        ticket0_.priority as priority5_0_,
+        ticket0_.product as product6_0_,
+        ticket0_.severity as severity7_0_,
+        ticket0_.start_date as start_da8_0_,
+        ticket0_.status as status9_0_,
+        ticket0_.title as title10_0_,
+        ticket0_.version as version11_0_ 
+    from
+        ticket ticket0_ 
+    where
+        ticket0_.title=?
+Hibernate: 
+    call next value for hibernate_sequence
+Hibernate: 
+    insert 
+    into
+        ticket
+        (closing_date, description, employee_id, priority, product, severity, start_date, status, title, version, code) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    select
+        ticket0_.code as code1_0_,
+        ticket0_.closing_date as closing_2_0_,
+        ticket0_.description as descript3_0_,
+        ticket0_.employee_id as employee4_0_,
+        ticket0_.priority as priority5_0_,
+        ticket0_.product as product6_0_,
+        ticket0_.severity as severity7_0_,
+        ticket0_.start_date as start_da8_0_,
+        ticket0_.status as status9_0_,
+        ticket0_.title as title10_0_,
+        ticket0_.version as version11_0_ 
+    from
+        ticket ticket0_ 
+    where
+        ticket0_.title=?
+Resetting system
+Hibernate: 
+    select
+        ticket0_.code as code1_0_,
+        ticket0_.closing_date as closing_2_0_,
+        ticket0_.description as descript3_0_,
+        ticket0_.employee_id as employee4_0_,
+        ticket0_.priority as priority5_0_,
+        ticket0_.product as product6_0_,
+        ticket0_.severity as severity7_0_,
+        ticket0_.start_date as start_da8_0_,
+        ticket0_.status as status9_0_,
+        ticket0_.title as title10_0_,
+        ticket0_.version as version11_0_ 
+    from
+        ticket ticket0_
+Hibernate: 
+    delete 
+    from
+        ticket_tasks 
+    where
+        ticket_id=?
+Hibernate: 
+    delete 
+    from
+        ticket 
+    where
+        code=?
+Resetting system
+Hibernate: 
+    select
+        ticket0_.code as code1_0_,
+        ticket0_.closing_date as closing_2_0_,
+        ticket0_.description as descript3_0_,
+        ticket0_.employee_id as employee4_0_,
+        ticket0_.priority as priority5_0_,
+        ticket0_.product as product6_0_,
+        ticket0_.severity as severity7_0_,
+        ticket0_.start_date as start_da8_0_,
+        ticket0_.status as status9_0_,
+        ticket0_.title as title10_0_,
+        ticket0_.version as version11_0_ 
+    from
+        ticket ticket0_
+Resetting system
+Hibernate: 
+    select
+        ticket0_.code as code1_0_,
+        ticket0_.closing_date as closing_2_0_,
+        ticket0_.description as descript3_0_,
+        ticket0_.employee_id as employee4_0_,
+        ticket0_.priority as priority5_0_,
+        ticket0_.product as product6_0_,
+        ticket0_.severity as severity7_0_,
+        ticket0_.start_date as start_da8_0_,
+        ticket0_.status as status9_0_,
+        ticket0_.title as title10_0_,
+        ticket0_.version as version11_0_ 
+    from
+        ticket ticket0_
+Resetting system
+Hibernate: 
+    select
+        ticket0_.code as code1_0_,
+        ticket0_.closing_date as closing_2_0_,
+        ticket0_.description as descript3_0_,
+        ticket0_.employee_id as employee4_0_,
+        ticket0_.priority as priority5_0_,
+        ticket0_.product as product6_0_,
+        ticket0_.severity as severity7_0_,
+        ticket0_.start_date as start_da8_0_,
+        ticket0_.status as status9_0_,
+        ticket0_.title as title10_0_,
+        ticket0_.version as version11_0_ 
+    from
+        ticket ticket0_
+2023-12-02 15:41:16.937  INFO 79413 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.aninfo.integration.cucumber.TicketIntegrationServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-12-02 15:41:16.939  INFO 79413 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2023-12-02 15:41:16.939  INFO 79413 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@5f59976b, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@7ce1fe95, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@775bc2fa, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@2594b692, org.springframework.test.context.support.DirtiesContextTestExecutionListener@36658f84, org.springframework.test.context.transaction.TransactionalTestExecutionListener@4583da8b, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@6c668cd3, org.springframework.test.context.event.EventPublishingTestExecutionListener@6c4697eb, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@76c53c48, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@2dc9e799, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@7511f6e7, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@2d30de61, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@724880f3]
+Before any test execution
+Before any test execution
+Before any test execution
+Before any test execution
+Hibernate: 
+    select
+        ticket0_.code as code1_0_,
+        ticket0_.closing_date as closing_2_0_,
+        ticket0_.description as descript3_0_,
+        ticket0_.employee_id as employee4_0_,
+        ticket0_.priority as priority5_0_,
+        ticket0_.product as product6_0_,
+        ticket0_.severity as severity7_0_,
+        ticket0_.start_date as start_da8_0_,
+        ticket0_.status as status9_0_,
+        ticket0_.title as title10_0_,
+        ticket0_.version as version11_0_ 
+    from
+        ticket ticket0_ 
+    where
+        ticket0_.title=?
+Hibernate: 
+    call next value for hibernate_sequence
+Hibernate: 
+    insert 
+    into
+        ticket
+        (closing_date, description, employee_id, priority, product, severity, start_date, status, title, version, code) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Resetting system
+Hibernate: 
+    select
+        ticket0_.code as code1_0_,
+        ticket0_.closing_date as closing_2_0_,
+        ticket0_.description as descript3_0_,
+        ticket0_.employee_id as employee4_0_,
+        ticket0_.priority as priority5_0_,
+        ticket0_.product as product6_0_,
+        ticket0_.severity as severity7_0_,
+        ticket0_.start_date as start_da8_0_,
+        ticket0_.status as status9_0_,
+        ticket0_.title as title10_0_,
+        ticket0_.version as version11_0_ 
+    from
+        ticket ticket0_
+Hibernate: 
+    delete 
+    from
+        ticket_tasks 
+    where
+        ticket_id=?
+Hibernate: 
+    delete 
+    from
+        ticket 
+    where
+        code=?
+Resetting system
+Hibernate: 
+    select
+        ticket0_.code as code1_0_,
+        ticket0_.closing_date as closing_2_0_,
+        ticket0_.description as descript3_0_,
+        ticket0_.employee_id as employee4_0_,
+        ticket0_.priority as priority5_0_,
+        ticket0_.product as product6_0_,
+        ticket0_.severity as severity7_0_,
+        ticket0_.start_date as start_da8_0_,
+        ticket0_.status as status9_0_,
+        ticket0_.title as title10_0_,
+        ticket0_.version as version11_0_ 
+    from
+        ticket ticket0_
+Resetting system
+Hibernate: 
+    select
+        ticket0_.code as code1_0_,
+        ticket0_.closing_date as closing_2_0_,
+        ticket0_.description as descript3_0_,
+        ticket0_.employee_id as employee4_0_,
+        ticket0_.priority as priority5_0_,
+        ticket0_.product as product6_0_,
+        ticket0_.severity as severity7_0_,
+        ticket0_.start_date as start_da8_0_,
+        ticket0_.status as status9_0_,
+        ticket0_.title as title10_0_,
+        ticket0_.version as version11_0_ 
+    from
+        ticket ticket0_
+Resetting system
+Hibernate: 
+    select
+        ticket0_.code as code1_0_,
+        ticket0_.closing_date as closing_2_0_,
+        ticket0_.description as descript3_0_,
+        ticket0_.employee_id as employee4_0_,
+        ticket0_.priority as priority5_0_,
+        ticket0_.product as product6_0_,
+        ticket0_.severity as severity7_0_,
+        ticket0_.start_date as start_da8_0_,
+        ticket0_.status as status9_0_,
+        ticket0_.title as title10_0_,
+        ticket0_.version as version11_0_ 
+    from
+        ticket ticket0_
+2023-12-02 15:41:16.963  INFO 79413 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.aninfo.integration.cucumber.TicketIntegrationServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-12-02 15:41:16.965  INFO 79413 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2023-12-02 15:41:16.965  INFO 79413 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@5b173128, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@22fce6b5, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@29d5bce1, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@717d9f35, org.springframework.test.context.support.DirtiesContextTestExecutionListener@13016e43, org.springframework.test.context.transaction.TransactionalTestExecutionListener@568debd8, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@52bb675c, org.springframework.test.context.event.EventPublishingTestExecutionListener@4f22de09, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@5749d2d8, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@6ea320c2, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@67ab2bcd, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@3e2073a7, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@27e6a9a9]
+Before any test execution
+Before any test execution
+Before any test execution
+Before any test execution
+Hibernate: 
+    select
+        ticket0_.code as code1_0_,
+        ticket0_.closing_date as closing_2_0_,
+        ticket0_.description as descript3_0_,
+        ticket0_.employee_id as employee4_0_,
+        ticket0_.priority as priority5_0_,
+        ticket0_.product as product6_0_,
+        ticket0_.severity as severity7_0_,
+        ticket0_.start_date as start_da8_0_,
+        ticket0_.status as status9_0_,
+        ticket0_.title as title10_0_,
+        ticket0_.version as version11_0_ 
+    from
+        ticket ticket0_ 
+    where
+        ticket0_.title=?
+Hibernate: 
+    call next value for hibernate_sequence
+Hibernate: 
+    insert 
+    into
+        ticket
+        (closing_date, description, employee_id, priority, product, severity, start_date, status, title, version, code) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    select
+        ticket0_.code as code1_0_0_,
+        ticket0_.closing_date as closing_2_0_0_,
+        ticket0_.description as descript3_0_0_,
+        ticket0_.employee_id as employee4_0_0_,
+        ticket0_.priority as priority5_0_0_,
+        ticket0_.product as product6_0_0_,
+        ticket0_.severity as severity7_0_0_,
+        ticket0_.start_date as start_da8_0_0_,
+        ticket0_.status as status9_0_0_,
+        ticket0_.title as title10_0_0_,
+        ticket0_.version as version11_0_0_ 
+    from
+        ticket ticket0_ 
+    where
+        ticket0_.code=?
+Hibernate: 
+    select
+        ticket0_.code as code1_0_0_,
+        ticket0_.closing_date as closing_2_0_0_,
+        ticket0_.description as descript3_0_0_,
+        ticket0_.employee_id as employee4_0_0_,
+        ticket0_.priority as priority5_0_0_,
+        ticket0_.product as product6_0_0_,
+        ticket0_.severity as severity7_0_0_,
+        ticket0_.start_date as start_da8_0_0_,
+        ticket0_.status as status9_0_0_,
+        ticket0_.title as title10_0_0_,
+        ticket0_.version as version11_0_0_ 
+    from
+        ticket ticket0_ 
+    where
+        ticket0_.code=?
+Hibernate: 
+    select
+        ticket0_.code as code1_0_,
+        ticket0_.closing_date as closing_2_0_,
+        ticket0_.description as descript3_0_,
+        ticket0_.employee_id as employee4_0_,
+        ticket0_.priority as priority5_0_,
+        ticket0_.product as product6_0_,
+        ticket0_.severity as severity7_0_,
+        ticket0_.start_date as start_da8_0_,
+        ticket0_.status as status9_0_,
+        ticket0_.title as title10_0_,
+        ticket0_.version as version11_0_ 
+    from
+        ticket ticket0_ 
+    where
+        ticket0_.title=?
+Hibernate: 
+    select
+        ticket0_.code as code1_0_0_,
+        ticket0_.closing_date as closing_2_0_0_,
+        ticket0_.description as descript3_0_0_,
+        ticket0_.employee_id as employee4_0_0_,
+        ticket0_.priority as priority5_0_0_,
+        ticket0_.product as product6_0_0_,
+        ticket0_.severity as severity7_0_0_,
+        ticket0_.start_date as start_da8_0_0_,
+        ticket0_.status as status9_0_0_,
+        ticket0_.title as title10_0_0_,
+        ticket0_.version as version11_0_0_ 
+    from
+        ticket ticket0_ 
+    where
+        ticket0_.code=?
+Hibernate: 
+    update
+        ticket 
+    set
+        closing_date=?,
+        description=?,
+        employee_id=?,
+        priority=?,
+        product=?,
+        severity=?,
+        start_date=?,
+        status=?,
+        title=?,
+        version=? 
+    where
+        code=?
+Resetting system
+Hibernate: 
+    select
+        ticket0_.code as code1_0_,
+        ticket0_.closing_date as closing_2_0_,
+        ticket0_.description as descript3_0_,
+        ticket0_.employee_id as employee4_0_,
+        ticket0_.priority as priority5_0_,
+        ticket0_.product as product6_0_,
+        ticket0_.severity as severity7_0_,
+        ticket0_.start_date as start_da8_0_,
+        ticket0_.status as status9_0_,
+        ticket0_.title as title10_0_,
+        ticket0_.version as version11_0_ 
+    from
+        ticket ticket0_
+Hibernate: 
+    delete 
+    from
+        ticket_tasks 
+    where
+        ticket_id=?
+Hibernate: 
+    delete 
+    from
+        ticket 
+    where
+        code=?
+Resetting system
+Hibernate: 
+    select
+        ticket0_.code as code1_0_,
+        ticket0_.closing_date as closing_2_0_,
+        ticket0_.description as descript3_0_,
+        ticket0_.employee_id as employee4_0_,
+        ticket0_.priority as priority5_0_,
+        ticket0_.product as product6_0_,
+        ticket0_.severity as severity7_0_,
+        ticket0_.start_date as start_da8_0_,
+        ticket0_.status as status9_0_,
+        ticket0_.title as title10_0_,
+        ticket0_.version as version11_0_ 
+    from
+        ticket ticket0_
+Resetting system
+Hibernate: 
+    select
+        ticket0_.code as code1_0_,
+        ticket0_.closing_date as closing_2_0_,
+        ticket0_.description as descript3_0_,
+        ticket0_.employee_id as employee4_0_,
+        ticket0_.priority as priority5_0_,
+        ticket0_.product as product6_0_,
+        ticket0_.severity as severity7_0_,
+        ticket0_.start_date as start_da8_0_,
+        ticket0_.status as status9_0_,
+        ticket0_.title as title10_0_,
+        ticket0_.version as version11_0_ 
+    from
+        ticket ticket0_
+Resetting system
+Hibernate: 
+    select
+        ticket0_.code as code1_0_,
+        ticket0_.closing_date as closing_2_0_,
+        ticket0_.description as descript3_0_,
+        ticket0_.employee_id as employee4_0_,
+        ticket0_.priority as priority5_0_,
+        ticket0_.product as product6_0_,
+        ticket0_.severity as severity7_0_,
+        ticket0_.start_date as start_da8_0_,
+        ticket0_.status as status9_0_,
+        ticket0_.title as title10_0_,
+        ticket0_.version as version11_0_ 
+    from
+        ticket ticket0_
+2023-12-02 15:41:17.008  INFO 79413 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.aninfo.integration.cucumber.TicketIntegrationServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-12-02 15:41:17.009  INFO 79413 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2023-12-02 15:41:17.010  INFO 79413 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@7746f087, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@34488d27, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@f34a58e, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@688079cc, org.springframework.test.context.support.DirtiesContextTestExecutionListener@28026e93, org.springframework.test.context.transaction.TransactionalTestExecutionListener@58d3ef01, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@72e12940, org.springframework.test.context.event.EventPublishingTestExecutionListener@194470c9, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@2289e384, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@65e5ab33, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@1e3535e6, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@244ddcd1, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@49b58e1f]
+Before any test execution
+Before any test execution
+Before any test execution
+Before any test execution
+Hibernate: 
+    select
+        ticket0_.code as code1_0_,
+        ticket0_.closing_date as closing_2_0_,
+        ticket0_.description as descript3_0_,
+        ticket0_.employee_id as employee4_0_,
+        ticket0_.priority as priority5_0_,
+        ticket0_.product as product6_0_,
+        ticket0_.severity as severity7_0_,
+        ticket0_.start_date as start_da8_0_,
+        ticket0_.status as status9_0_,
+        ticket0_.title as title10_0_,
+        ticket0_.version as version11_0_ 
+    from
+        ticket ticket0_ 
+    where
+        ticket0_.title=?
+Hibernate: 
+    call next value for hibernate_sequence
+Hibernate: 
+    insert 
+    into
+        ticket
+        (closing_date, description, employee_id, priority, product, severity, start_date, status, title, version, code) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    select
+        ticket0_.code as code1_0_0_,
+        ticket0_.closing_date as closing_2_0_0_,
+        ticket0_.description as descript3_0_0_,
+        ticket0_.employee_id as employee4_0_0_,
+        ticket0_.priority as priority5_0_0_,
+        ticket0_.product as product6_0_0_,
+        ticket0_.severity as severity7_0_0_,
+        ticket0_.start_date as start_da8_0_0_,
+        ticket0_.status as status9_0_0_,
+        ticket0_.title as title10_0_0_,
+        ticket0_.version as version11_0_0_ 
+    from
+        ticket ticket0_ 
+    where
+        ticket0_.code=?
+Hibernate: 
+    select
+        ticket0_.code as code1_0_0_,
+        ticket0_.closing_date as closing_2_0_0_,
+        ticket0_.description as descript3_0_0_,
+        ticket0_.employee_id as employee4_0_0_,
+        ticket0_.priority as priority5_0_0_,
+        ticket0_.product as product6_0_0_,
+        ticket0_.severity as severity7_0_0_,
+        ticket0_.start_date as start_da8_0_0_,
+        ticket0_.status as status9_0_0_,
+        ticket0_.title as title10_0_0_,
+        ticket0_.version as version11_0_0_ 
+    from
+        ticket ticket0_ 
+    where
+        ticket0_.code=?
+Hibernate: 
+    select
+        ticket0_.code as code1_0_,
+        ticket0_.closing_date as closing_2_0_,
+        ticket0_.description as descript3_0_,
+        ticket0_.employee_id as employee4_0_,
+        ticket0_.priority as priority5_0_,
+        ticket0_.product as product6_0_,
+        ticket0_.severity as severity7_0_,
+        ticket0_.start_date as start_da8_0_,
+        ticket0_.status as status9_0_,
+        ticket0_.title as title10_0_,
+        ticket0_.version as version11_0_ 
+    from
+        ticket ticket0_ 
+    where
+        ticket0_.title=?
+Hibernate: 
+    select
+        ticket0_.code as code1_0_0_,
+        ticket0_.closing_date as closing_2_0_0_,
+        ticket0_.description as descript3_0_0_,
+        ticket0_.employee_id as employee4_0_0_,
+        ticket0_.priority as priority5_0_0_,
+        ticket0_.product as product6_0_0_,
+        ticket0_.severity as severity7_0_0_,
+        ticket0_.start_date as start_da8_0_0_,
+        ticket0_.status as status9_0_0_,
+        ticket0_.title as title10_0_0_,
+        ticket0_.version as version11_0_0_ 
+    from
+        ticket ticket0_ 
+    where
+        ticket0_.code=?
+Hibernate: 
+    update
+        ticket 
+    set
+        closing_date=?,
+        description=?,
+        employee_id=?,
+        priority=?,
+        product=?,
+        severity=?,
+        start_date=?,
+        status=?,
+        title=?,
+        version=? 
+    where
+        code=?
+Resetting system
+Hibernate: 
+    select
+        ticket0_.code as code1_0_,
+        ticket0_.closing_date as closing_2_0_,
+        ticket0_.description as descript3_0_,
+        ticket0_.employee_id as employee4_0_,
+        ticket0_.priority as priority5_0_,
+        ticket0_.product as product6_0_,
+        ticket0_.severity as severity7_0_,
+        ticket0_.start_date as start_da8_0_,
+        ticket0_.status as status9_0_,
+        ticket0_.title as title10_0_,
+        ticket0_.version as version11_0_ 
+    from
+        ticket ticket0_
+Hibernate: 
+    delete 
+    from
+        ticket_tasks 
+    where
+        ticket_id=?
+Hibernate: 
+    delete 
+    from
+        ticket 
+    where
+        code=?
+Resetting system
+Hibernate: 
+    select
+        ticket0_.code as code1_0_,
+        ticket0_.closing_date as closing_2_0_,
+        ticket0_.description as descript3_0_,
+        ticket0_.employee_id as employee4_0_,
+        ticket0_.priority as priority5_0_,
+        ticket0_.product as product6_0_,
+        ticket0_.severity as severity7_0_,
+        ticket0_.start_date as start_da8_0_,
+        ticket0_.status as status9_0_,
+        ticket0_.title as title10_0_,
+        ticket0_.version as version11_0_ 
+    from
+        ticket ticket0_
+Resetting system
+Hibernate: 
+    select
+        ticket0_.code as code1_0_,
+        ticket0_.closing_date as closing_2_0_,
+        ticket0_.description as descript3_0_,
+        ticket0_.employee_id as employee4_0_,
+        ticket0_.priority as priority5_0_,
+        ticket0_.product as product6_0_,
+        ticket0_.severity as severity7_0_,
+        ticket0_.start_date as start_da8_0_,
+        ticket0_.status as status9_0_,
+        ticket0_.title as title10_0_,
+        ticket0_.version as version11_0_ 
+    from
+        ticket ticket0_
+Resetting system
+Hibernate: 
+    select
+        ticket0_.code as code1_0_,
+        ticket0_.closing_date as closing_2_0_,
+        ticket0_.description as descript3_0_,
+        ticket0_.employee_id as employee4_0_,
+        ticket0_.priority as priority5_0_,
+        ticket0_.product as product6_0_,
+        ticket0_.severity as severity7_0_,
+        ticket0_.start_date as start_da8_0_,
+        ticket0_.status as status9_0_,
+        ticket0_.title as title10_0_,
+        ticket0_.version as version11_0_ 
+    from
+        ticket ticket0_
+2023-12-02 15:41:17.040  INFO 79413 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.aninfo.integration.cucumber.TicketIntegrationServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-12-02 15:41:17.042  INFO 79413 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2023-12-02 15:41:17.042  INFO 79413 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@7d27542c, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@2526cc1, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@68d0faf9, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@57df9ec1, org.springframework.test.context.support.DirtiesContextTestExecutionListener@109e2622, org.springframework.test.context.transaction.TransactionalTestExecutionListener@13b6494, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@6ed35178, org.springframework.test.context.event.EventPublishingTestExecutionListener@4551f3f5, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@249f624b, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@7e5abd88, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@a766baa, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@4072ef4a, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@1f205035]
+Before any test execution
+Before any test execution
+Before any test execution
+Before any test execution
+Hibernate: 
+    select
+        ticket0_.code as code1_0_,
+        ticket0_.closing_date as closing_2_0_,
+        ticket0_.description as descript3_0_,
+        ticket0_.employee_id as employee4_0_,
+        ticket0_.priority as priority5_0_,
+        ticket0_.product as product6_0_,
+        ticket0_.severity as severity7_0_,
+        ticket0_.start_date as start_da8_0_,
+        ticket0_.status as status9_0_,
+        ticket0_.title as title10_0_,
+        ticket0_.version as version11_0_ 
+    from
+        ticket ticket0_ 
+    where
+        ticket0_.title=?
+Hibernate: 
+    call next value for hibernate_sequence
+Hibernate: 
+    insert 
+    into
+        ticket
+        (closing_date, description, employee_id, priority, product, severity, start_date, status, title, version, code) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    select
+        ticket0_.code as code1_0_0_,
+        ticket0_.closing_date as closing_2_0_0_,
+        ticket0_.description as descript3_0_0_,
+        ticket0_.employee_id as employee4_0_0_,
+        ticket0_.priority as priority5_0_0_,
+        ticket0_.product as product6_0_0_,
+        ticket0_.severity as severity7_0_0_,
+        ticket0_.start_date as start_da8_0_0_,
+        ticket0_.status as status9_0_0_,
+        ticket0_.title as title10_0_0_,
+        ticket0_.version as version11_0_0_ 
+    from
+        ticket ticket0_ 
+    where
+        ticket0_.code=?
+Hibernate: 
+    select
+        ticket0_.code as code1_0_0_,
+        ticket0_.closing_date as closing_2_0_0_,
+        ticket0_.description as descript3_0_0_,
+        ticket0_.employee_id as employee4_0_0_,
+        ticket0_.priority as priority5_0_0_,
+        ticket0_.product as product6_0_0_,
+        ticket0_.severity as severity7_0_0_,
+        ticket0_.start_date as start_da8_0_0_,
+        ticket0_.status as status9_0_0_,
+        ticket0_.title as title10_0_0_,
+        ticket0_.version as version11_0_0_ 
+    from
+        ticket ticket0_ 
+    where
+        ticket0_.code=?
+Hibernate: 
+    select
+        ticket0_.code as code1_0_,
+        ticket0_.closing_date as closing_2_0_,
+        ticket0_.description as descript3_0_,
+        ticket0_.employee_id as employee4_0_,
+        ticket0_.priority as priority5_0_,
+        ticket0_.product as product6_0_,
+        ticket0_.severity as severity7_0_,
+        ticket0_.start_date as start_da8_0_,
+        ticket0_.status as status9_0_,
+        ticket0_.title as title10_0_,
+        ticket0_.version as version11_0_ 
+    from
+        ticket ticket0_ 
+    where
+        ticket0_.title=?
+Hibernate: 
+    select
+        ticket0_.code as code1_0_0_,
+        ticket0_.closing_date as closing_2_0_0_,
+        ticket0_.description as descript3_0_0_,
+        ticket0_.employee_id as employee4_0_0_,
+        ticket0_.priority as priority5_0_0_,
+        ticket0_.product as product6_0_0_,
+        ticket0_.severity as severity7_0_0_,
+        ticket0_.start_date as start_da8_0_0_,
+        ticket0_.status as status9_0_0_,
+        ticket0_.title as title10_0_0_,
+        ticket0_.version as version11_0_0_ 
+    from
+        ticket ticket0_ 
+    where
+        ticket0_.code=?
+Hibernate: 
+    update
+        ticket 
+    set
+        closing_date=?,
+        description=?,
+        employee_id=?,
+        priority=?,
+        product=?,
+        severity=?,
+        start_date=?,
+        status=?,
+        title=?,
+        version=? 
+    where
+        code=?
+Resetting system
+Hibernate: 
+    select
+        ticket0_.code as code1_0_,
+        ticket0_.closing_date as closing_2_0_,
+        ticket0_.description as descript3_0_,
+        ticket0_.employee_id as employee4_0_,
+        ticket0_.priority as priority5_0_,
+        ticket0_.product as product6_0_,
+        ticket0_.severity as severity7_0_,
+        ticket0_.start_date as start_da8_0_,
+        ticket0_.status as status9_0_,
+        ticket0_.title as title10_0_,
+        ticket0_.version as version11_0_ 
+    from
+        ticket ticket0_
+Hibernate: 
+    delete 
+    from
+        ticket_tasks 
+    where
+        ticket_id=?
+Hibernate: 
+    delete 
+    from
+        ticket 
+    where
+        code=?
+Resetting system
+Hibernate: 
+    select
+        ticket0_.code as code1_0_,
+        ticket0_.closing_date as closing_2_0_,
+        ticket0_.description as descript3_0_,
+        ticket0_.employee_id as employee4_0_,
+        ticket0_.priority as priority5_0_,
+        ticket0_.product as product6_0_,
+        ticket0_.severity as severity7_0_,
+        ticket0_.start_date as start_da8_0_,
+        ticket0_.status as status9_0_,
+        ticket0_.title as title10_0_,
+        ticket0_.version as version11_0_ 
+    from
+        ticket ticket0_
+Resetting system
+Hibernate: 
+    select
+        ticket0_.code as code1_0_,
+        ticket0_.closing_date as closing_2_0_,
+        ticket0_.description as descript3_0_,
+        ticket0_.employee_id as employee4_0_,
+        ticket0_.priority as priority5_0_,
+        ticket0_.product as product6_0_,
+        ticket0_.severity as severity7_0_,
+        ticket0_.start_date as start_da8_0_,
+        ticket0_.status as status9_0_,
+        ticket0_.title as title10_0_,
+        ticket0_.version as version11_0_ 
+    from
+        ticket ticket0_
+Resetting system
+Hibernate: 
+    select
+        ticket0_.code as code1_0_,
+        ticket0_.closing_date as closing_2_0_,
+        ticket0_.description as descript3_0_,
+        ticket0_.employee_id as employee4_0_,
+        ticket0_.priority as priority5_0_,
+        ticket0_.product as product6_0_,
+        ticket0_.severity as severity7_0_,
+        ticket0_.start_date as start_da8_0_,
+        ticket0_.status as status9_0_,
+        ticket0_.title as title10_0_,
+        ticket0_.version as version11_0_ 
+    from
+        ticket ticket0_
+2023-12-02 15:41:17.066  INFO 79413 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.aninfo.integration.cucumber.TicketIntegrationServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-12-02 15:41:17.067  INFO 79413 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2023-12-02 15:41:17.067  INFO 79413 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@3631dfe3, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@7015c79f, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@141db263, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@6f4d1aa3, org.springframework.test.context.support.DirtiesContextTestExecutionListener@573b0e6e, org.springframework.test.context.transaction.TransactionalTestExecutionListener@94c1229, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@703b37c9, org.springframework.test.context.event.EventPublishingTestExecutionListener@7724b36f, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@78e38b9b, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@115713f4, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@38fbfb68, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@6a1698d3, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@e4d6959]
+Before any test execution
+Before any test execution
+Before any test execution
+Before any test execution
+Hibernate: 
+    select
+        ticket0_.code as code1_0_,
+        ticket0_.closing_date as closing_2_0_,
+        ticket0_.description as descript3_0_,
+        ticket0_.employee_id as employee4_0_,
+        ticket0_.priority as priority5_0_,
+        ticket0_.product as product6_0_,
+        ticket0_.severity as severity7_0_,
+        ticket0_.start_date as start_da8_0_,
+        ticket0_.status as status9_0_,
+        ticket0_.title as title10_0_,
+        ticket0_.version as version11_0_ 
+    from
+        ticket ticket0_ 
+    where
+        ticket0_.title=?
+Hibernate: 
+    call next value for hibernate_sequence
+Hibernate: 
+    insert 
+    into
+        ticket
+        (closing_date, description, employee_id, priority, product, severity, start_date, status, title, version, code) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    select
+        ticket0_.code as code1_0_0_,
+        ticket0_.closing_date as closing_2_0_0_,
+        ticket0_.description as descript3_0_0_,
+        ticket0_.employee_id as employee4_0_0_,
+        ticket0_.priority as priority5_0_0_,
+        ticket0_.product as product6_0_0_,
+        ticket0_.severity as severity7_0_0_,
+        ticket0_.start_date as start_da8_0_0_,
+        ticket0_.status as status9_0_0_,
+        ticket0_.title as title10_0_0_,
+        ticket0_.version as version11_0_0_ 
+    from
+        ticket ticket0_ 
+    where
+        ticket0_.code=?
+Hibernate: 
+    select
+        ticket0_.code as code1_0_0_,
+        ticket0_.closing_date as closing_2_0_0_,
+        ticket0_.description as descript3_0_0_,
+        ticket0_.employee_id as employee4_0_0_,
+        ticket0_.priority as priority5_0_0_,
+        ticket0_.product as product6_0_0_,
+        ticket0_.severity as severity7_0_0_,
+        ticket0_.start_date as start_da8_0_0_,
+        ticket0_.status as status9_0_0_,
+        ticket0_.title as title10_0_0_,
+        ticket0_.version as version11_0_0_ 
+    from
+        ticket ticket0_ 
+    where
+        ticket0_.code=?
+Hibernate: 
+    select
+        ticket0_.code as code1_0_,
+        ticket0_.closing_date as closing_2_0_,
+        ticket0_.description as descript3_0_,
+        ticket0_.employee_id as employee4_0_,
+        ticket0_.priority as priority5_0_,
+        ticket0_.product as product6_0_,
+        ticket0_.severity as severity7_0_,
+        ticket0_.start_date as start_da8_0_,
+        ticket0_.status as status9_0_,
+        ticket0_.title as title10_0_,
+        ticket0_.version as version11_0_ 
+    from
+        ticket ticket0_ 
+    where
+        ticket0_.title=?
+Hibernate: 
+    select
+        ticket0_.code as code1_0_0_,
+        ticket0_.closing_date as closing_2_0_0_,
+        ticket0_.description as descript3_0_0_,
+        ticket0_.employee_id as employee4_0_0_,
+        ticket0_.priority as priority5_0_0_,
+        ticket0_.product as product6_0_0_,
+        ticket0_.severity as severity7_0_0_,
+        ticket0_.start_date as start_da8_0_0_,
+        ticket0_.status as status9_0_0_,
+        ticket0_.title as title10_0_0_,
+        ticket0_.version as version11_0_0_ 
+    from
+        ticket ticket0_ 
+    where
+        ticket0_.code=?
+Hibernate: 
+    update
+        ticket 
+    set
+        closing_date=?,
+        description=?,
+        employee_id=?,
+        priority=?,
+        product=?,
+        severity=?,
+        start_date=?,
+        status=?,
+        title=?,
+        version=? 
+    where
+        code=?
+Resetting system
+Hibernate: 
+    select
+        ticket0_.code as code1_0_,
+        ticket0_.closing_date as closing_2_0_,
+        ticket0_.description as descript3_0_,
+        ticket0_.employee_id as employee4_0_,
+        ticket0_.priority as priority5_0_,
+        ticket0_.product as product6_0_,
+        ticket0_.severity as severity7_0_,
+        ticket0_.start_date as start_da8_0_,
+        ticket0_.status as status9_0_,
+        ticket0_.title as title10_0_,
+        ticket0_.version as version11_0_ 
+    from
+        ticket ticket0_
+Hibernate: 
+    delete 
+    from
+        ticket_tasks 
+    where
+        ticket_id=?
+Hibernate: 
+    delete 
+    from
+        ticket 
+    where
+        code=?
+Resetting system
+Hibernate: 
+    select
+        ticket0_.code as code1_0_,
+        ticket0_.closing_date as closing_2_0_,
+        ticket0_.description as descript3_0_,
+        ticket0_.employee_id as employee4_0_,
+        ticket0_.priority as priority5_0_,
+        ticket0_.product as product6_0_,
+        ticket0_.severity as severity7_0_,
+        ticket0_.start_date as start_da8_0_,
+        ticket0_.status as status9_0_,
+        ticket0_.title as title10_0_,
+        ticket0_.version as version11_0_ 
+    from
+        ticket ticket0_
+Resetting system
+Hibernate: 
+    select
+        ticket0_.code as code1_0_,
+        ticket0_.closing_date as closing_2_0_,
+        ticket0_.description as descript3_0_,
+        ticket0_.employee_id as employee4_0_,
+        ticket0_.priority as priority5_0_,
+        ticket0_.product as product6_0_,
+        ticket0_.severity as severity7_0_,
+        ticket0_.start_date as start_da8_0_,
+        ticket0_.status as status9_0_,
+        ticket0_.title as title10_0_,
+        ticket0_.version as version11_0_ 
+    from
+        ticket ticket0_
+Resetting system
+Hibernate: 
+    select
+        ticket0_.code as code1_0_,
+        ticket0_.closing_date as closing_2_0_,
+        ticket0_.description as descript3_0_,
+        ticket0_.employee_id as employee4_0_,
+        ticket0_.priority as priority5_0_,
+        ticket0_.product as product6_0_,
+        ticket0_.severity as severity7_0_,
+        ticket0_.start_date as start_da8_0_,
+        ticket0_.status as status9_0_,
+        ticket0_.title as title10_0_,
+        ticket0_.version as version11_0_ 
+    from
+        ticket ticket0_
+2023-12-02 15:41:17.082  INFO 79413 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.aninfo.integration.cucumber.TicketIntegrationServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-12-02 15:41:17.083  INFO 79413 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2023-12-02 15:41:17.083  INFO 79413 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@6cc7f173, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@418a3f61, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@79ba42f1, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@44b7da49, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1728f7c5, org.springframework.test.context.transaction.TransactionalTestExecutionListener@749a376, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@2c4fd4a4, org.springframework.test.context.event.EventPublishingTestExecutionListener@56d026f6, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@6967536, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@4c0e3481, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@1eb63350, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@490651e6, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@7c8cb235]
+Before any test execution
+Before any test execution
+Before any test execution
+Before any test execution
+Hibernate: 
+    select
+        ticket0_.code as code1_0_,
+        ticket0_.closing_date as closing_2_0_,
+        ticket0_.description as descript3_0_,
+        ticket0_.employee_id as employee4_0_,
+        ticket0_.priority as priority5_0_,
+        ticket0_.product as product6_0_,
+        ticket0_.severity as severity7_0_,
+        ticket0_.start_date as start_da8_0_,
+        ticket0_.status as status9_0_,
+        ticket0_.title as title10_0_,
+        ticket0_.version as version11_0_ 
+    from
+        ticket ticket0_ 
+    where
+        ticket0_.title=?
+Hibernate: 
+    call next value for hibernate_sequence
+Hibernate: 
+    insert 
+    into
+        ticket
+        (closing_date, description, employee_id, priority, product, severity, start_date, status, title, version, code) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    select
+        ticket0_.code as code1_0_0_,
+        ticket0_.closing_date as closing_2_0_0_,
+        ticket0_.description as descript3_0_0_,
+        ticket0_.employee_id as employee4_0_0_,
+        ticket0_.priority as priority5_0_0_,
+        ticket0_.product as product6_0_0_,
+        ticket0_.severity as severity7_0_0_,
+        ticket0_.start_date as start_da8_0_0_,
+        ticket0_.status as status9_0_0_,
+        ticket0_.title as title10_0_0_,
+        ticket0_.version as version11_0_0_ 
+    from
+        ticket ticket0_ 
+    where
+        ticket0_.code=?
+Hibernate: 
+    select
+        ticket0_.code as code1_0_0_,
+        ticket0_.closing_date as closing_2_0_0_,
+        ticket0_.description as descript3_0_0_,
+        ticket0_.employee_id as employee4_0_0_,
+        ticket0_.priority as priority5_0_0_,
+        ticket0_.product as product6_0_0_,
+        ticket0_.severity as severity7_0_0_,
+        ticket0_.start_date as start_da8_0_0_,
+        ticket0_.status as status9_0_0_,
+        ticket0_.title as title10_0_0_,
+        ticket0_.version as version11_0_0_ 
+    from
+        ticket ticket0_ 
+    where
+        ticket0_.code=?
+Hibernate: 
+    select
+        ticket0_.code as code1_0_,
+        ticket0_.closing_date as closing_2_0_,
+        ticket0_.description as descript3_0_,
+        ticket0_.employee_id as employee4_0_,
+        ticket0_.priority as priority5_0_,
+        ticket0_.product as product6_0_,
+        ticket0_.severity as severity7_0_,
+        ticket0_.start_date as start_da8_0_,
+        ticket0_.status as status9_0_,
+        ticket0_.title as title10_0_,
+        ticket0_.version as version11_0_ 
+    from
+        ticket ticket0_ 
+    where
+        ticket0_.title=?
+Hibernate: 
+    select
+        ticket0_.code as code1_0_0_,
+        ticket0_.closing_date as closing_2_0_0_,
+        ticket0_.description as descript3_0_0_,
+        ticket0_.employee_id as employee4_0_0_,
+        ticket0_.priority as priority5_0_0_,
+        ticket0_.product as product6_0_0_,
+        ticket0_.severity as severity7_0_0_,
+        ticket0_.start_date as start_da8_0_0_,
+        ticket0_.status as status9_0_0_,
+        ticket0_.title as title10_0_0_,
+        ticket0_.version as version11_0_0_ 
+    from
+        ticket ticket0_ 
+    where
+        ticket0_.code=?
+Hibernate: 
+    update
+        ticket 
+    set
+        closing_date=?,
+        description=?,
+        employee_id=?,
+        priority=?,
+        product=?,
+        severity=?,
+        start_date=?,
+        status=?,
+        title=?,
+        version=? 
+    where
+        code=?
+Resetting system
+Hibernate: 
+    select
+        ticket0_.code as code1_0_,
+        ticket0_.closing_date as closing_2_0_,
+        ticket0_.description as descript3_0_,
+        ticket0_.employee_id as employee4_0_,
+        ticket0_.priority as priority5_0_,
+        ticket0_.product as product6_0_,
+        ticket0_.severity as severity7_0_,
+        ticket0_.start_date as start_da8_0_,
+        ticket0_.status as status9_0_,
+        ticket0_.title as title10_0_,
+        ticket0_.version as version11_0_ 
+    from
+        ticket ticket0_
+Hibernate: 
+    delete 
+    from
+        ticket_tasks 
+    where
+        ticket_id=?
+Hibernate: 
+    delete 
+    from
+        ticket 
+    where
+        code=?
+Resetting system
+Hibernate: 
+    select
+        ticket0_.code as code1_0_,
+        ticket0_.closing_date as closing_2_0_,
+        ticket0_.description as descript3_0_,
+        ticket0_.employee_id as employee4_0_,
+        ticket0_.priority as priority5_0_,
+        ticket0_.product as product6_0_,
+        ticket0_.severity as severity7_0_,
+        ticket0_.start_date as start_da8_0_,
+        ticket0_.status as status9_0_,
+        ticket0_.title as title10_0_,
+        ticket0_.version as version11_0_ 
+    from
+        ticket ticket0_
+Resetting system
+Hibernate: 
+    select
+        ticket0_.code as code1_0_,
+        ticket0_.closing_date as closing_2_0_,
+        ticket0_.description as descript3_0_,
+        ticket0_.employee_id as employee4_0_,
+        ticket0_.priority as priority5_0_,
+        ticket0_.product as product6_0_,
+        ticket0_.severity as severity7_0_,
+        ticket0_.start_date as start_da8_0_,
+        ticket0_.status as status9_0_,
+        ticket0_.title as title10_0_,
+        ticket0_.version as version11_0_ 
+    from
+        ticket ticket0_
+Resetting system
+Hibernate: 
+    select
+        ticket0_.code as code1_0_,
+        ticket0_.closing_date as closing_2_0_,
+        ticket0_.description as descript3_0_,
+        ticket0_.employee_id as employee4_0_,
+        ticket0_.priority as priority5_0_,
+        ticket0_.product as product6_0_,
+        ticket0_.severity as severity7_0_,
+        ticket0_.start_date as start_da8_0_,
+        ticket0_.status as status9_0_,
+        ticket0_.title as title10_0_,
+        ticket0_.version as version11_0_ 
+    from
+        ticket ticket0_
+2023-12-02 15:41:17.098  INFO 79413 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.aninfo.integration.cucumber.TicketIntegrationServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-12-02 15:41:17.099  INFO 79413 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2023-12-02 15:41:17.100  INFO 79413 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@3b989fde, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@4210d0ec, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@543b14bd, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@6ed61ddf, org.springframework.test.context.support.DirtiesContextTestExecutionListener@11cf09b4, org.springframework.test.context.transaction.TransactionalTestExecutionListener@559c3cd1, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@598e5423, org.springframework.test.context.event.EventPublishingTestExecutionListener@7e89228, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@6e83a9c8, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@5a4d6a7d, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@71c9125b, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@3273b798, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@41cd85f7]
+Before any test execution
+Before any test execution
+Before any test execution
+Before any test execution
+Hibernate: 
+    select
+        ticket0_.code as code1_0_,
+        ticket0_.closing_date as closing_2_0_,
+        ticket0_.description as descript3_0_,
+        ticket0_.employee_id as employee4_0_,
+        ticket0_.priority as priority5_0_,
+        ticket0_.product as product6_0_,
+        ticket0_.severity as severity7_0_,
+        ticket0_.start_date as start_da8_0_,
+        ticket0_.status as status9_0_,
+        ticket0_.title as title10_0_,
+        ticket0_.version as version11_0_ 
+    from
+        ticket ticket0_ 
+    where
+        ticket0_.title=?
+Hibernate: 
+    call next value for hibernate_sequence
+Hibernate: 
+    insert 
+    into
+        ticket
+        (closing_date, description, employee_id, priority, product, severity, start_date, status, title, version, code) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    select
+        ticket0_.code as code1_0_,
+        ticket0_.closing_date as closing_2_0_,
+        ticket0_.description as descript3_0_,
+        ticket0_.employee_id as employee4_0_,
+        ticket0_.priority as priority5_0_,
+        ticket0_.product as product6_0_,
+        ticket0_.severity as severity7_0_,
+        ticket0_.start_date as start_da8_0_,
+        ticket0_.status as status9_0_,
+        ticket0_.title as title10_0_,
+        ticket0_.version as version11_0_ 
+    from
+        ticket ticket0_ 
+    where
+        ticket0_.title=?
+Hibernate: 
+    call next value for hibernate_sequence
+Hibernate: 
+    insert 
+    into
+        ticket
+        (closing_date, description, employee_id, priority, product, severity, start_date, status, title, version, code) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    select
+        ticket0_.code as code1_0_0_,
+        ticket0_.closing_date as closing_2_0_0_,
+        ticket0_.description as descript3_0_0_,
+        ticket0_.employee_id as employee4_0_0_,
+        ticket0_.priority as priority5_0_0_,
+        ticket0_.product as product6_0_0_,
+        ticket0_.severity as severity7_0_0_,
+        ticket0_.start_date as start_da8_0_0_,
+        ticket0_.status as status9_0_0_,
+        ticket0_.title as title10_0_0_,
+        ticket0_.version as version11_0_0_ 
+    from
+        ticket ticket0_ 
+    where
+        ticket0_.code=?
+Hibernate: 
+    select
+        ticket0_.code as code1_0_0_,
+        ticket0_.closing_date as closing_2_0_0_,
+        ticket0_.description as descript3_0_0_,
+        ticket0_.employee_id as employee4_0_0_,
+        ticket0_.priority as priority5_0_0_,
+        ticket0_.product as product6_0_0_,
+        ticket0_.severity as severity7_0_0_,
+        ticket0_.start_date as start_da8_0_0_,
+        ticket0_.status as status9_0_0_,
+        ticket0_.title as title10_0_0_,
+        ticket0_.version as version11_0_0_ 
+    from
+        ticket ticket0_ 
+    where
+        ticket0_.code=?
+Hibernate: 
+    select
+        ticket0_.code as code1_0_,
+        ticket0_.closing_date as closing_2_0_,
+        ticket0_.description as descript3_0_,
+        ticket0_.employee_id as employee4_0_,
+        ticket0_.priority as priority5_0_,
+        ticket0_.product as product6_0_,
+        ticket0_.severity as severity7_0_,
+        ticket0_.start_date as start_da8_0_,
+        ticket0_.status as status9_0_,
+        ticket0_.title as title10_0_,
+        ticket0_.version as version11_0_ 
+    from
+        ticket ticket0_ 
+    where
+        ticket0_.title=?
+Resetting system
+Hibernate: 
+    select
+        ticket0_.code as code1_0_,
+        ticket0_.closing_date as closing_2_0_,
+        ticket0_.description as descript3_0_,
+        ticket0_.employee_id as employee4_0_,
+        ticket0_.priority as priority5_0_,
+        ticket0_.product as product6_0_,
+        ticket0_.severity as severity7_0_,
+        ticket0_.start_date as start_da8_0_,
+        ticket0_.status as status9_0_,
+        ticket0_.title as title10_0_,
+        ticket0_.version as version11_0_ 
+    from
+        ticket ticket0_
+Hibernate: 
+    delete 
+    from
+        ticket_tasks 
+    where
+        ticket_id=?
+Hibernate: 
+    delete 
+    from
+        ticket_tasks 
+    where
+        ticket_id=?
+Hibernate: 
+    delete 
+    from
+        ticket 
+    where
+        code=?
+Hibernate: 
+    delete 
+    from
+        ticket 
+    where
+        code=?
+Resetting system
+Hibernate: 
+    select
+        ticket0_.code as code1_0_,
+        ticket0_.closing_date as closing_2_0_,
+        ticket0_.description as descript3_0_,
+        ticket0_.employee_id as employee4_0_,
+        ticket0_.priority as priority5_0_,
+        ticket0_.product as product6_0_,
+        ticket0_.severity as severity7_0_,
+        ticket0_.start_date as start_da8_0_,
+        ticket0_.status as status9_0_,
+        ticket0_.title as title10_0_,
+        ticket0_.version as version11_0_ 
+    from
+        ticket ticket0_
+Resetting system
+Hibernate: 
+    select
+        ticket0_.code as code1_0_,
+        ticket0_.closing_date as closing_2_0_,
+        ticket0_.description as descript3_0_,
+        ticket0_.employee_id as employee4_0_,
+        ticket0_.priority as priority5_0_,
+        ticket0_.product as product6_0_,
+        ticket0_.severity as severity7_0_,
+        ticket0_.start_date as start_da8_0_,
+        ticket0_.status as status9_0_,
+        ticket0_.title as title10_0_,
+        ticket0_.version as version11_0_ 
+    from
+        ticket ticket0_
+Resetting system
+Hibernate: 
+    select
+        ticket0_.code as code1_0_,
+        ticket0_.closing_date as closing_2_0_,
+        ticket0_.description as descript3_0_,
+        ticket0_.employee_id as employee4_0_,
+        ticket0_.priority as priority5_0_,
+        ticket0_.product as product6_0_,
+        ticket0_.severity as severity7_0_,
+        ticket0_.start_date as start_da8_0_,
+        ticket0_.status as status9_0_,
+        ticket0_.title as title10_0_,
+        ticket0_.version as version11_0_ 
+    from
+        ticket ticket0_
+2023-12-02 15:41:17.117  INFO 79413 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.aninfo.integration.cucumber.TicketIntegrationServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-12-02 15:41:17.119  INFO 79413 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2023-12-02 15:41:17.119  INFO 79413 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@48587c7a, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@66d1fc84, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@807e433, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@77fed640, org.springframework.test.context.support.DirtiesContextTestExecutionListener@7ccedf69, org.springframework.test.context.transaction.TransactionalTestExecutionListener@159239a8, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@22836155, org.springframework.test.context.event.EventPublishingTestExecutionListener@23ceff93, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@29f15914, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@2d2a7afb, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@149a2fc2, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@40fc68a5, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@6366b057]
+Before any test execution
+Before any test execution
+Before any test execution
+Before any test execution
+Hibernate: 
+    select
+        ticket0_.code as code1_0_,
+        ticket0_.closing_date as closing_2_0_,
+        ticket0_.description as descript3_0_,
+        ticket0_.employee_id as employee4_0_,
+        ticket0_.priority as priority5_0_,
+        ticket0_.product as product6_0_,
+        ticket0_.severity as severity7_0_,
+        ticket0_.start_date as start_da8_0_,
+        ticket0_.status as status9_0_,
+        ticket0_.title as title10_0_,
+        ticket0_.version as version11_0_ 
+    from
+        ticket ticket0_ 
+    where
+        ticket0_.title=?
+Hibernate: 
+    call next value for hibernate_sequence
+Hibernate: 
+    insert 
+    into
+        ticket
+        (closing_date, description, employee_id, priority, product, severity, start_date, status, title, version, code) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    select
+        ticket0_.code as code1_0_0_,
+        ticket0_.closing_date as closing_2_0_0_,
+        ticket0_.description as descript3_0_0_,
+        ticket0_.employee_id as employee4_0_0_,
+        ticket0_.priority as priority5_0_0_,
+        ticket0_.product as product6_0_0_,
+        ticket0_.severity as severity7_0_0_,
+        ticket0_.start_date as start_da8_0_0_,
+        ticket0_.status as status9_0_0_,
+        ticket0_.title as title10_0_0_,
+        ticket0_.version as version11_0_0_ 
+    from
+        ticket ticket0_ 
+    where
+        ticket0_.code=?
+Resetting system
+Hibernate: 
+    select
+        ticket0_.code as code1_0_,
+        ticket0_.closing_date as closing_2_0_,
+        ticket0_.description as descript3_0_,
+        ticket0_.employee_id as employee4_0_,
+        ticket0_.priority as priority5_0_,
+        ticket0_.product as product6_0_,
+        ticket0_.severity as severity7_0_,
+        ticket0_.start_date as start_da8_0_,
+        ticket0_.status as status9_0_,
+        ticket0_.title as title10_0_,
+        ticket0_.version as version11_0_ 
+    from
+        ticket ticket0_
+Hibernate: 
+    delete 
+    from
+        ticket_tasks 
+    where
+        ticket_id=?
+Hibernate: 
+    delete 
+    from
+        ticket 
+    where
+        code=?
+Resetting system
+Hibernate: 
+    select
+        ticket0_.code as code1_0_,
+        ticket0_.closing_date as closing_2_0_,
+        ticket0_.description as descript3_0_,
+        ticket0_.employee_id as employee4_0_,
+        ticket0_.priority as priority5_0_,
+        ticket0_.product as product6_0_,
+        ticket0_.severity as severity7_0_,
+        ticket0_.start_date as start_da8_0_,
+        ticket0_.status as status9_0_,
+        ticket0_.title as title10_0_,
+        ticket0_.version as version11_0_ 
+    from
+        ticket ticket0_
+Resetting system
+Hibernate: 
+    select
+        ticket0_.code as code1_0_,
+        ticket0_.closing_date as closing_2_0_,
+        ticket0_.description as descript3_0_,
+        ticket0_.employee_id as employee4_0_,
+        ticket0_.priority as priority5_0_,
+        ticket0_.product as product6_0_,
+        ticket0_.severity as severity7_0_,
+        ticket0_.start_date as start_da8_0_,
+        ticket0_.status as status9_0_,
+        ticket0_.title as title10_0_,
+        ticket0_.version as version11_0_ 
+    from
+        ticket ticket0_
+Resetting system
+Hibernate: 
+    select
+        ticket0_.code as code1_0_,
+        ticket0_.closing_date as closing_2_0_,
+        ticket0_.description as descript3_0_,
+        ticket0_.employee_id as employee4_0_,
+        ticket0_.priority as priority5_0_,
+        ticket0_.product as product6_0_,
+        ticket0_.severity as severity7_0_,
+        ticket0_.start_date as start_da8_0_,
+        ticket0_.status as status9_0_,
+        ticket0_.title as title10_0_,
+        ticket0_.version as version11_0_ 
+    from
+        ticket ticket0_
+2023-12-02 15:41:17.131  INFO 79413 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.aninfo.integration.cucumber.TicketIntegrationServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-12-02 15:41:17.132  INFO 79413 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2023-12-02 15:41:17.132  INFO 79413 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@7b1db92d, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@218ead18, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@597a0eba, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@58253f3c, org.springframework.test.context.support.DirtiesContextTestExecutionListener@4ee731c4, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1ad5b36d, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@13537153, org.springframework.test.context.event.EventPublishingTestExecutionListener@62fe70da, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@15e00450, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@2299935a, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@2ac8a7b3, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@3b216a90, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@2ef62b20]
+Before any test execution
+Before any test execution
+Before any test execution
+Before any test execution
+Hibernate: 
+    select
+        ticket0_.code as code1_0_0_,
+        ticket0_.closing_date as closing_2_0_0_,
+        ticket0_.description as descript3_0_0_,
+        ticket0_.employee_id as employee4_0_0_,
+        ticket0_.priority as priority5_0_0_,
+        ticket0_.product as product6_0_0_,
+        ticket0_.severity as severity7_0_0_,
+        ticket0_.start_date as start_da8_0_0_,
+        ticket0_.status as status9_0_0_,
+        ticket0_.title as title10_0_0_,
+        ticket0_.version as version11_0_0_ 
+    from
+        ticket ticket0_ 
+    where
+        ticket0_.code=?
+Resetting system
+Hibernate: 
+    select
+        ticket0_.code as code1_0_,
+        ticket0_.closing_date as closing_2_0_,
+        ticket0_.description as descript3_0_,
+        ticket0_.employee_id as employee4_0_,
+        ticket0_.priority as priority5_0_,
+        ticket0_.product as product6_0_,
+        ticket0_.severity as severity7_0_,
+        ticket0_.start_date as start_da8_0_,
+        ticket0_.status as status9_0_,
+        ticket0_.title as title10_0_,
+        ticket0_.version as version11_0_ 
+    from
+        ticket ticket0_
+Resetting system
+Hibernate: 
+    select
+        ticket0_.code as code1_0_,
+        ticket0_.closing_date as closing_2_0_,
+        ticket0_.description as descript3_0_,
+        ticket0_.employee_id as employee4_0_,
+        ticket0_.priority as priority5_0_,
+        ticket0_.product as product6_0_,
+        ticket0_.severity as severity7_0_,
+        ticket0_.start_date as start_da8_0_,
+        ticket0_.status as status9_0_,
+        ticket0_.title as title10_0_,
+        ticket0_.version as version11_0_ 
+    from
+        ticket ticket0_
+Resetting system
+Hibernate: 
+    select
+        ticket0_.code as code1_0_,
+        ticket0_.closing_date as closing_2_0_,
+        ticket0_.description as descript3_0_,
+        ticket0_.employee_id as employee4_0_,
+        ticket0_.priority as priority5_0_,
+        ticket0_.product as product6_0_,
+        ticket0_.severity as severity7_0_,
+        ticket0_.start_date as start_da8_0_,
+        ticket0_.status as status9_0_,
+        ticket0_.title as title10_0_,
+        ticket0_.version as version11_0_ 
+    from
+        ticket ticket0_
+Resetting system
+Hibernate: 
+    select
+        ticket0_.code as code1_0_,
+        ticket0_.closing_date as closing_2_0_,
+        ticket0_.description as descript3_0_,
+        ticket0_.employee_id as employee4_0_,
+        ticket0_.priority as priority5_0_,
+        ticket0_.product as product6_0_,
+        ticket0_.severity as severity7_0_,
+        ticket0_.start_date as start_da8_0_,
+        ticket0_.status as status9_0_,
+        ticket0_.title as title10_0_,
+        ticket0_.version as version11_0_ 
+    from
+        ticket ticket0_
+
+13 Scenarios (?[32m13 passed?[0m)
+42 Steps (?[32m42 passed?[0m)
+0m0.609s
+
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
