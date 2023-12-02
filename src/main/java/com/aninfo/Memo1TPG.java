@@ -37,9 +37,8 @@ public class Memo1TPG {
 		SpringApplication.run(Memo1TPG.class, args);
 	}
 
-
 	@PostMapping("/tickets")
-	public Ticket createTicket(@RequestBody String name, @RequestBody String info, @RequestBody Severity severity,@RequestBody Status status ,@RequestBody Priority priority, @RequestBody String creator, @RequestBody @DateTimeFormat(pattern = "yyyy-MM-dd") LocalDate startDate, @RequestBody @DateTimeFormat(pattern = "yyyy-MM-dd") LocalDate estimatedFinishDate)
+	public Ticket createTicket(@RequestParam String name, @RequestParam String info, @RequestParam Severity severity,@RequestParam Status status ,@RequestParam Priority priority, @RequestParam String creator, @RequestParam @DateTimeFormat(pattern = "yyyy-MM-dd") LocalDate startDate, @RequestParam @DateTimeFormat(pattern = "yyyy-MM-dd") LocalDate estimatedFinishDate)
 	{
 		return ticketService.createTicket(name, info, status, severity, priority, creator, startDate, estimatedFinishDate);
 	}
