@@ -53,10 +53,6 @@ public class Memo1TPG {
 	{
 		return ticketService.createTicket(title, info, status, severity, priority, product, version, employeeId, associatedTasksIds, startDate, estimatedFinishDate);
 	}
-	// public Ticket createTicket(@RequestBody Ticket ticket)
-	// {
-	// 	return ticketService.createTicket(ticket);
-	// }
 
 	@GetMapping("/tickets")
 	public Collection<Ticket> getTickets() {
@@ -68,6 +64,11 @@ public class Memo1TPG {
 		return ticketService.findByCode(code);
 	}
 
+	@GetMapping("/tickets/associatedTask")
+	public Collection<Long> getTicketsAssociatedTask(@RequestParam Long taskId){
+		return ticketService.getTicketsAssociatedTask(taskId);
+	}
+
 	@DeleteMapping("/tickets/{code}")
 	public void deleteTicket(@PathVariable Long code) {
 		ticketService.deleteByCode(code);
@@ -77,31 +78,6 @@ public class Memo1TPG {
 	public Ticket updateTicket(@PathVariable Long code, @RequestParam String title, @RequestParam String description, @RequestParam Status status, @RequestParam Severity severity, @RequestParam Priority priority, @RequestParam @DateTimeFormat(pattern = "yyyy-MM-dd") LocalDate estimatedClosingDate){
 		return ticketService.updateTicket(code, title, description, status, severity, priority, estimatedClosingDate);
 	}
-
-	// @GetMapping("/employees")
-	// public Collection<Employee> getEmployees() {
-	// 	RestTemplate restTemplate = new RestTemplate(new SimpleClientHttpRequestFactory());
-	// 	ResponseEntity<Employee[]> responseEntity = restTemplate.getForEntity(
-	// 			"https://anypoint.mulesoft.com/mocking/api/v1/sources/exchange/assets/754f50e8-20d8-4223-bbdc-56d50131d0ae/recursos-psa/1.0.0/m/api/recursos",
-	// 			Employee[].class);
-
-	// 	if (responseEntity.getStatusCode() == HttpStatus.OK) {
-	// 		Employee[] employees = responseEntity.getBody();
-
-	// 		if (employees != null) {
-	// 			return Arrays.asList(employees);
-	// 		}
-	// 	}
-
-	// 	return Collections.emptyList();
-	// }
-	// @GetMapping("/employees/{employeeId}")
-	// public  ResponseEntity<Employee> getEmployee(@PathVariable Long employeeId)
-	// {
-	// 	Optional<Employee> employeeOptional = getEmployees().stream().filter(employee -> employee.getIdNumber().equals(employeeId)).findFirst();
-	// 	return ResponseEntity.of(employeeOptional);
-
-	// }
 
 	@Bean
 	public Docket apiDocket() {

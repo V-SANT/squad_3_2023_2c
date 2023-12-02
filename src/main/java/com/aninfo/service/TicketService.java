@@ -73,6 +73,19 @@ public class TicketService {
         return ticketRepository.save(ticket);
     }
 
+    public Collection<Long> getTicketsAssociatedTask(Long taskId){
+        Collection<Ticket> tickets = findAll();
+        Collection<Long> associatedTickets = new ArrayList<Long>();
+        for (Ticket ticket: tickets){
+            for (Long associatedTaskId: ticket.getAssociatedTasks()){
+                if (associatedTaskId == taskId){
+                    associatedTickets.add(ticket.getCode());
+                }
+            }
+        }
+        return associatedTickets;
+    }
+
     public void deleteAll(){ ticketRepository.deleteAll(); }
     
 }
