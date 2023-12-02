@@ -4,9 +4,9 @@ Feature: Finding existing tickets
     Given A ticket
     When Searching this ticket by it's code
     Then It is found successfully
-    And The tickets's code matches
+    And The ticket's code matches
     
   Scenario: Can't find an existing ticket
     Given no tickets to search
-    When Searching a ticket by it's code
+    When Searching this ticket by it's code
     Then I get an Invalid Ticket Exception because of searching
