@@ -7,12 +7,12 @@ import com.aninfo.model.Ticket;
 import com.aninfo.model.Severity;
 import com.aninfo.model.Status;
 import com.aninfo.model.Priority;
-import com.aninfo.model.Employee;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
 import java.util.*;
+import static java.util.Objects.nonNull;
 
 @Service
 public class TicketService {
@@ -20,9 +20,9 @@ public class TicketService {
     @Autowired
     private TicketRepository ticketRepository;
 
-    public Ticket createTicket(String title, String info, Status status, Severity severity, Priority priority, String product, String version, Long employeeId, List<Long> associatedTasksIds, LocalDate startDate, LocalDate estimatedClosingDate) {
+    public Ticket createTicket(String title, String info, Status status, Severity severity, Priority priority, String product, String version, Long clientId, Long employeeId, List<Long> associatedTasksIds, LocalDate startDate, LocalDate estimatedClosingDate) {
         ticketRepository.findTicketByTitle(title).ifPresent(x -> {throw new TicketTitleAlreadyTakenException("Title already taken");});
-        Ticket ticket = new Ticket(title, info, status, severity, priority, product, version, employeeId, associatedTasksIds, startDate, estimatedClosingDate);
+        Ticket ticket = new Ticket(title, info, status, severity, priority, product, version, clientId, employeeId, associatedTasksIds, startDate, estimatedClosingDate);
         return ticketRepository.save(ticket);
     }
     // public Ticket createTicket(Ticket ticket) {
@@ -55,20 +55,40 @@ public class TicketService {
         ticketRepository.deleteById(code);
     }
 
-    public Ticket updateTicket(Long code, String title, String description, Status status, Severity severity, Priority priority, LocalDate date){
+    public Ticket updateTicket(Long code,
+        String title,
+        String description,
+        Status status,
+        Severity severity,
+        Priority priority,
+        String product,
+        String version,
+        Long clientId,
+        Long employeeId,
+        List<Long> tasksIds,
+        LocalDate date
+        ){
         Ticket ticket = ticketRepository.findById(code).orElseThrow(() -> new InvalidTicketException("No ticket found with that code"));
-        ticketRepository.findTicketByTitle(title).ifPresent(x -> {
-            if (!x.getCode().equals(code)) {
-                throw new TicketTitleAlreadyTakenException("Title already taken");
-            }
-        });
+        
+        if (nonNull(title)){
+            ticketRepository.findTicketByTitle(title).ifPresent(x -> {
+                if (!x.getCode().equals(code)) {
+                    throw new TicketTitleAlreadyTakenException("Title already taken");
+                }
+            });
+        }
 
-        ticket.setTitle(title);
-        ticket.setDescription(description);
-        ticket.setStatus(status);
-        ticket.setSeverity(severity);
-        ticket.setPriority(priority);
-        ticket.setClosingDate(date);
+        ticket.setTitle(nonNull(title) ? title : ticket.getTitle());
+        ticket.setDescription(nonNull(description) ? description : ticket.getDescription());
+        ticket.setStatus(nonNull(status) ? status : ticket.getStatus());
+        ticket.setSeverity(nonNull(severity) ? severity : ticket.getSeverity());
+        ticket.setPriority(nonNull(priority) ? priority : ticket.getPriority());
+        ticket.setProduct(nonNull(product) ? product : ticket.getProduct());
+        ticket.setVersion(nonNull(version) ? version : ticket.getVersion());
+        ticket.setClientId(nonNull(clientId) ? clientId : ticket.getClientId());
+        ticket.setAssignatedEmployeeId(nonNull(employeeId) ? employeeId : ticket.getAssignatedEmployeeId());
+        ticket.setAssociatedTasks(nonNull(tasksIds) ? tasksIds : ticket.getAssociatedTasks());
+        ticket.setClosingDate(nonNull(date) ? date : ticket.getClosingDate());
 
         return ticketRepository.save(ticket);
     }

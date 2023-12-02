@@ -31,6 +31,7 @@ public class Ticket {
     private String product;
     private String version;
     private Long employeeId;
+    private Long clientId;
     // @Column(columnDefinition = "longs[]")
     @ElementCollection
     @CollectionTable(name = "ticket_tasks", joinColumns = @JoinColumn(name = "ticket_id"))
@@ -43,17 +44,20 @@ public class Ticket {
     public Ticket() {
     }
     
-    public Ticket(String title,
-                String description,
-                Status status,
-                Severity severity,
-                Priority priority,
-                String product,
-                String version,
-                Long employeeId,
-                List<Long> associatedTasks,
-                LocalDate startDate,
-                LocalDate closingDate) {
+    public Ticket(
+        String title,
+        String description,
+        Status status,
+        Severity severity,
+        Priority priority,
+        String product,
+        String version,
+        Long clientId,
+        Long employeeId,
+        List<Long> associatedTasks,
+        LocalDate startDate,
+        LocalDate closingDate
+        ) {
         this.title = title;
         this.description = description;
         this.status = status;
@@ -62,6 +66,7 @@ public class Ticket {
         this.product = product;
         this.version = version;
         this.employeeId = employeeId;
+        this.clientId = clientId;
         this.associatedTasks = associatedTasks;
         this.startDate = startDate;
         this.closingDate = closingDate;
@@ -76,6 +81,7 @@ public class Ticket {
     public String getProduct(){ return product;}
     public String getVersion(){ return version;}
     public Long getAssignatedEmployeeId(){ return employeeId;}
+    public Long getClientId(){ return clientId;}
     public List<Long> getAssociatedTasks(){ return associatedTasks;}
     public LocalDate getStartDate(){ return startDate;}
     public LocalDate getClosingDate(){ return closingDate;}
@@ -89,6 +95,7 @@ public class Ticket {
     public void setProduct(String product){ this.product = product;}
     public void setVersion(String version){ this.version = version;}
     public void setAssignatedEmployeeId(Long employeeId){ this.employeeId = employeeId;}
+    public void setClientId(Long clientId){ this.clientId = clientId;}
     public void setAssociatedTasks(List<Long> associatedTasks){ this.associatedTasks = associatedTasks;}
     public void setClosingDate(LocalDate date){ this.closingDate = date;}
 }

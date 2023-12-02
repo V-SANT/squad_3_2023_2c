@@ -9,7 +9,6 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
-// import org.springframework.http.HttpStatus;
 // import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
@@ -17,6 +16,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.http.client.SimpleClientHttpRequestFactory;
+import org.springframework.lang.Nullable;
 
 import java.time.LocalDate;
 import java.util.Collection;
@@ -31,10 +31,10 @@ import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
-@CrossOrigin(origins = "*", allowedHeaders = "*")
+@CrossOrigin(origins = "*", methods = {RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE})
 @RestController
 @SpringBootApplication
-// @EnableJpaRepositories
+@EnableJpaRepositories
 @EnableSwagger2
 
 public class Memo1TPG {
@@ -49,9 +49,21 @@ public class Memo1TPG {
 	
 	@PostMapping("/tickets")
 	@ResponseStatus(HttpStatus.CREATED)
-	public Ticket createTicket(@RequestParam String title, @RequestParam String info, @RequestParam Severity severity,@RequestParam Status status ,@RequestParam Priority priority, @RequestParam String product, @RequestParam String version, @RequestParam Long employeeId, @RequestBody List<Long> associatedTasksIds, @RequestParam @DateTimeFormat(pattern = "yyyy-MM-dd") LocalDate startDate, @RequestParam @DateTimeFormat(pattern = "yyyy-MM-dd") LocalDate estimatedFinishDate)
-	{
-		return ticketService.createTicket(title, info, status, severity, priority, product, version, employeeId, associatedTasksIds, startDate, estimatedFinishDate);
+	public Ticket createTicket(
+		@RequestParam String title,
+		@RequestParam String info,
+		@RequestParam Severity severity,
+		@RequestParam Status status,
+		@RequestParam Priority priority,
+		@RequestParam String product,
+		@RequestParam String version,
+		@RequestParam Long employeeId,
+		@RequestParam Long clientId,
+		@RequestBody List<Long> associatedTasksIds,
+		@RequestParam @DateTimeFormat(pattern = "yyyy-MM-dd") LocalDate startDate,
+		@RequestParam @DateTimeFormat(pattern = "yyyy-MM-dd") LocalDate estimatedFinishDate
+		){
+		return ticketService.createTicket(title, info, status, severity, priority, product, version, clientId, employeeId, associatedTasksIds, startDate, estimatedFinishDate);
 	}
 
 	@GetMapping("/tickets")
@@ -75,8 +87,46 @@ public class Memo1TPG {
 	}
 
 	@PutMapping("/tickets/{code}")
-	public Ticket updateTicket(@PathVariable Long code, @RequestParam String title, @RequestParam String description, @RequestParam Status status, @RequestParam Severity severity, @RequestParam Priority priority, @RequestParam @DateTimeFormat(pattern = "yyyy-MM-dd") LocalDate estimatedClosingDate){
-		return ticketService.updateTicket(code, title, description, status, severity, priority, estimatedClosingDate);
+	public Ticket updateTicket(
+		@PathVariable Long code,
+		@RequestParam @Nullable String title,
+		@RequestParam @Nullable String description,
+		@RequestParam @Nullable Status status,
+		@RequestParam @Nullable Severity severity,
+		@RequestParam @Nullable Priority priority,
+		@RequestParam @Nullable String product,
+		@RequestParam @Nullable String version,
+		@RequestParam @Nullable Long employeeId,
+		@RequestParam @Nullable Long clientId,
+		@RequestBody @Nullable List<Long> taskIds,
+		@RequestParam @Nullable @DateTimeFormat(pattern = "yyyy-MM-dd") LocalDate estimatedClosingDate
+		){
+		return ticketService.updateTicket(code, title, description, status, severity, priority, product, version, clientId, employeeId, taskIds, estimatedClosingDate);
+	}
+
+	@GetMapping("/clients")
+	public Collection<Client> getClients() {
+		RestTemplate restTemplate = new RestTemplate(new SimpleClientHttpRequestFactory());
+		ResponseEntity<Client[]> responseEntity = restTemplate.getForEntity(
+				"https://anypoint.mulesoft.com/mocking/api/v1/sources/exchange/assets/754f50e8-20d8-4223-bbdc-56d50131d0ae/clientes-psa/1.0.0/m/api/clientes",
+				Client[].class);
+
+		if (responseEntity.getStatusCode() == HttpStatus.OK) {
+			Client[] clients = responseEntity.getBody();
+
+			if (clients != null) {
+				return Arrays.asList(clients);
+			}
+		}
+
+		return Collections.emptyList();
+	}
+
+	@GetMapping("/clients/{clientId}")
+	public  ResponseEntity<Client> getClient(@PathVariable Long clientId)
+	{
+		Optional<Client> clientOptional = getClients().stream().filter(client -> client.getId().equals(clientId)).findFirst();
+		return ResponseEntity.of(clientOptional);
 	}
 
 	@Bean
