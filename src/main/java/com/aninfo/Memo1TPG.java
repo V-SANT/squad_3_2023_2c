@@ -25,11 +25,16 @@ import java.util.Optional;
 import java.util.Arrays;
 import java.util.List;
 
+import org.springframework.web.filter.CorsFilter;
 import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;
 import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
+
+import org.springframework.web.cors.CorsConfiguration;
+import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
+
 
 @CrossOrigin(origins = "*", methods = {RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE})
 @RestController
@@ -38,7 +43,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableSwagger2
 
 public class Memo1TPG {
-	
+
 	@Autowired
 	private TicketService ticketService;
 
@@ -46,23 +51,23 @@ public class Memo1TPG {
 	public static void main(String[] args) {
 		SpringApplication.run(Memo1TPG.class, args);
 	}
-	
+
 	@PostMapping("/tickets")
 	@ResponseStatus(HttpStatus.CREATED)
 	public Ticket createTicket(
-		@RequestParam String title,
-		@RequestParam String info,
-		@RequestParam Severity severity,
-		@RequestParam Status status,
-		@RequestParam Priority priority,
-		@RequestParam String product,
-		@RequestParam String version,
-		@RequestParam Long employeeId,
-		@RequestParam Long clientId,
-		@RequestBody List<Long> associatedTasksIds,
-		@RequestParam @DateTimeFormat(pattern = "yyyy-MM-dd") LocalDate startDate,
-		@RequestParam @DateTimeFormat(pattern = "yyyy-MM-dd") LocalDate estimatedFinishDate
-		){
+			@RequestParam String title,
+			@RequestParam String info,
+			@RequestParam Severity severity,
+			@RequestParam Status status,
+			@RequestParam Priority priority,
+			@RequestParam String product,
+			@RequestParam String version,
+			@RequestParam Long employeeId,
+			@RequestParam Long clientId,
+			@RequestBody List<Long> associatedTasksIds,
+			@RequestParam @DateTimeFormat(pattern = "yyyy-MM-dd") LocalDate startDate,
+			@RequestParam @DateTimeFormat(pattern = "yyyy-MM-dd") LocalDate estimatedFinishDate
+	){
 		return ticketService.createTicket(title, info, status, severity, priority, product, version, clientId, employeeId, associatedTasksIds, startDate, estimatedFinishDate);
 	}
 
@@ -88,19 +93,19 @@ public class Memo1TPG {
 
 	@PutMapping("/tickets/{code}")
 	public Ticket updateTicket(
-		@PathVariable Long code,
-		@RequestParam @Nullable String title,
-		@RequestParam @Nullable String description,
-		@RequestParam @Nullable Status status,
-		@RequestParam @Nullable Severity severity,
-		@RequestParam @Nullable Priority priority,
-		@RequestParam @Nullable String product,
-		@RequestParam @Nullable String version,
-		@RequestParam @Nullable Long employeeId,
-		@RequestParam @Nullable Long clientId,
-		@RequestBody @Nullable List<Long> taskIds,
-		@RequestParam @Nullable @DateTimeFormat(pattern = "yyyy-MM-dd") LocalDate estimatedClosingDate
-		){
+			@PathVariable Long code,
+			@RequestParam @Nullable String title,
+			@RequestParam @Nullable String description,
+			@RequestParam @Nullable Status status,
+			@RequestParam @Nullable Severity severity,
+			@RequestParam @Nullable Priority priority,
+			@RequestParam @Nullable String product,
+			@RequestParam @Nullable String version,
+			@RequestParam @Nullable Long employeeId,
+			@RequestParam @Nullable Long clientId,
+			@RequestBody @Nullable List<Long> taskIds,
+			@RequestParam @Nullable @DateTimeFormat(pattern = "yyyy-MM-dd") LocalDate estimatedClosingDate
+	){
 		return ticketService.updateTicket(code, title, description, status, severity, priority, product, version, clientId, employeeId, taskIds, estimatedClosingDate);
 	}
 
@@ -132,9 +137,21 @@ public class Memo1TPG {
 	@Bean
 	public Docket apiDocket() {
 		return new Docket(DocumentationType.SWAGGER_2)
-			.select()
-			.apis(RequestHandlerSelectors.any())
-			.paths(PathSelectors.any())
-			.build();
+				.select()
+				.apis(RequestHandlerSelectors.any())
+				.paths(PathSelectors.any())
+				.build();
+	}
+
+	@Bean
+	public CorsFilter corsFilter() {
+		UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+		CorsConfiguration config = new CorsConfiguration();
+		config.setAllowCredentials(true);
+		config.addAllowedOrigin("*");
+		config.addAllowedHeader("*");
+		config.addAllowedMethod("*");
+		source.registerCorsConfiguration("/**", config);
+		return new CorsFilter(source);
 	}
 }
