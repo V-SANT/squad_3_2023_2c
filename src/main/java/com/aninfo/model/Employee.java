@@ -1,18 +1,30 @@
 package com.aninfo.model;
-
-import javax.persistence.Id;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class Employee {
+    @JsonProperty("legajo")
+    private Long idNumber;
 
+    @JsonProperty("Nombre")
     private String name;
 
-    @Id
-    private Long dni;
-    private Long hourlyPay;
+    @JsonProperty("Apellido")
+    private String lastName;
 
-    Employee(String name, Long dni, Long hourlyPay) {
-        this.name = name;
-        this.dni = dni;
-        this.hourlyPay = hourlyPay;
+    public String toString()
+    {
+        return "Empleado{" +
+                "legajo=" + idNumber+
+                ", nombre='" + name + '\'' +
+                ", apellido='" + lastName + '\'' +
+                '}';
+
+    }
+
+    public Employee(Integer id){
+    }
+
+    public Long getIdNumber() {
+        return this.idNumber;
     }
 }

@@ -5,6 +5,7 @@ import com.aninfo.model.Ticket;
 import com.aninfo.model.Severity;
 import com.aninfo.model.Priority;
 import com.aninfo.model.Status;
+import com.aninfo.model.Employee;
 import com.aninfo.service.TicketService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
@@ -21,11 +22,11 @@ public class TicketIntegrationServiceTest {
     TicketService ticketService;
 
     Ticket createTicket(String name) {
-        return ticketService.createTicket(name, "", Status.NOT_STARTED, Severity.S1, Priority.LOW, "", LocalDate.now(), LocalDate.now());
+        return ticketService.createTicket(name, "", Status.NOT_STARTED, Severity.S1, Priority.LOW, new Employee(), LocalDate.now(), LocalDate.now());
     }
 
     Ticket createTicket(){
-        return ticketService.createTicket("", "", Status.NOT_STARTED, Severity.S1, Priority.LOW, "", LocalDate.now(), LocalDate.now());
+        return ticketService.createTicket("", "", Status.NOT_STARTED, Severity.S1, Priority.LOW, new Employee(), LocalDate.now(), LocalDate.now());
     }
 
     Ticket updateTicketName(Long code, String new_name){
