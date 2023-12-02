@@ -1,6 +1,7 @@
 package com.aninfo.integration.cucumber;
 
-import com.aninfo.exceptions.TicketNameAlreadyTakenException;
+import com.aninfo.exceptions.TicketTitleAlreadyTakenException;
+import com.aninfo.exceptions.TicketTitleAlreadyTakenException;
 import com.aninfo.model.Ticket;
 import com.aninfo.model.Status;
 import com.aninfo.model.Severity;
@@ -21,7 +22,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class TicketEditTest extends TicketIntegrationServiceTest {
 
     private Ticket ticket;
-    private TicketNameAlreadyTakenException name_error;
+    private TicketTitleAlreadyTakenException name_error;
 
     @Before
     public void setup() {
@@ -85,7 +86,7 @@ public class TicketEditTest extends TicketIntegrationServiceTest {
 
     @Then("^Info is edited successfully$")
     public void info_edited_succesfully() {
-        assertEquals(this.ticket.getInfo(), "the info is not empty");
+        assertEquals(this.ticket.getDescription(), "the info is not empty");
     }
 
     @Given("^A ticket with name ticket1$")
@@ -100,7 +101,7 @@ public class TicketEditTest extends TicketIntegrationServiceTest {
     
     @Then("^Name is edited successfully$")
     public void name_edited_succesfully() {
-        assertEquals(this.ticket.getName(), "ticket2");
+        assertEquals(this.ticket.getTitle(), "ticket2");
     }
     
     @Given("^Two tickets with names ticket1 and ticket2$")
@@ -113,7 +114,7 @@ public class TicketEditTest extends TicketIntegrationServiceTest {
     public void trying_to_edit_repeated() {
         try {
             this.ticket = updateTicketName(this.ticket.getCode(), "ticket2");
-        } catch (TicketNameAlreadyTakenException name_error) {
+        } catch (TicketTitleAlreadyTakenException name_error) {
             this.name_error = name_error;
         }
     }
@@ -125,7 +126,7 @@ public class TicketEditTest extends TicketIntegrationServiceTest {
     
     @And("^It remain with the original name$")
     public void remain_same_name(){
-        assertEquals(this.ticket.getName(), "ticket1");
+        assertEquals(this.ticket.getTitle(), "ticket1");
     }
     
     @After

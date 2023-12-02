@@ -1,6 +1,6 @@
 package com.aninfo.integration.cucumber;
 
-import com.aninfo.exceptions.TicketNameAlreadyTakenException;
+import com.aninfo.exceptions.TicketTitleAlreadyTakenException;
 import com.aninfo.model.Ticket;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
@@ -22,7 +22,7 @@ import static org.junit.jupiter.api.Assertions.assertNull;
 public class TicketCreationTest extends TicketIntegrationServiceTest {
 
     private Ticket ticket;
-    private TicketNameAlreadyTakenException name_error;
+    private TicketTitleAlreadyTakenException name_error;
 
     @Before
     public void setup() {
@@ -42,7 +42,7 @@ public class TicketCreationTest extends TicketIntegrationServiceTest {
     public void trying_create_ticket(String name)  {
         try {
             this.ticket = createTicket(name);
-        } catch (TicketNameAlreadyTakenException name_error){
+        } catch (TicketTitleAlreadyTakenException name_error){
             this.name_error = name_error;
         }
     }
@@ -61,7 +61,7 @@ public class TicketCreationTest extends TicketIntegrationServiceTest {
 
     @And("^Ticket is named (.*)$")
     public void ticket_named(String name) {
-        assertEquals(name, this.ticket.getName());
+        assertEquals(name, this.ticket.getTitle());
     }
 
     @After
