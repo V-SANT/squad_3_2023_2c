@@ -35,18 +35,21 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
 
 @CrossOrigin(origins = "*", methods = {RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE})
 @RestController
 @SpringBootApplication
 @EnableJpaRepositories
 @EnableSwagger2
-
+@RequestMapping("https://psa-soporte-1yfx.onrender.com")
 public class Memo1TPG {
 
 	@Autowired
 	private TicketService ticketService;
-
 
 	public static void main(String[] args) {
 		SpringApplication.run(Memo1TPG.class, args);
