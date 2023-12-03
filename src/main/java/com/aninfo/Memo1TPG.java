@@ -19,6 +19,7 @@ import org.springframework.http.client.SimpleClientHttpRequestFactory;
 import org.springframework.lang.Nullable;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.Optional;
@@ -34,10 +35,6 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
-
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
 
 
 @CrossOrigin(origins = "*", allowedHeaders = "*")
@@ -59,8 +56,29 @@ public class Memo1TPG {
 	public Ticket createTicket(
 		@RequestBody TicketCreationRequest ticketCreationRequest
 	){
-		return ticketService.createTicket(ticketCreationRequest);
+		return ticketService.createTicket(
+			ticketCreationRequest.getTitle(),
+			ticketCreationRequest.getDescription(),
+			ticketCreationRequest.getMappedStatus(),
+			ticketCreationRequest.getMappedSeverity(),
+			ticketCreationRequest.getMappedPriority(),
+			ticketCreationRequest.getProduct(),
+			ticketCreationRequest.getVersion(),
+			Long.parseLong(ticketCreationRequest.getClientId()),
+			Long.parseLong(ticketCreationRequest.getEmployeeId()),
+			LocalDate.parse(ticketCreationRequest.getEstimatedClosingDate(), DateTimeFormatter.ofPattern("yyyy-MM-dd"))
+		);
 	}
+
+	        // String description = ticketRequest.getDescription();
+        // Status status = ticketRequest.getMappedStatus();
+        // Severity severity = ticketRequest.getMappedSeverity();
+        // Priority priority = ticketRequest.getMappedPriority();
+        // String product = ticketRequest.getProduct();
+        // String version = ticketRequest.getVersion();
+        // Long clientId = Long.parseLong(ticketRequest.getClientId());
+        // Long employeeId = Long.parseLong(ticketRequest.getEmployeeId());
+        // LocalDate estimatedClosingDate = LocalDate.parse(ticketRequest.getEstimatedClosingDate(), DateTimeFormatter.ofPattern("yyyy-MM-dd"));
 
 	@GetMapping("/tickets")
 	public Collection<Ticket> getTickets() {

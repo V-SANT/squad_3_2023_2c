@@ -67,6 +67,7 @@ public class Ticket {
         this.clientId = clientId;
         this.employeeId = employeeId;
         this.associatedTasks = new ArrayList<>();
+        this.startDate = LocalDate.now();
         this.closingDate = closingDate;
     }
 

@@ -15,27 +15,27 @@ public class TicketCreationRequest {
     public TicketCreationRequest() {
     }
 
-    public TicketCreationRequest(
-        String title, 
-        String description,
-        String status,
-        String severity,
-        String priority,
-        String product,
-        String version,
-        String clientId,
-        String employeeId,
-        String estimatedClosingDate){
-        this.title = title;
-        this.description = description;
-        this.status = status;
-        this.severity = severity;
-        this.product = product;
-        this.version = version;
-        this.clientId = clientId;
-        this.employeeId = employeeId;
-        this.estimatedClosingDate = estimatedClosingDate;
-    }
+    // public TicketCreationRequest(
+    //     String title, 
+    //     String description,
+    //     String status,
+    //     String severity,
+    //     String priority,
+    //     String product,
+    //     String version,
+    //     String clientId,
+    //     String employeeId,
+    //     String estimatedClosingDate){
+    //     this.title = title;
+    //     this.description = description;
+    //     this.status = status;
+    //     this.severity = severity;
+    //     this.product = product;
+    //     this.version = version;
+    //     this.clientId = clientId;
+    //     this.employeeId = employeeId;
+    //     this.estimatedClosingDate = estimatedClosingDate;
+    // }
 
     public String getTitle() {
         return title;
@@ -78,13 +78,13 @@ public class TicketCreationRequest {
     }
 
     public Status getMappedStatus(){
-        if (this.status == "No comenzado"){
+        if (this.status.equals("No comenzado")){
             return Status.NOT_STARTED;
         }
-        if (this.status == "En proceso"){
+        if (this.status.equals("En proceso")){
             return Status.IN_PROGRESS;
         }
-        if (this.status == "Bloqueado"){
+        if (this.status.equals("Bloqueado")){
             return Status.BLOCKED;
         }
         else return Status.COMPLETED;
@@ -92,19 +92,19 @@ public class TicketCreationRequest {
 
 
     public Severity getMappedSeverity(){
-        if (this.severity == "S1")
+        if (this.severity.equals("S1"))
             return Severity.S1;
-        if (this.severity == "S2")
+        if (this.severity.equals("S2"))
             return Severity.S2;
-        if (this.severity == "S3")
+        if (this.severity.equals("S3"))
             return Severity.S3;
         else return Severity.S4;
     }
 
     public Priority getMappedPriority(){
-        if (this.priority == "Baja")
+        if (this.priority.equals("Baja"))
             return Priority.LOW;
-        if (this.priority == "Media")
+        if (this.priority.equals("Media"))
             return Priority.MEDIUM;
         else {
             return Priority.HIGH;
