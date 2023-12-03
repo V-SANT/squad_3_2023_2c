@@ -40,12 +40,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 
-@CrossOrigin(origins = "*", methods = {RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE})
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 @RestController
 @SpringBootApplication
-@EnableJpaRepositories
 @EnableSwagger2
-@RequestMapping("https://psa-soporte-1yfx.onrender.com")
+@EnableJpaRepositories
 public class Memo1TPG {
 
 	@Autowired
@@ -58,20 +57,9 @@ public class Memo1TPG {
 	@PostMapping("/tickets")
 	@ResponseStatus(HttpStatus.CREATED)
 	public Ticket createTicket(
-			@RequestParam String title,
-			@RequestParam String info,
-			@RequestParam Severity severity,
-			@RequestParam Status status,
-			@RequestParam Priority priority,
-			@RequestParam String product,
-			@RequestParam String version,
-			@RequestParam Long employeeId,
-			@RequestParam Long clientId,
-			@RequestBody List<Long> associatedTasksIds,
-			@RequestParam @DateTimeFormat(pattern = "yyyy-MM-dd") LocalDate startDate,
-			@RequestParam @DateTimeFormat(pattern = "yyyy-MM-dd") LocalDate estimatedFinishDate
+		@RequestBody TicketCreationRequest ticketCreationRequest
 	){
-		return ticketService.createTicket(title, info, status, severity, priority, product, version, clientId, employeeId, associatedTasksIds, startDate, estimatedFinishDate);
+		return ticketService.createTicket(ticketCreationRequest);
 	}
 
 	@GetMapping("/tickets")

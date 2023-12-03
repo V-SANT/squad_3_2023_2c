@@ -4,6 +4,7 @@ import com.aninfo.exceptions.TicketTitleAlreadyTakenException;
 import com.aninfo.exceptions.InvalidTicketException;
 import com.aninfo.repository.TicketRepository;
 import com.aninfo.model.Ticket;
+import com.aninfo.model.TicketCreationRequest;
 import com.aninfo.model.Severity;
 import com.aninfo.model.Status;
 import com.aninfo.model.Priority;
@@ -11,6 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.*;
 import static java.util.Objects.nonNull;
 
@@ -20,16 +22,25 @@ public class TicketService {
     @Autowired
     private TicketRepository ticketRepository;
 
-    public Ticket createTicket(String title, String info, Status status, Severity severity, Priority priority, String product, String version, Long clientId, Long employeeId, List<Long> associatedTasksIds, LocalDate startDate, LocalDate estimatedClosingDate) {
+    public Ticket createTicket(TicketCreationRequest ticketRequest) {
+
+        String title = ticketRequest.getTitle();
         ticketRepository.findTicketByTitle(title).ifPresent(x -> {throw new TicketTitleAlreadyTakenException("Title already taken");});
-        Ticket ticket = new Ticket(title, info, status, severity, priority, product, version, clientId, employeeId, associatedTasksIds, startDate, estimatedClosingDate);
+
+        String description = ticketRequest.getDescription();
+        Status status = ticketRequest.getMappedStatus();
+        Severity severity = ticketRequest.getMappedSeverity();
+        Priority priority = ticketRequest.getMappedPriority();
+        String product = ticketRequest.getProduct();
+        String version = ticketRequest.getVersion();
+        Long clientId = Long.parseLong(ticketRequest.getClientId());
+        Long employeeId = Long.parseLong(ticketRequest.getEmployeeId());
+        LocalDate estimatedClosingDate = LocalDate.parse(ticketRequest.getEstimatedClosingDate(), DateTimeFormatter.ofPattern("yyyy-MM-dd"));
+
+
+        Ticket ticket = new Ticket(title, description, status, severity, priority, product, version, clientId, employeeId, estimatedClosingDate);
         return ticketRepository.save(ticket);
     }
-    // public Ticket createTicket(Ticket ticket) {
-    //     ticketRepository.findTicketByName(ticket.getName()).ifPresent(x -> {throw new TicketNameAlreadyTakenException("Name already taken");});
-    //     // Ticket ticket = new Ticket(name, info, status, severity, priority, employeeId, associatedTasks, startDate, estimatedFinishDate);
-    //     return ticketRepository.save(ticket);
-    // }
 
     public Collection<Ticket> getTickets() {
         return ticketRepository.findAll();

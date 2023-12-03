@@ -13,6 +13,7 @@ import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
@@ -54,8 +55,6 @@ public class Ticket {
         String version,
         Long clientId,
         Long employeeId,
-        List<Long> associatedTasks,
-        LocalDate startDate,
         LocalDate closingDate
         ) {
         this.title = title;
@@ -65,10 +64,9 @@ public class Ticket {
         this.priority = priority;
         this.product = product;
         this.version = version;
-        this.employeeId = employeeId;
         this.clientId = clientId;
-        this.associatedTasks = associatedTasks;
-        this.startDate = startDate;
+        this.employeeId = employeeId;
+        this.associatedTasks = new ArrayList<>();
         this.closingDate = closingDate;
     }
 
