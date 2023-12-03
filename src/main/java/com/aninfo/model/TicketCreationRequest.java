@@ -15,27 +15,27 @@ public class TicketCreationRequest {
     public TicketCreationRequest() {
     }
 
-    // public TicketCreationRequest(
-    //     String title, 
-    //     String description,
-    //     String status,
-    //     String severity,
-    //     String priority,
-    //     String product,
-    //     String version,
-    //     String clientId,
-    //     String employeeId,
-    //     String estimatedClosingDate){
-    //     this.title = title;
-    //     this.description = description;
-    //     this.status = status;
-    //     this.severity = severity;
-    //     this.product = product;
-    //     this.version = version;
-    //     this.clientId = clientId;
-    //     this.employeeId = employeeId;
-    //     this.estimatedClosingDate = estimatedClosingDate;
-    // }
+    public TicketCreationRequest(
+        String title, 
+        String description,
+        String status,
+        String severity,
+        String priority,
+        String product,
+        String version,
+        String clientId,
+        String employeeId,
+        String estimatedClosingDate){
+        this.title = title;
+        this.description = description;
+        this.status = status;
+        this.severity = severity;
+        this.product = product;
+        this.version = version;
+        this.clientId = clientId;
+        this.employeeId = employeeId;
+        this.estimatedClosingDate = estimatedClosingDate;
+    }
 
     public String getTitle() {
         return title;

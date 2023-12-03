@@ -31,3 +31,28 @@ Feature: Ticket editing
     When Trying to edit the name of ticket1 to the same name of ticket2
     Then I get a Ticket Name Already Taken Exception 
     And It remain with the original name
+
+  Scenario: Successfully edit the ticket product
+    Given A ticket with product product1
+    When Trying to edit the product from product1 to product2
+    Then Product is edited successfully
+
+  Scenario: Successfully edit the ticket version
+    Given A ticket with version version1
+    When Trying to edit the version from version1 to version2
+    Then Version is edited successfully
+
+  Scenario: Successfully edit the clientID
+    Given A ticket with clientID 0
+    When Trying to edit the clientID from 0 to 1
+    Then ClientID is edited successfully
+
+  Scenario: Successfully edit the employeeId
+    Given A ticket with employeeId 0
+    When Trying to edit the employeeId from 0 to 1
+    Then EmployeeId is edited successfully
+
+   Scenario: Successfully edit the closingDate
+    Given A ticket with closingDate today
+    When Trying to edit the closingDate from today to tomorrow
+    Then ClosingDate is edited successfully
