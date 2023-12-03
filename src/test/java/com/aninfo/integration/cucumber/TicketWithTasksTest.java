@@ -1,22 +1,17 @@
 package com.aninfo.integration.cucumber;
 
-import com.aninfo.exceptions.TicketTitleAlreadyTakenException;
 import com.aninfo.model.Ticket;
-import com.aninfo.model.Status;
-import com.aninfo.model.Severity;
-import com.aninfo.model.Priority;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
-import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import com.aninfo.service.TicketService;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.TestPropertySource;
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Collection;
+
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -25,6 +20,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class TicketWithTasksTest extends TicketIntegrationServiceTest {
 
     private Ticket ticket;
+    private Ticket ticket2;
     private Collection<Long> associated_tickets;
 
     @Before
@@ -33,21 +29,46 @@ public class TicketWithTasksTest extends TicketIntegrationServiceTest {
     }
     
     @Given("^A ticket with task 0$")
-    public void ticket_with_task() {
+    public void ticket_with_task_zero() {
         this.ticket = createTicket("ticket1");
         List<Long> tasks = new ArrayList<>();
         tasks.add(0L);
-        this.ticket.setAssociatedTasks(tasks);
+        this.ticket = updateTicketAssociatedTask(this.ticket.getCode() ,tasks);
     }
 
     @When("^Trying to get the tickets with task 1$")
-    public void trying_to_edit_closingDate() {
-        getTicketsAssociatedTask(1L);
+    public void trying_to_get_tickets_with_task_one() {
+        this.associated_tickets = getTicketsAssociatedTask(1L);
+        // List<Long> ticketsIds = new ArrayList<Long>();
+        // // ticketsIds.add(1L);
+        // this.associated_tickets = ticketsIds;
     }
 
-    @Then("^ClosingDate is edited successfully$")
-    public void closing_date_edited_succesfully() {
-        assertEquals(this.ticket.getClosingDate(), LocalDate.now().plusDays(1));
+    @Then("^Get no tickets$")
+    public void get_no_tickets_with_task_zero() {
+        assertEquals(this.associated_tickets.size(), 0);
+    }
+
+    @Given("^A ticket with task 0 and toher with task 1$")
+    public void tickets_with_differents_tasks() {
+        this.ticket = createTicket("ticket1");
+        this.ticket2 = createTicket("ticket2");
+        List<Long> tasks = new ArrayList<>();
+        tasks.add(0L);
+        List<Long> tasks2 = new ArrayList<>();
+        tasks2.add(1L);
+        this.ticket.setAssociatedTasks(tasks);
+        this.ticket2.setAssociatedTasks(tasks2);
+    }
+
+    @When("^Trying to get the tickets with task 0$")
+    public void trying_to_get_the_tickets() {
+        this.associated_tickets = getTicketsAssociatedTask(0L);
+    }
+
+    @Then("^Get succesfuly the tickets$")
+    public void get_succesfuly_the_ticket() {
+        assertEquals(this.associated_tickets.size(), 1);
     }
 
 

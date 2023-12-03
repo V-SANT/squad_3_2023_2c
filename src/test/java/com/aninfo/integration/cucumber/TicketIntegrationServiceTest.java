@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.web.WebAppConfiguration;
 
+import java.util.List;
 import java.time.LocalDate;
 import java.util.Collection;
 
@@ -80,12 +81,10 @@ public class TicketIntegrationServiceTest {
         return ticketService.updateTicket(code, ticket.getTitle(), ticket.getDescription(), ticket.getStatus(), ticket.getSeverity(), ticket.getPriority(),  ticket.getProduct() ,new_version,ticket.getClientId(),ticket.getAssignatedEmployeeId(),ticket.getAssociatedTasks(),ticket.getClosingDate());
     }
 
-
      Ticket updateTicketClientID(Long code, Long new_client_id){
         Ticket ticket = ticketService.findByCode(code);
         return ticketService.updateTicket(code, ticket.getTitle(), ticket.getDescription(), ticket.getStatus(), ticket.getSeverity(), ticket.getPriority(),  ticket.getProduct() ,ticket.getVersion(),new_client_id,ticket.getAssignatedEmployeeId(),ticket.getAssociatedTasks(),ticket.getClosingDate());
     }
-
 
     Ticket updateTicketEmployeeID(Long code, Long new_employee_id){
         Ticket ticket = ticketService.findByCode(code);
@@ -96,6 +95,11 @@ public class TicketIntegrationServiceTest {
         Ticket ticket = ticketService.findByCode(code);
         return ticketService.updateTicket(code,ticket.getTitle(), ticket.getDescription(), ticket.getStatus(), ticket.getSeverity(), ticket.getPriority(), ticket.getProduct(),ticket.getVersion(),ticket.getClientId(),ticket.getAssignatedEmployeeId(),ticket.getAssociatedTasks(), new_date);
     }
+
+    Ticket updateTicketAssociatedTask(Long code, List<Long> new_tasks){
+         Ticket ticket = ticketService.findByCode(code);
+         return ticketService.updateTicket(code,ticket.getTitle(), ticket.getDescription(), ticket.getStatus(), ticket.getSeverity(), ticket.getPriority(), ticket.getProduct(),ticket.getVersion(),ticket.getClientId(),ticket.getAssignatedEmployeeId(),new_tasks, ticket.getClosingDate());
+     }
 
     public Ticket findByCode(Long code){
         return ticketService.findByCode(code);
