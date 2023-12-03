@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.002s</div>
+<div class="counter">0.005s</div>
 <p>duration</p>
 </div>
 </td>
@@ -94,7 +94,7 @@
 </tr>
 <tr>
 <td class="success">Given A ticket</td>
-<td class="success">0s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -164,12 +164,12 @@
 </tr>
 <tr>
 <td class="success">Then I get an Invalid Ticket Exception because of accessing</td>
-<td class="success">0.001s</td>
+<td class="success">0s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">Then I get an Invalid Ticket Exception because of searching</td>
-<td class="success">0s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -184,7 +184,7 @@
 </tr>
 <tr>
 <td class="success">Then I get two tickets</td>
-<td class="success">0s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -239,7 +239,7 @@
 </tr>
 <tr>
 <td class="success">When Trying to edit the info to a different one</td>
-<td class="success">0s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -264,7 +264,7 @@
 </tr>
 <tr>
 <td class="success">When Trying to edit the status from NOT STARTED to IN PROGRESS</td>
-<td class="success">0.001s</td>
+<td class="success">0s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -274,7 +274,7 @@
 </tr>
 <tr>
 <td class="success">When Trying to find ticket with name Ticket1</td>
-<td class="success">0s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -292,17 +292,17 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>19:03:15.377 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
-19:03:15.393 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
-19:03:15.434 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.aninfo.integration.cucumber.TicketSearchTest] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
-19:03:15.459 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.aninfo.integration.cucumber.TicketIntegrationServiceTest]: class path resource [com/aninfo/integration/cucumber/TicketIntegrationServiceTest-context.xml] does not exist
-19:03:15.460 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.aninfo.integration.cucumber.TicketIntegrationServiceTest]: class path resource [com/aninfo/integration/cucumber/TicketIntegrationServiceTestContext.groovy] does not exist
-19:03:15.460 [Test worker] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.aninfo.integration.cucumber.TicketIntegrationServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
-19:03:15.487 [Test worker] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.aninfo.integration.cucumber.TicketSearchTest]
-19:03:15.556 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [com.aninfo.integration.cucumber.TicketSearchTest]: using defaults.
-19:03:15.556 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
-19:03:15.564 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@1a338c5b, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@670884f0, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@10f0e659, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@168e9e70, org.springframework.test.context.support.DirtiesContextTestExecutionListener@10d989ae, org.springframework.test.context.transaction.TransactionalTestExecutionListener@3355b041, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@24005a5c, org.springframework.test.context.event.EventPublishingTestExecutionListener@469f2db2, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@1a574836, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@41e2485, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@226a5ce0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@1d2717a2, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@3d91eac8]
-19:03:15.576 [Test worker] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true, server.port=-1}
+<pre>21:03:24.765 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+21:03:24.772 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+21:03:24.800 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.aninfo.integration.cucumber.TicketSearchTest] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+21:03:24.812 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.aninfo.integration.cucumber.TicketIntegrationServiceTest]: class path resource [com/aninfo/integration/cucumber/TicketIntegrationServiceTest-context.xml] does not exist
+21:03:24.813 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.aninfo.integration.cucumber.TicketIntegrationServiceTest]: class path resource [com/aninfo/integration/cucumber/TicketIntegrationServiceTestContext.groovy] does not exist
+21:03:24.813 [Test worker] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.aninfo.integration.cucumber.TicketIntegrationServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+21:03:24.841 [Test worker] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.aninfo.integration.cucumber.TicketSearchTest]
+21:03:24.903 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [com.aninfo.integration.cucumber.TicketSearchTest]: using defaults.
+21:03:24.903 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+21:03:24.910 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@1a338c5b, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@670884f0, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@10f0e659, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@168e9e70, org.springframework.test.context.support.DirtiesContextTestExecutionListener@10d989ae, org.springframework.test.context.transaction.TransactionalTestExecutionListener@3355b041, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@24005a5c, org.springframework.test.context.event.EventPublishingTestExecutionListener@469f2db2, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@1a574836, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@41e2485, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@226a5ce0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@1d2717a2, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@3d91eac8]
+21:03:24.930 [Test worker] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true, server.port=-1}
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -312,16 +312,16 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::        (v2.2.5.RELEASE)
 
-2023-12-02 19:03:15.852  INFO 126758 --- [    Test worker] c.a.i.cucumber.TicketSearchTest          : Starting TicketSearchTest on valentin-750XFG with PID 126758 (started by valentin in /home/valentin/ANALISIS_DE_LA_INFORMACION/TPG/squad_3_2023_2c)
-2023-12-02 19:03:15.854  INFO 126758 --- [    Test worker] c.a.i.cucumber.TicketSearchTest          : No active profile set, falling back to default profiles: default
-2023-12-02 19:03:16.423  INFO 126758 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-12-02 19:03:16.496  INFO 126758 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 68ms. Found 1 JPA repository interfaces.
-2023-12-02 19:03:17.229  INFO 126758 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-12-02 19:03:17.266  INFO 126758 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.12.Final
-2023-12-02 19:03:17.346  INFO 126758 --- [    Test worker] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
-2023-12-02 19:03:17.404  INFO 126758 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-12-02 19:03:17.525  INFO 126758 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-12-02 19:03:17.536  INFO 126758 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2023-12-02 21:03:25.177  INFO 169169 --- [    Test worker] c.a.i.cucumber.TicketSearchTest          : Starting TicketSearchTest on valentin-750XFG with PID 169169 (started by valentin in /home/valentin/ANALISIS_DE_LA_INFORMACION/TPG/squad_3_2023_2c)
+2023-12-02 21:03:25.179  INFO 169169 --- [    Test worker] c.a.i.cucumber.TicketSearchTest          : No active profile set, falling back to default profiles: default
+2023-12-02 21:03:25.695  INFO 169169 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-02 21:03:25.770  INFO 169169 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 70ms. Found 1 JPA repository interfaces.
+2023-12-02 21:03:26.506  INFO 169169 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-02 21:03:26.571  INFO 169169 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.12.Final
+2023-12-02 21:03:26.695  INFO 169169 --- [    Test worker] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2023-12-02 21:03:26.787  INFO 169169 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-12-02 21:03:26.956  INFO 169169 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-12-02 21:03:26.973  INFO 169169 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
 Hibernate: 
     
     drop table ticket if exists
@@ -361,12 +361,12 @@ Hibernate:
        add constraint FKnbyd5rwnukhkx2huaqj7mmpdn 
        foreign key (ticket_id) 
        references ticket
-2023-12-02 19:03:18.004  INFO 126758 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-12-02 19:03:18.009  INFO 126758 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-12-02 19:03:18.707  WARN 126758 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-12-02 19:03:19.409  INFO 126758 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2023-12-02 19:03:19.719  INFO 126758 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:DBNAME'
-2023-12-02 19:03:20.179  INFO 126758 --- [    Test worker] c.a.i.cucumber.TicketSearchTest          : Started TicketSearchTest in 4.597 seconds (JVM running for 5.592)
+2023-12-02 21:03:27.468  INFO 169169 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-12-02 21:03:27.472  INFO 169169 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-02 21:03:28.120  WARN 169169 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-02 21:03:28.886  INFO 169169 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-12-02 21:03:29.210  INFO 169169 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:DBNAME'
+2023-12-02 21:03:29.741  INFO 169169 --- [    Test worker] c.a.i.cucumber.TicketSearchTest          : Started TicketSearchTest in 4.805 seconds (JVM running for 5.742)
 Before any test execution
 Before any test execution
 Before any test execution
@@ -455,9 +455,9 @@ Hibernate:
         ticket0_.version as version12_0_ 
     from
         ticket ticket0_
-2023-12-02 19:03:20.410  INFO 126758 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.aninfo.integration.cucumber.TicketIntegrationServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
-2023-12-02 19:03:20.411  INFO 126758 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
-2023-12-02 19:03:20.411  INFO 126758 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@11bee8b8, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@72995f17, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@3d382a8d, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@3d98f318, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5b85373b, org.springframework.test.context.transaction.TransactionalTestExecutionListener@63dcbabb, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1fcc980f, org.springframework.test.context.event.EventPublishingTestExecutionListener@65b6a8dd, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@17f877bf, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@11771e99, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@6a00e058, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@3a204d85, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@6eb180f1]
+2023-12-02 21:03:30.062  INFO 169169 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.aninfo.integration.cucumber.TicketIntegrationServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-12-02 21:03:30.064  INFO 169169 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2023-12-02 21:03:30.065  INFO 169169 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@11771e99, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@6a00e058, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@3a204d85, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@6eb180f1, org.springframework.test.context.support.DirtiesContextTestExecutionListener@471bc868, org.springframework.test.context.transaction.TransactionalTestExecutionListener@2af4f2f3, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1280de4d, org.springframework.test.context.event.EventPublishingTestExecutionListener@705462e4, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@6915bc0e, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@64fbb8b5, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@709d60d1, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@230d7f64, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@673c42c7]
 Before any test execution
 Before any test execution
 Before any test execution
@@ -640,9 +640,9 @@ Hibernate:
         ticket0_.version as version12_0_ 
     from
         ticket ticket0_
-2023-12-02 19:03:20.485  INFO 126758 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.aninfo.integration.cucumber.TicketIntegrationServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
-2023-12-02 19:03:20.486  INFO 126758 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
-2023-12-02 19:03:20.487  INFO 126758 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@b7856cb, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@584e42d4, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@4fc2382f, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@3114ce94, org.springframework.test.context.support.DirtiesContextTestExecutionListener@78931873, org.springframework.test.context.transaction.TransactionalTestExecutionListener@5261bd57, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@c3cf474, org.springframework.test.context.event.EventPublishingTestExecutionListener@1b4bfb09, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@7b7b2893, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@24afa9ae, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@4fdb661b, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@b0c5f5a, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@2991c118]
+2023-12-02 21:03:30.185  INFO 169169 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.aninfo.integration.cucumber.TicketIntegrationServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-12-02 21:03:30.186  INFO 169169 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2023-12-02 21:03:30.187  INFO 169169 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@24afa9ae, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@4fdb661b, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@b0c5f5a, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@2991c118, org.springframework.test.context.support.DirtiesContextTestExecutionListener@702aff5d, org.springframework.test.context.transaction.TransactionalTestExecutionListener@64d5a4fd, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@dcad1b2, org.springframework.test.context.event.EventPublishingTestExecutionListener@2af45812, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@d039a06, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@44382517, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@1fa43b63, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@1718c44d, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@6daaf02]
 Before any test execution
 Before any test execution
 Before any test execution
@@ -772,9 +772,9 @@ Hibernate:
         ticket0_.version as version12_0_ 
     from
         ticket ticket0_
-2023-12-02 19:03:20.502  INFO 126758 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.aninfo.integration.cucumber.TicketIntegrationServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
-2023-12-02 19:03:20.503  INFO 126758 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
-2023-12-02 19:03:20.503  INFO 126758 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@69d98dd, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@42369590, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@9ded7d, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@4e40c69, org.springframework.test.context.support.DirtiesContextTestExecutionListener@6e552758, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1839b517, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@77204568, org.springframework.test.context.event.EventPublishingTestExecutionListener@538398a1, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@14ab0a6e, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@41ef84e1, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@341182b1, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@7b984202, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@37accf65]
+2023-12-02 21:03:30.212  INFO 169169 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.aninfo.integration.cucumber.TicketIntegrationServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-12-02 21:03:30.214  INFO 169169 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2023-12-02 21:03:30.214  INFO 169169 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@41ef84e1, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@341182b1, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@7b984202, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@37accf65, org.springframework.test.context.support.DirtiesContextTestExecutionListener@a599dfd, org.springframework.test.context.transaction.TransactionalTestExecutionListener@3265820d, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@b544e11, org.springframework.test.context.event.EventPublishingTestExecutionListener@5a527ff9, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@1ca2a73b, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@2492b48, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@2bc4c9d6, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@6220c6e0, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@6b323ee0]
 Before any test execution
 Before any test execution
 Before any test execution
@@ -904,9 +904,9 @@ Hibernate:
         ticket0_.version as version12_0_ 
     from
         ticket ticket0_
-2023-12-02 19:03:20.518  INFO 126758 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.aninfo.integration.cucumber.TicketIntegrationServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
-2023-12-02 19:03:20.520  INFO 126758 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
-2023-12-02 19:03:20.520  INFO 126758 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@66224589, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@f4a40d, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@52feb03f, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@32521826, org.springframework.test.context.support.DirtiesContextTestExecutionListener@46a80de8, org.springframework.test.context.transaction.TransactionalTestExecutionListener@63d91dfc, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@440136f0, org.springframework.test.context.event.EventPublishingTestExecutionListener@66b0857e, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@6071030d, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@4b6cc402, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@697cd29, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@64ee23f0, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@c6f3d0b]
+2023-12-02 21:03:30.226  INFO 169169 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.aninfo.integration.cucumber.TicketIntegrationServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-12-02 21:03:30.227  INFO 169169 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2023-12-02 21:03:30.227  INFO 169169 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@4b6cc402, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@697cd29, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@64ee23f0, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@c6f3d0b, org.springframework.test.context.support.DirtiesContextTestExecutionListener@210ea450, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1948dbdd, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@c2c9aa7, org.springframework.test.context.event.EventPublishingTestExecutionListener@79de794c, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@2da67e03, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@72efde59, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@1a7e9b01, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@10e0851b, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@ea8b762]
 Before any test execution
 Before any test execution
 Before any test execution
@@ -1018,212 +1018,9 @@ Hibernate:
         ticket0_.version as version12_0_ 
     from
         ticket ticket0_
-2023-12-02 19:03:20.534  INFO 126758 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.aninfo.integration.cucumber.TicketIntegrationServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
-2023-12-02 19:03:20.535  INFO 126758 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
-2023-12-02 19:03:20.535  INFO 126758 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@433feed2, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@5f9dfc88, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@34186eb2, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@29aa91b6, org.springframework.test.context.support.DirtiesContextTestExecutionListener@155fb32f, org.springframework.test.context.transaction.TransactionalTestExecutionListener@251674b0, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@528ce35e, org.springframework.test.context.event.EventPublishingTestExecutionListener@2f56ff98, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@4778f796, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@515da83d, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@647e275b, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@7c4cae73, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@7c88222b]
-Before any test execution
-Before any test execution
-Before any test execution
-Before any test execution
-Hibernate: 
-    select
-        ticket0_.code as code1_0_,
-        ticket0_.client_id as client_i2_0_,
-        ticket0_.closing_date as closing_3_0_,
-        ticket0_.description as descript4_0_,
-        ticket0_.employee_id as employee5_0_,
-        ticket0_.priority as priority6_0_,
-        ticket0_.product as product7_0_,
-        ticket0_.severity as severity8_0_,
-        ticket0_.start_date as start_da9_0_,
-        ticket0_.status as status10_0_,
-        ticket0_.title as title11_0_,
-        ticket0_.version as version12_0_ 
-    from
-        ticket ticket0_ 
-    where
-        ticket0_.title=?
-Hibernate: 
-    call next value for hibernate_sequence
-Hibernate: 
-    insert 
-    into
-        ticket
-        (client_id, closing_date, description, employee_id, priority, product, severity, start_date, status, title, version, code) 
-    values
-        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-Hibernate: 
-    select
-        ticket0_.code as code1_0_0_,
-        ticket0_.client_id as client_i2_0_0_,
-        ticket0_.closing_date as closing_3_0_0_,
-        ticket0_.description as descript4_0_0_,
-        ticket0_.employee_id as employee5_0_0_,
-        ticket0_.priority as priority6_0_0_,
-        ticket0_.product as product7_0_0_,
-        ticket0_.severity as severity8_0_0_,
-        ticket0_.start_date as start_da9_0_0_,
-        ticket0_.status as status10_0_0_,
-        ticket0_.title as title11_0_0_,
-        ticket0_.version as version12_0_0_ 
-    from
-        ticket ticket0_ 
-    where
-        ticket0_.code=?
-Hibernate: 
-    select
-        ticket0_.code as code1_0_0_,
-        ticket0_.client_id as client_i2_0_0_,
-        ticket0_.closing_date as closing_3_0_0_,
-        ticket0_.description as descript4_0_0_,
-        ticket0_.employee_id as employee5_0_0_,
-        ticket0_.priority as priority6_0_0_,
-        ticket0_.product as product7_0_0_,
-        ticket0_.severity as severity8_0_0_,
-        ticket0_.start_date as start_da9_0_0_,
-        ticket0_.status as status10_0_0_,
-        ticket0_.title as title11_0_0_,
-        ticket0_.version as version12_0_0_ 
-    from
-        ticket ticket0_ 
-    where
-        ticket0_.code=?
-Hibernate: 
-    select
-        ticket0_.code as code1_0_,
-        ticket0_.client_id as client_i2_0_,
-        ticket0_.closing_date as closing_3_0_,
-        ticket0_.description as descript4_0_,
-        ticket0_.employee_id as employee5_0_,
-        ticket0_.priority as priority6_0_,
-        ticket0_.product as product7_0_,
-        ticket0_.severity as severity8_0_,
-        ticket0_.start_date as start_da9_0_,
-        ticket0_.status as status10_0_,
-        ticket0_.title as title11_0_,
-        ticket0_.version as version12_0_ 
-    from
-        ticket ticket0_ 
-    where
-        ticket0_.title=?
-Hibernate: 
-    select
-        ticket0_.code as code1_0_0_,
-        ticket0_.client_id as client_i2_0_0_,
-        ticket0_.closing_date as closing_3_0_0_,
-        ticket0_.description as descript4_0_0_,
-        ticket0_.employee_id as employee5_0_0_,
-        ticket0_.priority as priority6_0_0_,
-        ticket0_.product as product7_0_0_,
-        ticket0_.severity as severity8_0_0_,
-        ticket0_.start_date as start_da9_0_0_,
-        ticket0_.status as status10_0_0_,
-        ticket0_.title as title11_0_0_,
-        ticket0_.version as version12_0_0_ 
-    from
-        ticket ticket0_ 
-    where
-        ticket0_.code=?
-Hibernate: 
-    update
-        ticket 
-    set
-        client_id=?,
-        closing_date=?,
-        description=?,
-        employee_id=?,
-        priority=?,
-        product=?,
-        severity=?,
-        start_date=?,
-        status=?,
-        title=?,
-        version=? 
-    where
-        code=?
-Resetting system
-Hibernate: 
-    select
-        ticket0_.code as code1_0_,
-        ticket0_.client_id as client_i2_0_,
-        ticket0_.closing_date as closing_3_0_,
-        ticket0_.description as descript4_0_,
-        ticket0_.employee_id as employee5_0_,
-        ticket0_.priority as priority6_0_,
-        ticket0_.product as product7_0_,
-        ticket0_.severity as severity8_0_,
-        ticket0_.start_date as start_da9_0_,
-        ticket0_.status as status10_0_,
-        ticket0_.title as title11_0_,
-        ticket0_.version as version12_0_ 
-    from
-        ticket ticket0_
-Hibernate: 
-    delete 
-    from
-        ticket_tasks 
-    where
-        ticket_id=?
-Hibernate: 
-    delete 
-    from
-        ticket 
-    where
-        code=?
-Resetting system
-Hibernate: 
-    select
-        ticket0_.code as code1_0_,
-        ticket0_.client_id as client_i2_0_,
-        ticket0_.closing_date as closing_3_0_,
-        ticket0_.description as descript4_0_,
-        ticket0_.employee_id as employee5_0_,
-        ticket0_.priority as priority6_0_,
-        ticket0_.product as product7_0_,
-        ticket0_.severity as severity8_0_,
-        ticket0_.start_date as start_da9_0_,
-        ticket0_.status as status10_0_,
-        ticket0_.title as title11_0_,
-        ticket0_.version as version12_0_ 
-    from
-        ticket ticket0_
-Resetting system
-Hibernate: 
-    select
-        ticket0_.code as code1_0_,
-        ticket0_.client_id as client_i2_0_,
-        ticket0_.closing_date as closing_3_0_,
-        ticket0_.description as descript4_0_,
-        ticket0_.employee_id as employee5_0_,
-        ticket0_.priority as priority6_0_,
-        ticket0_.product as product7_0_,
-        ticket0_.severity as severity8_0_,
-        ticket0_.start_date as start_da9_0_,
-        ticket0_.status as status10_0_,
-        ticket0_.title as title11_0_,
-        ticket0_.version as version12_0_ 
-    from
-        ticket ticket0_
-Resetting system
-Hibernate: 
-    select
-        ticket0_.code as code1_0_,
-        ticket0_.client_id as client_i2_0_,
-        ticket0_.closing_date as closing_3_0_,
-        ticket0_.description as descript4_0_,
-        ticket0_.employee_id as employee5_0_,
-        ticket0_.priority as priority6_0_,
-        ticket0_.product as product7_0_,
-        ticket0_.severity as severity8_0_,
-        ticket0_.start_date as start_da9_0_,
-        ticket0_.status as status10_0_,
-        ticket0_.title as title11_0_,
-        ticket0_.version as version12_0_ 
-    from
-        ticket ticket0_
-2023-12-02 19:03:20.560  INFO 126758 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.aninfo.integration.cucumber.TicketIntegrationServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
-2023-12-02 19:03:20.561  INFO 126758 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
-2023-12-02 19:03:20.561  INFO 126758 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@1ad2fc07, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@7f59bfaa, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@2e3a88f1, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@6654bdc6, org.springframework.test.context.support.DirtiesContextTestExecutionListener@6beb57cf, org.springframework.test.context.transaction.TransactionalTestExecutionListener@597d11f7, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@23fa6729, org.springframework.test.context.event.EventPublishingTestExecutionListener@6003441d, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@516722fd, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@6024638f, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@1097838d, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@6a4e0e2e, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@2d6a950]
+2023-12-02 21:03:30.239  INFO 169169 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.aninfo.integration.cucumber.TicketIntegrationServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-12-02 21:03:30.240  INFO 169169 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2023-12-02 21:03:30.241  INFO 169169 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@515da83d, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@647e275b, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@7c4cae73, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@7c88222b, org.springframework.test.context.support.DirtiesContextTestExecutionListener@402871c7, org.springframework.test.context.transaction.TransactionalTestExecutionListener@5579d266, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@4c5fc18c, org.springframework.test.context.event.EventPublishingTestExecutionListener@71fb3b56, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@72decae7, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@692fcc38, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@5b4e3330, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@73479284, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@774ae7f9]
 Before any test execution
 Before any test execution
 Before any test execution
@@ -1424,9 +1221,9 @@ Hibernate:
         ticket0_.version as version12_0_ 
     from
         ticket ticket0_
-2023-12-02 19:03:20.577  INFO 126758 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.aninfo.integration.cucumber.TicketIntegrationServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
-2023-12-02 19:03:20.578  INFO 126758 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
-2023-12-02 19:03:20.578  INFO 126758 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@1f57c5f2, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@172914d5, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@12460d67, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@5425144e, org.springframework.test.context.support.DirtiesContextTestExecutionListener@757c236d, org.springframework.test.context.transaction.TransactionalTestExecutionListener@2a2c0eab, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@8a313bc, org.springframework.test.context.event.EventPublishingTestExecutionListener@74d8e182, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@60abc33f, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@2ab8c0d7, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@3a1608cf, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@9713afe, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@37fdb2d4]
+2023-12-02 21:03:30.262  INFO 169169 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.aninfo.integration.cucumber.TicketIntegrationServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-12-02 21:03:30.263  INFO 169169 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2023-12-02 21:03:30.263  INFO 169169 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@6024638f, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@1097838d, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@6a4e0e2e, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@2d6a950, org.springframework.test.context.support.DirtiesContextTestExecutionListener@41ad8a9e, org.springframework.test.context.transaction.TransactionalTestExecutionListener@6d8ae2cd, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@772fbe2c, org.springframework.test.context.event.EventPublishingTestExecutionListener@400405b0, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@6dd09e54, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@57f695a9, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@5d229fa5, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@3deb3834, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@54a033e3]
 Before any test execution
 Before any test execution
 Before any test execution
@@ -1627,9 +1424,9 @@ Hibernate:
         ticket0_.version as version12_0_ 
     from
         ticket ticket0_
-2023-12-02 19:03:20.593  INFO 126758 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.aninfo.integration.cucumber.TicketIntegrationServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
-2023-12-02 19:03:20.594  INFO 126758 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
-2023-12-02 19:03:20.594  INFO 126758 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@3d7689ca, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@44971b89, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@4a686164, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@db5d831, org.springframework.test.context.support.DirtiesContextTestExecutionListener@4843894, org.springframework.test.context.transaction.TransactionalTestExecutionListener@783320de, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@71d91dfd, org.springframework.test.context.event.EventPublishingTestExecutionListener@520e37a7, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@776bf5ea, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@163f0e09, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@2fb0dfc6, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@ca06698, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@24cc1643]
+2023-12-02 21:03:30.276  INFO 169169 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.aninfo.integration.cucumber.TicketIntegrationServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-12-02 21:03:30.277  INFO 169169 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2023-12-02 21:03:30.277  INFO 169169 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@2ab8c0d7, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@3a1608cf, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@9713afe, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@37fdb2d4, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5baf7284, org.springframework.test.context.transaction.TransactionalTestExecutionListener@51f5494e, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@51d33f44, org.springframework.test.context.event.EventPublishingTestExecutionListener@b624cb8, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@2bf93402, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@503db70a, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@18dc8b56, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@1421379, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@63f96e77]
 Before any test execution
 Before any test execution
 Before any test execution
@@ -1830,9 +1627,9 @@ Hibernate:
         ticket0_.version as version12_0_ 
     from
         ticket ticket0_
-2023-12-02 19:03:20.607  INFO 126758 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.aninfo.integration.cucumber.TicketIntegrationServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
-2023-12-02 19:03:20.608  INFO 126758 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
-2023-12-02 19:03:20.608  INFO 126758 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@5bfc37d7, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@7b265c6, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@789de32d, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@591367d2, org.springframework.test.context.support.DirtiesContextTestExecutionListener@636bb1a8, org.springframework.test.context.transaction.TransactionalTestExecutionListener@77e36456, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@60f0750c, org.springframework.test.context.event.EventPublishingTestExecutionListener@229fa337, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@1cc7b03d, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@70eab627, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@1351f523, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@4c087a65, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@6def6d81]
+2023-12-02 21:03:30.290  INFO 169169 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.aninfo.integration.cucumber.TicketIntegrationServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-12-02 21:03:30.291  INFO 169169 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2023-12-02 21:03:30.292  INFO 169169 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@163f0e09, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@2fb0dfc6, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@ca06698, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@24cc1643, org.springframework.test.context.support.DirtiesContextTestExecutionListener@4aed1b95, org.springframework.test.context.transaction.TransactionalTestExecutionListener@630ab3e1, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@6c119dbe, org.springframework.test.context.event.EventPublishingTestExecutionListener@282be071, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@a386752, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@3c1b484f, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@5c07ce1f, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@2b588586, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@62937548]
 Before any test execution
 Before any test execution
 Before any test execution
@@ -2033,9 +1830,212 @@ Hibernate:
         ticket0_.version as version12_0_ 
     from
         ticket ticket0_
-2023-12-02 19:03:20.626  INFO 126758 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.aninfo.integration.cucumber.TicketIntegrationServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
-2023-12-02 19:03:20.626  INFO 126758 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
-2023-12-02 19:03:20.626  INFO 126758 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@731e40be, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@1a268845, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@24d5ef41, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@2f10314f, org.springframework.test.context.support.DirtiesContextTestExecutionListener@2e8a9fa3, org.springframework.test.context.transaction.TransactionalTestExecutionListener@c04e97, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@b641629, org.springframework.test.context.event.EventPublishingTestExecutionListener@2550d443, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@5fdd20cd, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@5deb7957, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@7695f99d, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@55c4d9c0, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@632940fd]
+2023-12-02 21:03:30.310  INFO 169169 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.aninfo.integration.cucumber.TicketIntegrationServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-12-02 21:03:30.311  INFO 169169 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2023-12-02 21:03:30.311  INFO 169169 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@70eab627, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@1351f523, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@4c087a65, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@6def6d81, org.springframework.test.context.support.DirtiesContextTestExecutionListener@4891a595, org.springframework.test.context.transaction.TransactionalTestExecutionListener@5475a949, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@5ba13af0, org.springframework.test.context.event.EventPublishingTestExecutionListener@4db4c760, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@84c7e4e, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@710aa1ef, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@23ae6384, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@48ca3f56, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@231f860f]
+Before any test execution
+Before any test execution
+Before any test execution
+Before any test execution
+Hibernate: 
+    select
+        ticket0_.code as code1_0_,
+        ticket0_.client_id as client_i2_0_,
+        ticket0_.closing_date as closing_3_0_,
+        ticket0_.description as descript4_0_,
+        ticket0_.employee_id as employee5_0_,
+        ticket0_.priority as priority6_0_,
+        ticket0_.product as product7_0_,
+        ticket0_.severity as severity8_0_,
+        ticket0_.start_date as start_da9_0_,
+        ticket0_.status as status10_0_,
+        ticket0_.title as title11_0_,
+        ticket0_.version as version12_0_ 
+    from
+        ticket ticket0_ 
+    where
+        ticket0_.title=?
+Hibernate: 
+    call next value for hibernate_sequence
+Hibernate: 
+    insert 
+    into
+        ticket
+        (client_id, closing_date, description, employee_id, priority, product, severity, start_date, status, title, version, code) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    select
+        ticket0_.code as code1_0_0_,
+        ticket0_.client_id as client_i2_0_0_,
+        ticket0_.closing_date as closing_3_0_0_,
+        ticket0_.description as descript4_0_0_,
+        ticket0_.employee_id as employee5_0_0_,
+        ticket0_.priority as priority6_0_0_,
+        ticket0_.product as product7_0_0_,
+        ticket0_.severity as severity8_0_0_,
+        ticket0_.start_date as start_da9_0_0_,
+        ticket0_.status as status10_0_0_,
+        ticket0_.title as title11_0_0_,
+        ticket0_.version as version12_0_0_ 
+    from
+        ticket ticket0_ 
+    where
+        ticket0_.code=?
+Hibernate: 
+    select
+        ticket0_.code as code1_0_0_,
+        ticket0_.client_id as client_i2_0_0_,
+        ticket0_.closing_date as closing_3_0_0_,
+        ticket0_.description as descript4_0_0_,
+        ticket0_.employee_id as employee5_0_0_,
+        ticket0_.priority as priority6_0_0_,
+        ticket0_.product as product7_0_0_,
+        ticket0_.severity as severity8_0_0_,
+        ticket0_.start_date as start_da9_0_0_,
+        ticket0_.status as status10_0_0_,
+        ticket0_.title as title11_0_0_,
+        ticket0_.version as version12_0_0_ 
+    from
+        ticket ticket0_ 
+    where
+        ticket0_.code=?
+Hibernate: 
+    select
+        ticket0_.code as code1_0_,
+        ticket0_.client_id as client_i2_0_,
+        ticket0_.closing_date as closing_3_0_,
+        ticket0_.description as descript4_0_,
+        ticket0_.employee_id as employee5_0_,
+        ticket0_.priority as priority6_0_,
+        ticket0_.product as product7_0_,
+        ticket0_.severity as severity8_0_,
+        ticket0_.start_date as start_da9_0_,
+        ticket0_.status as status10_0_,
+        ticket0_.title as title11_0_,
+        ticket0_.version as version12_0_ 
+    from
+        ticket ticket0_ 
+    where
+        ticket0_.title=?
+Hibernate: 
+    select
+        ticket0_.code as code1_0_0_,
+        ticket0_.client_id as client_i2_0_0_,
+        ticket0_.closing_date as closing_3_0_0_,
+        ticket0_.description as descript4_0_0_,
+        ticket0_.employee_id as employee5_0_0_,
+        ticket0_.priority as priority6_0_0_,
+        ticket0_.product as product7_0_0_,
+        ticket0_.severity as severity8_0_0_,
+        ticket0_.start_date as start_da9_0_0_,
+        ticket0_.status as status10_0_0_,
+        ticket0_.title as title11_0_0_,
+        ticket0_.version as version12_0_0_ 
+    from
+        ticket ticket0_ 
+    where
+        ticket0_.code=?
+Hibernate: 
+    update
+        ticket 
+    set
+        client_id=?,
+        closing_date=?,
+        description=?,
+        employee_id=?,
+        priority=?,
+        product=?,
+        severity=?,
+        start_date=?,
+        status=?,
+        title=?,
+        version=? 
+    where
+        code=?
+Resetting system
+Hibernate: 
+    select
+        ticket0_.code as code1_0_,
+        ticket0_.client_id as client_i2_0_,
+        ticket0_.closing_date as closing_3_0_,
+        ticket0_.description as descript4_0_,
+        ticket0_.employee_id as employee5_0_,
+        ticket0_.priority as priority6_0_,
+        ticket0_.product as product7_0_,
+        ticket0_.severity as severity8_0_,
+        ticket0_.start_date as start_da9_0_,
+        ticket0_.status as status10_0_,
+        ticket0_.title as title11_0_,
+        ticket0_.version as version12_0_ 
+    from
+        ticket ticket0_
+Hibernate: 
+    delete 
+    from
+        ticket_tasks 
+    where
+        ticket_id=?
+Hibernate: 
+    delete 
+    from
+        ticket 
+    where
+        code=?
+Resetting system
+Hibernate: 
+    select
+        ticket0_.code as code1_0_,
+        ticket0_.client_id as client_i2_0_,
+        ticket0_.closing_date as closing_3_0_,
+        ticket0_.description as descript4_0_,
+        ticket0_.employee_id as employee5_0_,
+        ticket0_.priority as priority6_0_,
+        ticket0_.product as product7_0_,
+        ticket0_.severity as severity8_0_,
+        ticket0_.start_date as start_da9_0_,
+        ticket0_.status as status10_0_,
+        ticket0_.title as title11_0_,
+        ticket0_.version as version12_0_ 
+    from
+        ticket ticket0_
+Resetting system
+Hibernate: 
+    select
+        ticket0_.code as code1_0_,
+        ticket0_.client_id as client_i2_0_,
+        ticket0_.closing_date as closing_3_0_,
+        ticket0_.description as descript4_0_,
+        ticket0_.employee_id as employee5_0_,
+        ticket0_.priority as priority6_0_,
+        ticket0_.product as product7_0_,
+        ticket0_.severity as severity8_0_,
+        ticket0_.start_date as start_da9_0_,
+        ticket0_.status as status10_0_,
+        ticket0_.title as title11_0_,
+        ticket0_.version as version12_0_ 
+    from
+        ticket ticket0_
+Resetting system
+Hibernate: 
+    select
+        ticket0_.code as code1_0_,
+        ticket0_.client_id as client_i2_0_,
+        ticket0_.closing_date as closing_3_0_,
+        ticket0_.description as descript4_0_,
+        ticket0_.employee_id as employee5_0_,
+        ticket0_.priority as priority6_0_,
+        ticket0_.product as product7_0_,
+        ticket0_.severity as severity8_0_,
+        ticket0_.start_date as start_da9_0_,
+        ticket0_.status as status10_0_,
+        ticket0_.title as title11_0_,
+        ticket0_.version as version12_0_ 
+    from
+        ticket ticket0_
+2023-12-02 21:03:30.334  INFO 169169 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.aninfo.integration.cucumber.TicketIntegrationServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-12-02 21:03:30.335  INFO 169169 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2023-12-02 21:03:30.336  INFO 169169 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@2550d443, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@5fdd20cd, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@5deb7957, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@7695f99d, org.springframework.test.context.support.DirtiesContextTestExecutionListener@55c4d9c0, org.springframework.test.context.transaction.TransactionalTestExecutionListener@632940fd, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@650eac0e, org.springframework.test.context.event.EventPublishingTestExecutionListener@3c0ee823, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@4f773cbb, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@6670b300, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@760e0d1c, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@3d0abc0e, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@4b6ecdf0]
 Before any test execution
 Before any test execution
 Before any test execution
@@ -2240,9 +2240,9 @@ Hibernate:
         ticket0_.version as version12_0_ 
     from
         ticket ticket0_
-2023-12-02 19:03:20.639  INFO 126758 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.aninfo.integration.cucumber.TicketIntegrationServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
-2023-12-02 19:03:20.640  INFO 126758 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
-2023-12-02 19:03:20.640  INFO 126758 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@500bd798, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@278bc942, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@387f63c2, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@4fd9b143, org.springframework.test.context.support.DirtiesContextTestExecutionListener@41e00837, org.springframework.test.context.transaction.TransactionalTestExecutionListener@38d81890, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@7b7a1d3a, org.springframework.test.context.event.EventPublishingTestExecutionListener@792be8bf, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@38cbf61d, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@40af750c, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@6b9723ee, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@4ddf4033, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@2ac33c8b]
+2023-12-02 21:03:30.355  INFO 169169 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.aninfo.integration.cucumber.TicketIntegrationServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-12-02 21:03:30.356  INFO 169169 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2023-12-02 21:03:30.356  INFO 169169 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@792be8bf, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@38cbf61d, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@40af750c, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@6b9723ee, org.springframework.test.context.support.DirtiesContextTestExecutionListener@4ddf4033, org.springframework.test.context.transaction.TransactionalTestExecutionListener@2ac33c8b, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@11ff3bca, org.springframework.test.context.event.EventPublishingTestExecutionListener@4325f248, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@74ccecc7, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@4758b1b1, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@2f11f3fb, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@434af3e3, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@50739599]
 Before any test execution
 Before any test execution
 Before any test execution
@@ -2372,9 +2372,9 @@ Hibernate:
         ticket0_.version as version12_0_ 
     from
         ticket ticket0_
-2023-12-02 19:03:20.650  INFO 126758 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.aninfo.integration.cucumber.TicketIntegrationServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
-2023-12-02 19:03:20.651  INFO 126758 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
-2023-12-02 19:03:20.651  INFO 126758 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@179f4f84, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@22fe5203, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@52a22b5b, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@1952a22b, org.springframework.test.context.support.DirtiesContextTestExecutionListener@74dc3dea, org.springframework.test.context.transaction.TransactionalTestExecutionListener@24620738, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@6759081c, org.springframework.test.context.event.EventPublishingTestExecutionListener@6b16ad26, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@7e30eec3, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@4a5f6dfa, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@65698545, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@3b487b53, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@4277dc0f]
+2023-12-02 21:03:30.365  INFO 169169 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.aninfo.integration.cucumber.TicketIntegrationServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-12-02 21:03:30.366  INFO 169169 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2023-12-02 21:03:30.366  INFO 169169 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@6b16ad26, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@7e30eec3, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@4a5f6dfa, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@65698545, org.springframework.test.context.support.DirtiesContextTestExecutionListener@3b487b53, org.springframework.test.context.transaction.TransactionalTestExecutionListener@4277dc0f, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@73764906, org.springframework.test.context.event.EventPublishingTestExecutionListener@5a9cb980, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@22f6c363, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@5e1de496, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@1f62b82a, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@208d42ff, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@34747056]
 Before any test execution
 Before any test execution
 Before any test execution
@@ -2468,7 +2468,7 @@ Hibernate:
 
 13 Scenarios (?[32m13 passed?[0m)
 42 Steps (?[32m42 passed?[0m)
-0m0.416s
+0m0.557s
 
 </pre>
 </span>
@@ -2481,7 +2481,7 @@ Hibernate:
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 6.2.2</a> at Dec 2, 2023, 7:03:20 PM</p>
+<a href="http://www.gradle.org">Gradle 6.2.2</a> at Dec 2, 2023, 9:03:30 PM</p>
 </div>
 </div>
 </body>
