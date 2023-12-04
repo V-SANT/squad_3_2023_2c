@@ -123,7 +123,7 @@ public class Memo1TPG {
 			if (gottenTask != null) {
 				List<Long> taskId = new ArrayList<Long>();
 				taskId.add(gottenTask.getId());
-				ticketService.updateTicket(code, null, null, null, null, null, null, null, null, null, Optional.of(taskId), null);
+				ticketService.updateTicket(code, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.of(taskId), Optional.empty());
 				return gottenTask.getId();
 			}
 		}

@@ -79,7 +79,7 @@ public class Ticket {
     public Priority getPriority(){ return priority;}
     public String getProduct(){ return product;}
     public String getVersion(){ return version;}
-    public Long getAssignatedEmployeeId(){ return employeeId;}
+    public Long getEmployeeId(){ return employeeId;}
     public Long getClientId(){ return clientId;}
     public List<Long> getAssociatedTasks(){ return associatedTasks;}
     public LocalDate getStartDate(){ return startDate;}

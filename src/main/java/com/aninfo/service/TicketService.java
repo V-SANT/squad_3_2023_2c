@@ -98,7 +98,7 @@ public class TicketService {
         ticket.setProduct(product.orElse(ticket.getProduct()));
         ticket.setVersion(version.orElse(ticket.getVersion()));
         ticket.setClientId(clientId.orElse(ticket.getClientId()));
-        ticket.setEmployeeId(employeeId.orElse(ticket.getAssignatedEmployeeId()));
+        ticket.setEmployeeId(employeeId.orElse(ticket.getEmployeeId()));
         ticket.setAssociatedTasks(tasksIds.orElse(ticket.getAssociatedTasks()));
         ticket.setClosingDate(date.orElse(ticket.getClosingDate()));
 

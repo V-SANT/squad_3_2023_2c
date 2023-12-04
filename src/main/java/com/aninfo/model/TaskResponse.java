@@ -6,18 +6,18 @@ import java.time.LocalDate;
 
 public class TaskResponse{
 
-    private final Long id;
+    private Long id;
     
-    private final Long projectId;
-    private final String name;
-    private final String description;
-    private final Status status;
-    private final Priority priority;
-    private final Long estimatedDuration;
-    private final LocalDate creationDate;
-    private final LocalDate startDate;
-    private final LocalDate finishDate;
-    private final Long asignedId;
+    private Long projectId;
+    private String name;
+    private String description;
+    private Status status;
+    private Priority priority;
+    private Long estimatedDuration;
+    private LocalDate creationDate;
+    private LocalDate startDate;
+    private LocalDate finishDate;
+    private Long asignedId;
 
     public Long getId(){ return id; }
     public String getName(){ return name; }
@@ -31,6 +31,17 @@ public class TaskResponse{
     public LocalDate getFinishDate(){ return finishDate; }
     public Long getAsignedId(){
         return asignedId;
+    }
+
+    public void setName(String name){ this.name = name; }
+    public void setDescription(String description){ this.description = description; }
+    public void setStatus(Status status){ this.status = status; }
+    public void setPriority(Priority priority){ this.priority = priority; }
+    public void setEstimatedDuration(Long estimatedDuration){ this.estimatedDuration = estimatedDuration; }
+    public void setFinishDate(LocalDate finishDate){ this.finishDate = finishDate; }
+
+    public TaskResponse(){
+        
     }
 
     public TaskResponse(Long id, Long projectId, String name, String description, Priority priority, Long estimatedDuration, LocalDate startDate, LocalDate finishDate, Long asignedId){
