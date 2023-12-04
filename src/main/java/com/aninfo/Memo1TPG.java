@@ -2,7 +2,6 @@ package com.aninfo;
 
 import com.aninfo.model.*;
 import com.aninfo.service.TicketService;
-import com.aninfo.exceptions.CouldNotAccessAPI;
 
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
@@ -20,7 +19,6 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.client.SimpleClientHttpRequestFactory;
-import org.springframework.lang.Nullable;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDate;
@@ -76,16 +74,6 @@ public class Memo1TPG {
 			LocalDate.parse(ticketCreationRequest.getEstimatedClosingDate(), DateTimeFormatter.ofPattern("yyyy-MM-dd"))
 		);
 	}
-
-	        // String description = ticketRequest.getDescription();
-        // Status status = ticketRequest.getMappedStatus();
-        // Severity severity = ticketRequest.getMappedSeverity();
-        // Priority priority = ticketRequest.getMappedPriority();
-        // String product = ticketRequest.getProduct();
-        // String version = ticketRequest.getVersion();
-        // Long clientId = Long.parseLong(ticketRequest.getClientId());
-        // Long employeeId = Long.parseLong(ticketRequest.getEmployeeId());
-        // LocalDate estimatedClosingDate = LocalDate.parse(ticketRequest.getEstimatedClosingDate(), DateTimeFormatter.ofPattern("yyyy-MM-dd"));
 
 	@GetMapping("/tickets")
 	public Collection<Ticket> getTickets() {

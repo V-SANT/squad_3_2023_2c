@@ -4,7 +4,6 @@ import com.aninfo.exceptions.TicketTitleAlreadyTakenException;
 import com.aninfo.exceptions.InvalidTicketException;
 import com.aninfo.repository.TicketRepository;
 import com.aninfo.model.Ticket;
-import com.aninfo.model.TicketCreationRequest;
 import com.aninfo.model.Severity;
 import com.aninfo.model.Status;
 import com.aninfo.model.Priority;
@@ -12,9 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 import java.util.*;
-import static java.util.Objects.nonNull;
 
 @Service
 public class TicketService {
@@ -24,19 +21,7 @@ public class TicketService {
 
     public Ticket createTicket(String title, String description, Status status, Severity severity, Priority priority, String product, String version, Long clientId, Long employeeId, LocalDate estimatedClosingDate) {
 
-        // String title = ticketRequest.getTitle();
         ticketRepository.findTicketByTitle(title).ifPresent(x -> {throw new TicketTitleAlreadyTakenException("Title already taken");});
-
-        // String description = ticketRequest.getDescription();
-        // Status status = ticketRequest.getMappedStatus();
-        // Severity severity = ticketRequest.getMappedSeverity();
-        // Priority priority = ticketRequest.getMappedPriority();
-        // String product = ticketRequest.getProduct();
-        // String version = ticketRequest.getVersion();
-        // Long clientId = Long.parseLong(ticketRequest.getClientId());
-        // Long employeeId = Long.parseLong(ticketRequest.getEmployeeId());
-        // LocalDate estimatedClosingDate = LocalDate.parse(ticketRequest.getEstimatedClosingDate(), DateTimeFormatter.ofPattern("yyyy-MM-dd"));
-
 
         Ticket ticket = new Ticket(title, description, status, severity, priority, product, version, clientId, employeeId, estimatedClosingDate);
         return ticketRepository.save(ticket);

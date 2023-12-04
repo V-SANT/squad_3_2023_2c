@@ -14,6 +14,7 @@ import org.springframework.test.context.web.WebAppConfiguration;
 import java.util.List;
 import java.time.LocalDate;
 import java.util.Collection;
+import java.util.Optional;
 
 @ContextConfiguration(classes = Memo1TPG.class)
 @WebAppConfiguration
@@ -47,58 +48,47 @@ public class TicketIntegrationServiceTest {
     }
 
     Ticket updateTicketName(Long code, String new_name){
-        Ticket ticket = ticketService.findByCode(code);
-        return ticketService.updateTicket(code,new_name, ticket.getDescription(), ticket.getStatus(), ticket.getSeverity(), ticket.getPriority(), ticket.getProduct(),ticket.getVersion(),ticket.getClientId(),ticket.getAssignatedEmployeeId(),ticket.getAssociatedTasks(),ticket.getClosingDate());
+        return ticketService.updateTicket(code, Optional.of(new_name), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(),Optional.empty(),Optional.empty(),Optional.empty(),Optional.empty(),Optional.empty());
     }
 
     Ticket updateTicketSeverity(Long code, Severity new_severity){
-        Ticket ticket = ticketService.findByCode(code);
-        return ticketService.updateTicket(code,ticket.getTitle(), ticket.getDescription(), ticket.getStatus(), new_severity, ticket.getPriority(),  ticket.getProduct(),ticket.getVersion(),ticket.getClientId(),ticket.getAssignatedEmployeeId(),ticket.getAssociatedTasks(),ticket.getClosingDate());
+        return ticketService.updateTicket(code,Optional.empty(), Optional.empty(), Optional.empty(), Optional.of(new_severity), Optional.empty(),  Optional.empty(),Optional.empty(),Optional.empty(),Optional.empty(),Optional.empty(),Optional.empty());
     }
 
     Ticket updateTicketPriority(Long code, Priority new_priority){
-        Ticket ticket = ticketService.findByCode(code);
-        return ticketService.updateTicket(code,ticket.getTitle(), ticket.getDescription(), ticket.getStatus(), ticket.getSeverity(), new_priority, ticket.getProduct(),ticket.getVersion(),ticket.getClientId(),ticket.getAssignatedEmployeeId(),ticket.getAssociatedTasks(), ticket.getClosingDate());
+        return ticketService.updateTicket(code,Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.of(new_priority), Optional.empty(),Optional.empty(),Optional.empty(),Optional.empty(),Optional.empty(), Optional.empty());
     }
 
     Ticket updateTicketInfo(Long code, String new_info){
-        Ticket ticket = ticketService.findByCode(code);
-        return ticketService.updateTicket(code,ticket.getTitle(), new_info, ticket.getStatus(), ticket.getSeverity(), ticket.getPriority(),  ticket.getProduct(),ticket.getVersion(),ticket.getClientId(),ticket.getAssignatedEmployeeId(),ticket.getAssociatedTasks(),ticket.getClosingDate());
+        return ticketService.updateTicket(code,Optional.empty(), Optional.of(new_info), Optional.empty(), Optional.empty(), Optional.empty(),  Optional.empty(),Optional.empty(),Optional.empty(),Optional.empty(),Optional.empty(),Optional.empty());
     }
 
     Ticket updateTicketStatus(Long code, Status new_status){
-        Ticket ticket = ticketService.findByCode(code);
-        return ticketService.updateTicket(code, ticket.getTitle(), ticket.getDescription(), new_status, ticket.getSeverity(), ticket.getPriority(),  ticket.getProduct(),ticket.getVersion(),ticket.getClientId(),ticket.getAssignatedEmployeeId(),ticket.getAssociatedTasks(),ticket.getClosingDate());
+        return ticketService.updateTicket(code, Optional.empty(), Optional.empty(), Optional.of(new_status), Optional.empty(), Optional.empty(),  Optional.empty(),Optional.empty(),Optional.empty(),Optional.empty(),Optional.empty(),Optional.empty());
     }
 
     Ticket updateTicketProduct(Long code, String new_product){
-        Ticket ticket = ticketService.findByCode(code);
-        return ticketService.updateTicket(code, ticket.getTitle(), ticket.getDescription(), ticket.getStatus(), ticket.getSeverity(), ticket.getPriority(),  new_product ,ticket.getVersion(),ticket.getClientId(),ticket.getAssignatedEmployeeId(),ticket.getAssociatedTasks(),ticket.getClosingDate());
+        return ticketService.updateTicket(code, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(),  Optional.of(new_product) ,Optional.empty(),Optional.empty(),Optional.empty(),Optional.empty(),Optional.empty());
     }
 
     Ticket updateTicketVersion(Long code, String new_version){
-        Ticket ticket = ticketService.findByCode(code);
-        return ticketService.updateTicket(code, ticket.getTitle(), ticket.getDescription(), ticket.getStatus(), ticket.getSeverity(), ticket.getPriority(),  ticket.getProduct() ,new_version,ticket.getClientId(),ticket.getAssignatedEmployeeId(),ticket.getAssociatedTasks(),ticket.getClosingDate());
+        return ticketService.updateTicket(code, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(),  Optional.empty() ,Optional.of(new_version),Optional.empty(),Optional.empty(),Optional.empty(),Optional.empty());
     }
 
      Ticket updateTicketClientID(Long code, Long new_client_id){
-        Ticket ticket = ticketService.findByCode(code);
-        return ticketService.updateTicket(code, ticket.getTitle(), ticket.getDescription(), ticket.getStatus(), ticket.getSeverity(), ticket.getPriority(),  ticket.getProduct() ,ticket.getVersion(),new_client_id,ticket.getAssignatedEmployeeId(),ticket.getAssociatedTasks(),ticket.getClosingDate());
+        return ticketService.updateTicket(code, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(),  Optional.empty() ,Optional.empty(),Optional.of(new_client_id),Optional.empty(),Optional.empty(),Optional.empty());
     }
 
     Ticket updateTicketEmployeeID(Long code, Long new_employee_id){
-        Ticket ticket = ticketService.findByCode(code);
-        return ticketService.updateTicket(code, ticket.getTitle(), ticket.getDescription(), ticket.getStatus(), ticket.getSeverity(), ticket.getPriority(),  ticket.getProduct() ,ticket.getVersion(),ticket.getClientId(),new_employee_id,ticket.getAssociatedTasks(),ticket.getClosingDate());
+        return ticketService.updateTicket(code, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(),  Optional.empty() ,Optional.empty(),Optional.empty(),Optional.of(new_employee_id),Optional.empty(),Optional.empty());
     }
 
     Ticket updateTicketEstimatedFinishDate(Long code, LocalDate new_date){
-        Ticket ticket = ticketService.findByCode(code);
-        return ticketService.updateTicket(code,ticket.getTitle(), ticket.getDescription(), ticket.getStatus(), ticket.getSeverity(), ticket.getPriority(), ticket.getProduct(),ticket.getVersion(),ticket.getClientId(),ticket.getAssignatedEmployeeId(),ticket.getAssociatedTasks(), new_date);
+        return ticketService.updateTicket(code,Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(),Optional.empty(),Optional.empty(),Optional.empty(),Optional.empty(), Optional.of(new_date));
     }
 
     Ticket updateTicketAssociatedTask(Long code, List<Long> new_tasks){
-         Ticket ticket = ticketService.findByCode(code);
-         return ticketService.updateTicket(code,ticket.getTitle(), ticket.getDescription(), ticket.getStatus(), ticket.getSeverity(), ticket.getPriority(), ticket.getProduct(),ticket.getVersion(),ticket.getClientId(),ticket.getAssignatedEmployeeId(),new_tasks, ticket.getClosingDate());
+         return ticketService.updateTicket(code,Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(),Optional.empty(),Optional.empty(),Optional.empty(),Optional.of(new_tasks), Optional.empty());
      }
 
     public Ticket findByCode(Long code){

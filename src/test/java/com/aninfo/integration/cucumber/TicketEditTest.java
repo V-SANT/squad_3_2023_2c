@@ -188,7 +188,7 @@ public class TicketEditTest extends TicketIntegrationServiceTest {
 
     @Then("^EmployeeID is edited successfully$")
     public void employeID_edited_succesfully() {
-        assertEquals(this.ticket.getAssignatedEmployeeId(), 1L);
+        assertEquals(this.ticket.getEmployeeId(), 1L);
     }
 
     @Given("^ A ticket with closingDate today$")

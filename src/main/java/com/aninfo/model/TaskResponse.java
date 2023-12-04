@@ -1,6 +1,5 @@
 package com.aninfo.model;
 
-import org.springframework.web.bind.annotation.RequestBody;
 
 import java.time.LocalDate;
 
@@ -41,7 +40,7 @@ public class TaskResponse{
     public void setFinishDate(LocalDate finishDate){ this.finishDate = finishDate; }
 
     public TaskResponse(){
-        
+
     }
 
     public TaskResponse(Long id, Long projectId, String name, String description, Priority priority, Long estimatedDuration, LocalDate startDate, LocalDate finishDate, Long asignedId){

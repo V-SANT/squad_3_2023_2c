@@ -1,8 +1,5 @@
 package com.aninfo.model;
 
-import org.springframework.web.bind.annotation.RequestBody;
-
-import java.time.LocalDate;
 
 public class TaskCreationRequest {
     private String name;
