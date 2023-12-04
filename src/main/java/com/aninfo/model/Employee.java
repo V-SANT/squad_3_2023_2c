@@ -21,7 +21,7 @@ public class Employee {
 
     }
 
-    public Employee(Integer id){
+    public Employee(){
     }
 
     public Long getIdNumber() {

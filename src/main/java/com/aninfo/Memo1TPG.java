@@ -10,7 +10,6 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.RestTemplate;
 
-import org.h2.util.Task;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -103,6 +102,42 @@ public class Memo1TPG {
 		return ticketService.getTicketsAssociatedTask(taskId);
 	}
 
+	@GetMapping("/tasks")
+	public TaskResponse[] getTasks(){
+		RestTemplate restTemplate = new RestTemplate(new SimpleClientHttpRequestFactory());
+		String url = "https://psa-proyecto.onrender.com/tasks/";
+		ResponseEntity<TaskResponse[]> responseEntity = restTemplate.getForEntity(
+				url,
+				TaskResponse[].class);
+
+		if (responseEntity.getStatusCode() == HttpStatus.OK) {
+			TaskResponse[] tasks = responseEntity.getBody();
+
+			if (tasks != null) {
+				return tasks;
+			}
+		}
+		return new TaskResponse[0];
+	}
+
+	@GetMapping("/tasks/{id}")
+	public TaskResponse getTask(@PathVariable Long id){
+		RestTemplate restTemplate = new RestTemplate(new SimpleClientHttpRequestFactory());
+		String url = "https://psa-proyecto.onrender.com/tasks/" + id;
+		ResponseEntity<TaskResponse> responseEntity = restTemplate.getForEntity(
+				url,
+				TaskResponse.class);
+
+		if (responseEntity.getStatusCode() == HttpStatus.OK) {
+			TaskResponse tasks = responseEntity.getBody();
+
+			if (tasks != null) {
+				return tasks;
+			}
+		}
+		return null;
+	}
+
 	@Transactional
 	@PutMapping("/tickets/{code}/associatedTask")
 	public Long createTicketAssociatedTask(@PathVariable Long code, @RequestParam Long projectId, @RequestBody TaskCreationRequest task){
@@ -176,6 +211,32 @@ public class Memo1TPG {
 	{
 		Optional<Client> clientOptional = getClients().stream().filter(client -> client.getId().equals(clientId)).findFirst();
 		return ResponseEntity.of(clientOptional);
+	}
+	
+	@GetMapping("/employees")
+	public Collection<Employee> getEmployees() {
+		RestTemplate restTemplate = new RestTemplate(new SimpleClientHttpRequestFactory());
+		ResponseEntity<Employee[]> responseEntity = restTemplate.getForEntity(
+				"https://psa-proyecto.onrender.com/employees",
+				Employee[].class);
+
+		if (responseEntity.getStatusCode() == HttpStatus.OK) {
+			Employee[] employees = responseEntity.getBody();
+
+			if (employees != null) {
+				return Arrays.asList(employees);
+			}
+		}
+
+		return Collections.emptyList();
+	}
+
+	@GetMapping("/employees/{employeeId}")
+	public  ResponseEntity<Employee> getEmployee(@PathVariable Long employeeId)
+	{
+		Optional<Employee> employeeOptional = getEmployees().stream().filter(employee -> employee.getIdNumber().equals(employeeId)).findFirst();
+		return ResponseEntity.of(employeeOptional);
+
 	}
 
 	@Bean
