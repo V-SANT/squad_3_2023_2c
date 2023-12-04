@@ -4,25 +4,31 @@ import com.aninfo.model.*;
 import com.aninfo.service.TicketService;
 import com.aninfo.exceptions.CouldNotAccessAPI;
 
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.client.RestTemplate;
+
+import org.h2.util.Task;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
-// import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.client.RestTemplate;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.http.client.SimpleClientHttpRequestFactory;
 import org.springframework.lang.Nullable;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.Optional;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -95,6 +101,33 @@ public class Memo1TPG {
 		return ticketService.getTicketsAssociatedTask(taskId);
 	}
 
+	@Transactional
+	@PutMapping("/tickets/{code}/associatedTask")
+	public Long createTicketAssociatedTask(@PathVariable Long code, @RequestParam Long projectId, @RequestBody TaskCreationRequest task){
+		ticketService.findByCode(code);
+		RestTemplate restTemplate = new RestTemplate(new SimpleClientHttpRequestFactory());
+		String url = "https://psa-proyecto.onrender.com/projects/" + projectId + "/tasks";
+		HttpHeaders headers = new HttpHeaders();
+		headers.setContentType(MediaType.APPLICATION_JSON);
+		HttpEntity<TaskCreationRequest> requestEntity = new HttpEntity<>(task, headers);
+		ResponseEntity<TaskResponse> responseEntity = restTemplate.postForEntity(
+				url,
+				requestEntity,
+				TaskResponse.class);
+
+		if (responseEntity.getStatusCode() == HttpStatus.OK) {
+			TaskResponse gottenTask = responseEntity.getBody();
+
+			if (gottenTask != null) {
+				List<Long> taskId = new ArrayList<Long>();
+				taskId.add(gottenTask.getId());
+				ticketService.updateTicket(code, null, null, null, null, null, null, null, null, null, Optional.of(taskId), null);
+				return gottenTask.getId();
+			}
+		}
+		return null;
+	}
+
 	@DeleteMapping("/tickets/{code}")
 	public void deleteTicket(@PathVariable Long code) {
 		ticketService.deleteByCode(code);
@@ -103,17 +136,17 @@ public class Memo1TPG {
 	@PutMapping("/tickets/{code}")
 	public Ticket updateTicket(
 			@PathVariable Long code,
-			@RequestParam @Nullable String title,
-			@RequestParam @Nullable String description,
-			@RequestParam @Nullable Status status,
-			@RequestParam @Nullable Severity severity,
-			@RequestParam @Nullable Priority priority,
-			@RequestParam @Nullable String product,
-			@RequestParam @Nullable String version,
-			@RequestParam @Nullable Long employeeId,
-			@RequestParam @Nullable Long clientId,
-			@RequestBody @Nullable List<Long> taskIds,
-			@RequestParam @Nullable @DateTimeFormat(pattern = "yyyy-MM-dd") LocalDate estimatedClosingDate
+			@RequestParam(required = false) Optional<String> title,
+			@RequestParam(required = false) Optional<String> description,
+			@RequestParam(required = false) Optional<Status> status,
+			@RequestParam(required = false) Optional<Severity> severity,
+			@RequestParam(required = false) Optional<Priority> priority,
+			@RequestParam(required = false) Optional<String> product,
+			@RequestParam(required = false) Optional<String> version,
+			@RequestParam(required = false) Optional<Long> employeeId,
+			@RequestParam(required = false) Optional<Long> clientId,
+			@RequestBody Optional<List<Long>> taskIds,
+			@RequestParam(required = false) @DateTimeFormat(pattern = "yyyy-MM-dd") Optional<LocalDate> estimatedClosingDate
 	){
 		return ticketService.updateTicket(code, title, description, status, severity, priority, product, version, clientId, employeeId, taskIds, estimatedClosingDate);
 	}

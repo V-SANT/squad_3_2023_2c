@@ -66,40 +66,41 @@ public class TicketService {
         ticketRepository.deleteById(code);
     }
 
-    public Ticket updateTicket(Long code,
-        String title,
-        String description,
-        Status status,
-        Severity severity,
-        Priority priority,
-        String product,
-        String version,
-        Long clientId,
-        Long employeeId,
-        List<Long> tasksIds,
-        LocalDate date
+    public Ticket updateTicket(
+        Long code,
+        Optional<String> title,
+        Optional<String> description,
+        Optional<Status> status,
+        Optional<Severity> severity,
+        Optional<Priority> priority,
+        Optional<String> product,
+        Optional<String> version,
+        Optional<Long> clientId,
+        Optional<Long> employeeId,
+        Optional<List<Long>> tasksIds,
+        Optional<LocalDate> date
         ){
         Ticket ticket = ticketRepository.findById(code).orElseThrow(() -> new InvalidTicketException("No ticket found with that code"));
         
-        if (nonNull(title)){
-            ticketRepository.findTicketByTitle(title).ifPresent(x -> {
+        if (title.isPresent()){
+            ticketRepository.findTicketByTitle(title.get()).ifPresent(x -> {
                 if (!x.getCode().equals(code)) {
                     throw new TicketTitleAlreadyTakenException("Title already taken");
                 }
             });
         }
 
-        ticket.setTitle(nonNull(title) ? title : ticket.getTitle());
-        ticket.setDescription(nonNull(description) ? description : ticket.getDescription());
-        ticket.setStatus(nonNull(status) ? status : ticket.getStatus());
-        ticket.setSeverity(nonNull(severity) ? severity : ticket.getSeverity());
-        ticket.setPriority(nonNull(priority) ? priority : ticket.getPriority());
-        ticket.setProduct(nonNull(product) ? product : ticket.getProduct());
-        ticket.setVersion(nonNull(version) ? version : ticket.getVersion());
-        ticket.setClientId(nonNull(clientId) ? clientId : ticket.getClientId());
-        ticket.setAssignatedEmployeeId(nonNull(employeeId) ? employeeId : ticket.getAssignatedEmployeeId());
-        ticket.setAssociatedTasks(nonNull(tasksIds) ? tasksIds : ticket.getAssociatedTasks());
-        ticket.setClosingDate(nonNull(date) ? date : ticket.getClosingDate());
+        ticket.setTitle(title.orElse(ticket.getTitle()));
+        ticket.setDescription(description.orElse(ticket.getDescription()));
+        ticket.setStatus(status.orElse(ticket.getStatus()));
+        ticket.setSeverity(severity.orElse(ticket.getSeverity()));
+        ticket.setPriority(priority.orElse(ticket.getPriority()));
+        ticket.setProduct(product.orElse(ticket.getProduct()));
+        ticket.setVersion(version.orElse(ticket.getVersion()));
+        ticket.setClientId(clientId.orElse(ticket.getClientId()));
+        ticket.setAssignatedEmployeeId(employeeId.orElse(ticket.getAssignatedEmployeeId()));
+        ticket.setAssociatedTasks(tasksIds.orElse(ticket.getAssociatedTasks()));
+        ticket.setClosingDate(date.orElse(ticket.getClosingDate()));
 
         return ticketRepository.save(ticket);
     }
