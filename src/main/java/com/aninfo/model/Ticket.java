@@ -93,7 +93,7 @@ public class Ticket {
     public void setPriority(Priority priority){ this.priority = priority;}
     public void setProduct(String product){ this.product = product;}
     public void setVersion(String version){ this.version = version;}
-    public void setAssignatedEmployeeId(Long employeeId){ this.employeeId = employeeId;}
+    public void setEmployeeId(Long employeeId){ this.employeeId = employeeId;}
     public void setClientId(Long clientId){ this.clientId = clientId;}
     public void setAssociatedTasks(List<Long> associatedTasks){ this.associatedTasks = associatedTasks;}
     public void setClosingDate(LocalDate date){ this.closingDate = date;}
